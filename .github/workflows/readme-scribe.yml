@@ -18,7 +18,7 @@ jobs:
       -
         uses: muesli/readme-scribe@5a187a2a36ef894335f17a7d01c32b0e28c6d948
         with:
-          template: https://github.com/alismx/alismx/blob/main/templates/INDEX.md.tpl
+          template: "https://github.com/alismx/alismx/blob/main/templates/INDEX.md.tpl"
           writeTo: index.md
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
