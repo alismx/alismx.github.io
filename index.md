@@ -1,6 +1,6 @@
-# Hi there 👋 
+# DevSecOps
 
-I'm Alis, a software engineer with a passion for open-source, cloud-native technologies, and public health. I'm currently working at [Skylight](https://skylight.digital) on projects that enable public health agencies to leverage modern, cloud-based software solutions. Feel free to follow me on [GitHub](https://github.com/alismx) or connect with me on [LinkedIn](https://www.linkedin.com/in/alismx). 
+I'm Alis, a DevOps engineer passionate about open-source, cloud-native technologies, and public health. I'm currently working at [Skylight](https://skylight.digital) on projects that enable public health agencies to leverage modern, cloud-based software solutions. Feel free to follow me on [GitHub](https://github.com/alismx) or connect with me on [LinkedIn](https://www.linkedin.com/in/alismx). 
 
 [<img align="left" href="https://github.com/alismx" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx)
 
@@ -19,6 +19,8 @@ I'm Alis, a software engineer with a passion for open-source, cloud-native techn
 
 ### 🚀 My work
 
+- [alismx/gitmsg](https://github.com/alismx/gitmsg)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
 - [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
 - [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
@@ -26,9 +28,7 @@ I'm Alis, a software engineer with a passion for open-source, cloud-native techn
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/phdi-playground](https://github.com/CDCgov/phdi-playground)
-- [alismx/dibbs-tfmodule-setup](https://github.com/alismx/dibbs-tfmodule-setup)
 - [alismx/dibbs-tfmodule-ecs](https://github.com/alismx/dibbs-tfmodule-ecs)
-- [alismx/dimages](https://github.com/alismx/dimages)
 
 ### 🌱 My pull requests
 
