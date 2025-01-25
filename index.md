@@ -19,16 +19,16 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
+- [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
+- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
 - [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
 - [CDCgov/phdi](https://github.com/CDCgov/phdi)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/phdi-playground](https://github.com/CDCgov/phdi-playground)
-- [alismx/dibbs-tfmodule-ecs](https://github.com/alismx/dibbs-tfmodule-ecs)
+- [alismx/dibbs-tfmodule-setup](https://github.com/alismx/dibbs-tfmodule-setup)
 
 ### 🌱 My pull requests
 
