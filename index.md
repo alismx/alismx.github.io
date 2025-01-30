@@ -32,6 +32,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Add dependabot.yml, GH issue template, GH PR template 📎 ](https://github.com/CDCgov/dibbs-vm/pull/15) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
+- [add new ephemeral environments workflow](https://github.com/CDCgov/dibbs-aws/pull/50) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Add alismx to Contributors list 🦝 ](https://github.com/firstcontributions/first-contributions/pull/93624) on [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 - [Start markdown](https://github.com/alismx/skills-communicate-using-markdown/pull/1) on [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
 - [Add my first file](https://github.com/alismx/skills-introduction-to-github/pull/1) on [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
@@ -40,8 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Fixes the missing aws secrets manager data object](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/12) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Docker Compose (ECR Viewer, Query Connector) &#43;portainer 🐳 ](https://github.com/CDCgov/dibbs-vm/pull/13) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Connection options for Metadata Database ℹ️ ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/11) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [Keep it clean, tflint 🧹 ](https://github.com/CDCgov/dibbs-aws/pull/47) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [Allow SSL cert and port 443 setup 🔒 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/9) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
