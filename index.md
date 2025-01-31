@@ -19,6 +19,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
@@ -28,10 +29,10 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/phdi-playground](https://github.com/CDCgov/phdi-playground)
-- [alismx/dibbs-tfmodule-ecs](https://github.com/alismx/dibbs-tfmodule-ecs)
 
 ### 🌱 My pull requests
 
+- [Allow for root service, use CONFIG_NAME 🫚 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/17) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Add dependabot.yml, GH issue template, GH PR template 📎 ](https://github.com/CDCgov/dibbs-vm/pull/15) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [add new ephemeral environments workflow](https://github.com/CDCgov/dibbs-aws/pull/50) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Add alismx to Contributors list 🦝 ](https://github.com/firstcontributions/first-contributions/pull/93624) on [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [update phdi_version &#43; issue tempates 📜 ](https://github.com/CDCgov/dibbs-aws/pull/48) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Fixes the missing aws secrets manager data object](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/12) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Docker Compose (ECR Viewer, Query Connector) &#43;portainer 🐳 ](https://github.com/CDCgov/dibbs-vm/pull/13) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [Connection options for Metadata Database ℹ️ ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/11) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
