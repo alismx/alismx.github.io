@@ -21,10 +21,10 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
-- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
+- [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 - [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
+- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
 - [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -32,6 +32,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: upgrade typescript to ^5.7.3 and openai to ^4.80.0](https://github.com/alismx/gitmsg/pull/11) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
+- [feat: replace npm with pnpm for package management and update depende…](https://github.com/alismx/gitmsg/pull/10) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [Allow for root service, use CONFIG_NAME 🫚 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/17) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Add dependabot.yml, GH issue template, GH PR template 📎 ](https://github.com/CDCgov/dibbs-vm/pull/15) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [add new ephemeral environments workflow](https://github.com/CDCgov/dibbs-aws/pull/50) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -40,8 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Add my first file](https://github.com/alismx/skills-introduction-to-github/pull/1) on [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
 - [add basic autoscaling based on mem and cpu usage](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/13) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [update phdi_version &#43; issue tempates 📜 ](https://github.com/CDCgov/dibbs-aws/pull/48) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [Fixes the missing aws secrets manager data object](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/12) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [Docker Compose (ECR Viewer, Query Connector) &#43;portainer 🐳 ](https://github.com/CDCgov/dibbs-vm/pull/13) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
