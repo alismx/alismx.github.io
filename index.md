@@ -20,28 +20,28 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 - [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
 - [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
 - [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/phdi-playground](https://github.com/CDCgov/phdi-playground)
 
 ### 🌱 My pull requests
 
+- [feat: add package download steps and update dependencies in project c…](https://github.com/alismx/gitmsg/pull/15) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
+- [feat: add pnpm setup step in GitHub actions workflow](https://github.com/alismx/gitmsg/pull/14) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
+- [feat: add pnpm setup step in GitHub actions workflow](https://github.com/alismx/gitmsg/pull/13) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
+- [chore: upgrade node version and dependencies](https://github.com/alismx/gitmsg/pull/12) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [Resolve GH workflow issues 🔒 ](https://github.com/CDCgov/dibbs-vm/pull/41) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [docs: Add project readme files](https://github.com/CDCgov/dibbs-vm/pull/40) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [chore: upgrade typescript to ^5.7.3 and openai to ^4.80.0](https://github.com/alismx/gitmsg/pull/11) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [feat: replace npm with pnpm for package management and update depende…](https://github.com/alismx/gitmsg/pull/10) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [Allow for root service, use CONFIG_NAME 🫚 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/17) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Add dependabot.yml, GH issue template, GH PR template 📎 ](https://github.com/CDCgov/dibbs-vm/pull/15) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [add new ephemeral environments workflow](https://github.com/CDCgov/dibbs-aws/pull/50) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [Add alismx to Contributors list 🦝 ](https://github.com/firstcontributions/first-contributions/pull/93624) on [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
-- [Start markdown](https://github.com/alismx/skills-communicate-using-markdown/pull/1) on [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
-- [Add my first file](https://github.com/alismx/skills-introduction-to-github/pull/1) on [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
 
 ### 📓 My gists
 
