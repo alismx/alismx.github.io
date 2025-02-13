@@ -19,10 +19,10 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
