@@ -19,8 +19,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Dibbs ECR Viewer repo update, `NBS_AUTH` usage and database var changes 🎊 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/20) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add new GitHub labels and workflows for label automation 🏷️ ](https://github.com/CDCgov/dibbs-vm/pull/46) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: Add GitHub Actions workflow for building dibbs-vm on trigger ♍ ](https://github.com/CDCgov/dibbs-vm/pull/44) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add Github Actions workflow to trigger VM build ♍ ](https://github.com/CDCgov/dibbs-ecr-viewer/pull/263) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add pnpm setup step in GitHub actions workflow](https://github.com/alismx/gitmsg/pull/13) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [chore: upgrade node version and dependencies](https://github.com/alismx/gitmsg/pull/12) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [Resolve GH workflow issues 🔒 ](https://github.com/CDCgov/dibbs-vm/pull/41) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [docs: Add project readme files](https://github.com/CDCgov/dibbs-vm/pull/40) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
