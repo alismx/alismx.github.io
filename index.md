@@ -19,8 +19,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
@@ -28,10 +29,10 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 - [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
 - [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
-- [alismx/skills-introduction-to-github](https://github.com/alismx/skills-introduction-to-github)
 
 ### 🌱 My pull requests
 
+- [Workflow cleanup, dibbs-ecr-viewer version, speed up redeploys 💨 ](https://github.com/CDCgov/dibbs-aws/pull/51) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Dibbs ECR Viewer repo update, `NBS_AUTH` usage and database var changes 🎊 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/20) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add new GitHub labels and workflows for label automation 🏷️ ](https://github.com/CDCgov/dibbs-vm/pull/46) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: Add GitHub Actions workflow for building dibbs-vm on trigger ♍ ](https://github.com/CDCgov/dibbs-vm/pull/44) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add pnpm setup step in GitHub actions workflow](https://github.com/alismx/gitmsg/pull/14) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [feat: add pnpm setup step in GitHub actions workflow](https://github.com/alismx/gitmsg/pull/13) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [chore: upgrade node version and dependencies](https://github.com/alismx/gitmsg/pull/12) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
-- [Resolve GH workflow issues 🔒 ](https://github.com/CDCgov/dibbs-vm/pull/41) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
