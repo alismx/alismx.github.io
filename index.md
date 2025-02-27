@@ -32,7 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
-- [wip](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
+- [eCR Viewer setup script &#43; variable pattern setting 🖌️ ](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Cipher parameter for sqlserver 🔏 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/23) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Workflow cleanup, dibbs-ecr-viewer version, speed up redeploys 💨 ](https://github.com/CDCgov/dibbs-aws/pull/51) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Dibbs ECR Viewer repo update, `NBS_AUTH` usage and database var changes 🎊 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/20) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
