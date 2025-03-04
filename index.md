@@ -19,19 +19,20 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/proxmox](https://github.com/alismx/proxmox)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
-- [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
+- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
 
 ### 🌱 My pull requests
 
+- [fix(workflows): remove condition check](https://github.com/CDCgov/dibbs-vm/pull/55) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [eCR Viewer setup script &#43; variable pattern setting 🖌️ ](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Cipher parameter for sqlserver 🔏 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/23) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Workflow cleanup, dibbs-ecr-viewer version, speed up redeploys 💨 ](https://github.com/CDCgov/dibbs-aws/pull/51) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -41,15 +42,14 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add Github Actions workflow to trigger VM build ♍ ](https://github.com/CDCgov/dibbs-ecr-viewer/pull/263) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Remove docker updates from dependabot 📦 ](https://github.com/CDCgov/dibbs-vm/pull/43) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add package download steps and update dependencies in project c…](https://github.com/alismx/gitmsg/pull/15) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
-- [feat: add pnpm setup step in GitHub actions workflow](https://github.com/alismx/gitmsg/pull/14) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 
 ### 📓 My gists
 
+- [](https://gist.github.com/eb554c67c7013b27c0e16461c3321df9)
 - [](https://gist.github.com/a8c473968f0d87c0532944017f844363)
 - [Hidden content in markdown](https://gist.github.com/cffeb79c933f98279c46906f390fd3a0)
 - [This creates a lock based on the existence of a file](https://gist.github.com/6bb524c02a636a478f49d7387f57869b)
 - [This is a script to sync to s3 compatible tools (AWS S3, Digital Ocean Spaces)](https://gist.github.com/7a42ab3b5203a9eca579f0a80a9dc63b)
-- [Python script to generate fake data](https://gist.github.com/ea13a03b628e2d682334c0adf38400c5)
 
 ### 👯 Recent followers
 
