@@ -21,7 +21,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [alismx/proxmox](https://github.com/alismx/proxmox)
+- [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix(workflows): remove dupe, update workflows for bulding main, workflow_dispatch, repo_dispatch 🥟 ](https://github.com/CDCgov/dibbs-vm/pull/56) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove condition check](https://github.com/CDCgov/dibbs-vm/pull/55) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [eCR Viewer setup script &#43; variable pattern setting 🖌️ ](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Cipher parameter for sqlserver 🔏 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/23) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: Add GitHub Actions workflow for building dibbs-vm on trigger ♍ ](https://github.com/CDCgov/dibbs-vm/pull/44) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add Github Actions workflow to trigger VM build ♍ ](https://github.com/CDCgov/dibbs-ecr-viewer/pull/263) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Remove docker updates from dependabot 📦 ](https://github.com/CDCgov/dibbs-vm/pull/43) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [feat: add package download steps and update dependencies in project c…](https://github.com/alismx/gitmsg/pull/15) on [alismx/gitmsg](https://github.com/alismx/gitmsg)
 
 ### 📓 My gists
 
