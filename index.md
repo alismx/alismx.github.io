@@ -22,8 +22,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: fixes for packMachines 🤖 ](https://github.com/CDCgov/dibbs-vm/pull/57) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove dupe, update workflows for bulding main, workflow_dispatch, repo_dispatch 🥟 ](https://github.com/CDCgov/dibbs-vm/pull/56) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove condition check](https://github.com/CDCgov/dibbs-vm/pull/55) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [eCR Viewer setup script &#43; variable pattern setting 🖌️ ](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -41,15 +42,14 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add new GitHub labels and workflows for label automation 🏷️ ](https://github.com/CDCgov/dibbs-vm/pull/46) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: Add GitHub Actions workflow for building dibbs-vm on trigger ♍ ](https://github.com/CDCgov/dibbs-vm/pull/44) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add Github Actions workflow to trigger VM build ♍ ](https://github.com/CDCgov/dibbs-ecr-viewer/pull/263) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [Remove docker updates from dependabot 📦 ](https://github.com/CDCgov/dibbs-vm/pull/43) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
+- [Debian 12 preseed file](https://gist.github.com/717776684587d3467b8c3980d2cba4e3)
 - [](https://gist.github.com/eb554c67c7013b27c0e16461c3321df9)
 - [](https://gist.github.com/a8c473968f0d87c0532944017f844363)
 - [Hidden content in markdown](https://gist.github.com/cffeb79c933f98279c46906f390fd3a0)
 - [This creates a lock based on the existence of a file](https://gist.github.com/6bb524c02a636a478f49d7387f57869b)
-- [This is a script to sync to s3 compatible tools (AWS S3, Digital Ocean Spaces)](https://gist.github.com/7a42ab3b5203a9eca579f0a80a9dc63b)
 
 ### 👯 Recent followers
 
