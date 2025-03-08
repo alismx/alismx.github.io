@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore(ecr-viewer): refactor environment variables and add scripts for…](https://github.com/CDCgov/dibbs-vm/pull/58) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix: fixes for packMachines 🤖 ](https://github.com/CDCgov/dibbs-vm/pull/57) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove dupe, update workflows for bulding main, workflow_dispatch, repo_dispatch 🥟 ](https://github.com/CDCgov/dibbs-vm/pull/56) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove condition check](https://github.com/CDCgov/dibbs-vm/pull/55) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Dibbs ECR Viewer repo update, `NBS_AUTH` usage and database var changes 🎊 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/20) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add new GitHub labels and workflows for label automation 🏷️ ](https://github.com/CDCgov/dibbs-vm/pull/46) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: Add GitHub Actions workflow for building dibbs-vm on trigger ♍ ](https://github.com/CDCgov/dibbs-vm/pull/44) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [feat: add Github Actions workflow to trigger VM build ♍ ](https://github.com/CDCgov/dibbs-ecr-viewer/pull/263) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
