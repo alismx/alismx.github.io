@@ -22,13 +22,13 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
-- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
+- [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
 
 ### 🌱 My pull requests
 
@@ -45,11 +45,11 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 📓 My gists
 
+- [Emulating ARM with QEMU on Debian/Ubuntu](https://gist.github.com/3107fdd62a87607d7cc7b1368d84fc52)
 - [Debian 12 preseed file](https://gist.github.com/717776684587d3467b8c3980d2cba4e3)
 - [](https://gist.github.com/eb554c67c7013b27c0e16461c3321df9)
 - [](https://gist.github.com/a8c473968f0d87c0532944017f844363)
 - [Hidden content in markdown](https://gist.github.com/cffeb79c933f98279c46906f390fd3a0)
-- [This creates a lock based on the existence of a file](https://gist.github.com/6bb524c02a636a478f49d7387f57869b)
 
 ### 👯 Recent followers
 
