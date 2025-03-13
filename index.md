@@ -22,8 +22,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Update script 💠 ](https://github.com/CDCgov/dibbs-vm/pull/59) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Upgrade script, additions to docs, other cleanup 🍬 ](https://github.com/CDCgov/dibbs-vm/pull/58) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix: fixes for packMachines 🤖 ](https://github.com/CDCgov/dibbs-vm/pull/57) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove dupe, update workflows for bulding main, workflow_dispatch, repo_dispatch 🥟 ](https://github.com/CDCgov/dibbs-vm/pull/56) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Workflow cleanup, dibbs-ecr-viewer version, speed up redeploys 💨 ](https://github.com/CDCgov/dibbs-aws/pull/51) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Dibbs ECR Viewer repo update, `NBS_AUTH` usage and database var changes 🎊 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/20) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add new GitHub labels and workflows for label automation 🏷️ ](https://github.com/CDCgov/dibbs-vm/pull/46) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [feat: Add GitHub Actions workflow for building dibbs-vm on trigger ♍ ](https://github.com/CDCgov/dibbs-vm/pull/44) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
