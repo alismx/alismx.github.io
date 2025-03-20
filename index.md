@@ -32,7 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
-- [chore(README): refactor instruction sections and ignore changes in po…](https://github.com/CDCgov/dibbs-aws/pull/57) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [dibbs-ecr-viewer upgrade to 3.0.0, docs updates! 📜 ](https://github.com/CDCgov/dibbs-aws/pull/57) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Update script 💠 ](https://github.com/CDCgov/dibbs-vm/pull/59) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Upgrade script, additions to docs, other cleanup 🍬 ](https://github.com/CDCgov/dibbs-vm/pull/58) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix: fixes for packMachines 🤖 ](https://github.com/CDCgov/dibbs-vm/pull/57) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
