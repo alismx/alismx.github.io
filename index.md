@@ -53,9 +53,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 👯 Recent followers
 
+- [isyuricunha](https://github.com/isyuricunha)
 - [shanice-skylight](https://github.com/shanice-skylight)
 - [joesghub](https://github.com/joesghub)
-- [DanielSass](https://github.com/DanielSass)
 
 ### 📈 My certifications
 
