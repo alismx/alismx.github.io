@@ -28,7 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
-- [alismx/skills-copilot-codespaces-vscode](https://github.com/alismx/skills-copilot-codespaces-vscode)
+- [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
 
 ### 🌱 My pull requests
 
