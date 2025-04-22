@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: restrict environment id and add VPC networking settings](https://github.com/CDCgov/dibbs-aws/pull/62) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [dibbs-ecr-viewer upgrade to 3.0.0, docs updates! 📜 ](https://github.com/CDCgov/dibbs-aws/pull/57) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Update script 💠 ](https://github.com/CDCgov/dibbs-vm/pull/59) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Upgrade script, additions to docs, other cleanup 🍬 ](https://github.com/CDCgov/dibbs-vm/pull/58) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [eCR Viewer setup script &#43; variable pattern setting 🖌️ ](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Cipher parameter for sqlserver 🔏 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/23) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Workflow cleanup, dibbs-ecr-viewer version, speed up redeploys 💨 ](https://github.com/CDCgov/dibbs-aws/pull/51) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [Dibbs ECR Viewer repo update, `NBS_AUTH` usage and database var changes 🎊 ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/20) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
