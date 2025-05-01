@@ -19,8 +19,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add AWS_INTEGRATED branch to deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/65) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add dual configuration support and update docs](https://github.com/CDCgov/dibbs-vm/pull/63) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat(iam): add missing permissions and update .gitignore](https://github.com/CDCgov/dibbs-aws/pull/63) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: restrict environment id and add VPC networking settings](https://github.com/CDCgov/dibbs-aws/pull/62) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: fixes for packMachines 🤖 ](https://github.com/CDCgov/dibbs-vm/pull/57) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove dupe, update workflows for bulding main, workflow_dispatch, repo_dispatch 🥟 ](https://github.com/CDCgov/dibbs-vm/pull/56) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix(workflows): remove condition check](https://github.com/CDCgov/dibbs-vm/pull/55) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [eCR Viewer setup script &#43; variable pattern setting 🖌️ ](https://github.com/CDCgov/dibbs-vm/pull/51) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
