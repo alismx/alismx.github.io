@@ -32,6 +32,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: update ECS module source to GitHub branch for pub key update](https://github.com/CDCgov/dibbs-aws/pull/66) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [fix: update eCR viewer authentication public key](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/27) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add AWS_INTEGRATED branch to deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/65) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add dual configuration support and update docs](https://github.com/CDCgov/dibbs-vm/pull/63) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat(iam): add missing permissions and update .gitignore](https://github.com/CDCgov/dibbs-aws/pull/63) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -40,8 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Update script 💠 ](https://github.com/CDCgov/dibbs-vm/pull/59) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Upgrade script, additions to docs, other cleanup 🍬 ](https://github.com/CDCgov/dibbs-vm/pull/58) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [fix: fixes for packMachines 🤖 ](https://github.com/CDCgov/dibbs-vm/pull/57) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [fix(workflows): remove dupe, update workflows for bulding main, workflow_dispatch, repo_dispatch 🥟 ](https://github.com/CDCgov/dibbs-vm/pull/56) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [fix(workflows): remove condition check](https://github.com/CDCgov/dibbs-vm/pull/55) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
