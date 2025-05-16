@@ -19,11 +19,11 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
@@ -33,8 +33,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🌱 My pull requests
 
 - [feat: update env handling and add orchestration support](https://github.com/CDCgov/dibbs-vm/pull/65) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [chore: update ECS module source to GitHub branch for pub key update](https://github.com/CDCgov/dibbs-aws/pull/66) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [fix: update eCR viewer authentication public key](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/27) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [chore: Update terraform-aws-dibbs-ecr-viewer &#43; db module cleanup](https://github.com/CDCgov/dibbs-aws/pull/66) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [Feature: override autoscaling ⚖️, chore: fix nbs pub key 🗝️ ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/27) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add AWS_INTEGRATED branch to deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/65) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add dual configuration support and update docs](https://github.com/CDCgov/dibbs-vm/pull/63) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat(iam): add missing permissions and update .gitignore](https://github.com/CDCgov/dibbs-aws/pull/63) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
