@@ -19,8 +19,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
@@ -53,9 +53,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 👯 Recent followers
 
+- [J-Prichard-PHL](https://github.com/J-Prichard-PHL)
 - [shanice-skylight](https://github.com/shanice-skylight)
 - [joesghub](https://github.com/joesghub)
-- [DanielSass](https://github.com/DanielSass)
 
 ### 📈 My certifications
 
