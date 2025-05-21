@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add ALB logging and S3 logging bucket support](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/29) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: update env handling and add orchestration support](https://github.com/CDCgov/dibbs-vm/pull/65) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [chore: Update terraform-aws-dibbs-ecr-viewer &#43; db module cleanup](https://github.com/CDCgov/dibbs-aws/pull/66) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Feature: override autoscaling ⚖️, chore: fix nbs pub key 🗝️ ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/27) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: restrict environment id and add VPC networking settings](https://github.com/CDCgov/dibbs-aws/pull/62) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [dibbs-ecr-viewer upgrade to 3.0.0, docs updates! 📜 ](https://github.com/CDCgov/dibbs-aws/pull/57) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Update script 💠 ](https://github.com/CDCgov/dibbs-vm/pull/59) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [Upgrade script, additions to docs, other cleanup 🍬 ](https://github.com/CDCgov/dibbs-vm/pull/58) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
