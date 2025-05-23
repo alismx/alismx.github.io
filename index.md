@@ -19,8 +19,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
@@ -28,20 +29,19 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [alismx/lvb](https://github.com/alismx/lvb)
 - [alismx/gitmsg](https://github.com/alismx/gitmsg)
 - [firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
-- [alismx/skills-communicate-using-markdown](https://github.com/alismx/skills-communicate-using-markdown)
 
 ### 🌱 My pull requests
 
+- [feat: add workflow to trigger demo deployment via dispatch event](https://github.com/CDCgov/dibbs-ecr-refiner/pull/109) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [feat: add workflow to trigger deploy to demo](https://github.com/CDCgov/dibbs-query-connector/pull/624) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
+- [feat: add workflow to trigger deploy to demo environment](https://github.com/CDCgov/dibbs-ecr-viewer/pull/753) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [fix: update deploy workflow for demo environment](https://github.com/skylight-hq/dibbs-landing/pull/6) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
+- [feat(policy): add KMS permissions and resources](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/30) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [feat: add deploy to demo workflow trigger](https://github.com/skylight-hq/dibbs-landing/pull/5) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [feat: add ALB logging and S3 logging bucket support](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/29) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: update env handling and add orchestration support](https://github.com/CDCgov/dibbs-vm/pull/65) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [chore: Update terraform-aws-dibbs-ecr-viewer &#43; db module cleanup](https://github.com/CDCgov/dibbs-aws/pull/66) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Feature: override autoscaling ⚖️, chore: fix nbs pub key 🗝️ ](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/27) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [feat: add AWS_INTEGRATED branch to deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/65) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat: add dual configuration support and update docs](https://github.com/CDCgov/dibbs-vm/pull/63) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [feat(iam): add missing permissions and update .gitignore](https://github.com/CDCgov/dibbs-aws/pull/63) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat: restrict environment id and add VPC networking settings](https://github.com/CDCgov/dibbs-aws/pull/62) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [dibbs-ecr-viewer upgrade to 3.0.0, docs updates! 📜 ](https://github.com/CDCgov/dibbs-aws/pull/57) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [Update script 💠 ](https://github.com/CDCgov/dibbs-vm/pull/59) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
