@@ -19,12 +19,12 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -32,6 +32,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: rename variable secrets_manager_postgresql_connection_strin…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/32) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [refactor: remove database_type variable and update connection string …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/31) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add workflow to trigger deploy to demo environment](https://github.com/CDCgov/RecordLinker/pull/390) on [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 - [fix: properly escape JSON payload in workflow dispatch event](https://github.com/CDCgov/dibbs-ecr-refiner/pull/111) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [fix: properly escape JSON payload in workflow dispatch event](https://github.com/skylight-hq/dibbs-landing/pull/7) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
@@ -40,8 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add workflow to trigger deploy to demo environment](https://github.com/CDCgov/dibbs-ecr-viewer/pull/753) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: update deploy workflow for demo environment](https://github.com/skylight-hq/dibbs-landing/pull/6) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [fix(policy): add KMS permissions and resources](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/30) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [feat: add deploy to demo workflow trigger](https://github.com/skylight-hq/dibbs-landing/pull/5) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [feat: add ALB logging and S3 logging bucket support](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/29) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
