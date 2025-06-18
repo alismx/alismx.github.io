@@ -19,6 +19,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -26,12 +27,13 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
 
 ### 🌱 My pull requests
 
+- [feat: update AWS provider versions, add WEB_CONCURRENCY env var, and …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/34) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [docs: update README with documentation and examples sections](https://github.com/CDCgov/dibbs-vm/pull/71) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: update secrets manager input and add s3 delete permission](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/33) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [chore: update endpoint URLs in constants file](https://github.com/skylight-hq/dibbs-landing/pull/8) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [fix: rename variable secrets_manager_postgresql_connection_strin…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/32) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -40,8 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: properly escape JSON payload in workflow dispatch event](https://github.com/CDCgov/dibbs-ecr-refiner/pull/111) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [fix: properly escape JSON payload in workflow dispatch event](https://github.com/skylight-hq/dibbs-landing/pull/7) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [feat: add workflow to trigger demo deployment via dispatch event](https://github.com/CDCgov/dibbs-ecr-refiner/pull/109) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
-- [feat: add workflow to trigger deploy to demo](https://github.com/CDCgov/dibbs-query-connector/pull/624) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
-- [feat: add workflow to trigger deploy to demo environment](https://github.com/CDCgov/dibbs-ecr-viewer/pull/753) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
