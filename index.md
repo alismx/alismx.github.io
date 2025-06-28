@@ -19,19 +19,20 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
-- [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 - [alismx/proxmox_scripts](https://github.com/alismx/proxmox_scripts)
 
 ### 🌱 My pull requests
 
+- [feat: update AWS provider versions, add WEB_CONCURRENCY env var, and …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/35) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat(ecs): update module source to use alis/fhirfix-test git ref](https://github.com/CDCgov/dibbs-aws/pull/71) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat(ci, terraform): update checkout logic and bump ECS module version](https://github.com/CDCgov/dibbs-aws/pull/70) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat(ci): add AWS Dev deploy trigger workflow and rename workflow fil…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/916) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [chore: update endpoint URLs in constants file](https://github.com/skylight-hq/dibbs-landing/pull/8) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [fix: rename variable secrets_manager_postgresql_connection_strin…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/32) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [refactor: remove database_type variable and update connection string …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/31) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [feat: add workflow to trigger deploy to demo environment](https://github.com/CDCgov/RecordLinker/pull/390) on [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 
 ### 📓 My gists
 
