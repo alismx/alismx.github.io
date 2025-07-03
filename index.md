@@ -20,11 +20,11 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add gitsha to build scripts and packer configuration](https://github.com/CDCgov/dibbs-vm/pull/73) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [refactor(trigger-dev-workflow): remove redundant response handling fr…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/927) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add repository_dispatch trigger and tf_branch option](https://github.com/CDCgov/dibbs-aws/pull/72) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add METADATA_DATABASE_MIGRATION_SECRET configuration and variable](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/36) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat(ci): add AWS Dev deploy trigger workflow and rename workflow fil…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/916) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: update AWS provider versions, add WEB_CONCURRENCY env var, and …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/34) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [docs: update README with documentation and examples sections](https://github.com/CDCgov/dibbs-vm/pull/71) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [feat: update secrets manager input and add s3 delete permission](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/33) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
