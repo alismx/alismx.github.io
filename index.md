@@ -32,6 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat(github-actions): update AWS dev deploy workflow](https://github.com/CDCgov/dibbs-ecr-viewer/pull/942) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add gitsha to build scripts and packer configuration](https://github.com/CDCgov/dibbs-vm/pull/73) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [refactor(trigger-dev-workflow): remove redundant response handling fr…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/927) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add repository_dispatch trigger and tf_branch option](https://github.com/CDCgov/dibbs-aws/pull/72) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat(ci, terraform): update checkout logic and bump ECS module version](https://github.com/CDCgov/dibbs-aws/pull/70) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat(ci): add AWS Dev deploy trigger workflow and rename workflow fil…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/916) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: update AWS provider versions, add WEB_CONCURRENCY env var, and …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/34) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [docs: update README with documentation and examples sections](https://github.com/CDCgov/dibbs-vm/pull/71) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
