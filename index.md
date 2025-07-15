@@ -26,12 +26,13 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
+- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 
 ### 🌱 My pull requests
 
+- [refactor: remove unused GitHub workflow and consolidate DB secrets](https://github.com/CDCgov/dibbs-aws/pull/75) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix(docs): update configuration URL in README.md 📜 ](https://github.com/MauriceNino/dashdot/pull/1227) on [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
 - [feat(github-actions): update AWS dev deploy workflow](https://github.com/CDCgov/dibbs-ecr-viewer/pull/942) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add gitsha to build scripts and packer configuration](https://github.com/CDCgov/dibbs-vm/pull/73) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -41,7 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: update AWS provider versions, add WEB_CONCURRENCY env var, and …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/35) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat(ecs): update module source, add metadata secret variable](https://github.com/CDCgov/dibbs-aws/pull/71) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat(ci, terraform): update checkout logic and bump ECS module version](https://github.com/CDCgov/dibbs-aws/pull/70) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat(ci): add AWS Dev deploy trigger workflow and rename workflow fil…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/916) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
