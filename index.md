@@ -20,18 +20,20 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
-- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/RecordLinker](https://github.com/CDCgov/RecordLinker)
 
 ### 🌱 My pull requests
 
+- [chore: add Dependabot configuration for npm, docker and terraform wee…](https://github.com/CDCgov/dibbs-query-connector/pull/738) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
+- [chore: add Dependabot config for npm, pip, docker, and docker-compose…](https://github.com/CDCgov/dibbs-ecr-refiner/pull/194) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [refactor: remove unused GitHub workflow and consolidate DB secrets](https://github.com/CDCgov/dibbs-aws/pull/75) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix(docs): update configuration URL in README.md 📜 ](https://github.com/MauriceNino/dashdot/pull/1227) on [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
 - [feat(github-actions): update AWS dev deploy workflow](https://github.com/CDCgov/dibbs-ecr-viewer/pull/942) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -40,8 +42,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add repository_dispatch trigger and tf_branch option](https://github.com/CDCgov/dibbs-aws/pull/72) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add METADATA_DATABASE_MIGRATION_SECRET configuration and variable](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/36) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: update AWS provider versions, add WEB_CONCURRENCY env var, and …](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/35) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [feat(ecs): update module source, add metadata secret variable](https://github.com/CDCgov/dibbs-aws/pull/71) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat(ci, terraform): update checkout logic and bump ECS module version](https://github.com/CDCgov/dibbs-aws/pull/70) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
