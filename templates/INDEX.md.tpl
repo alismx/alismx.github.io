@@ -2,9 +2,11 @@
 
 I'm Alis, a DevOps engineer passionate about open-source, cloud-native technologies, and public health. I'm currently working at [Skylight](https://skylight.digital) on projects that enable public health agencies to leverage modern, cloud-based software solutions. Feel free to follow me on [GitHub](https://github.com/alismx) or connect with me on [LinkedIn](https://www.linkedin.com/in/alismx). 
 
-[<img align="left" href="https://github.com/alismx" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx)
+[<img alt="alismx-github align="left" href="https://github.com/alismx" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx)
 
-[<img alt="alismx-linked-in" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/alismx)<br>
+[<img alt="alismx-linked-in" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/alismx)
+
+[<img alt="alismx-ko-fi" src="https://img.shields.io/badge/Ko--fi-FF5E5B?&style=for-the-badge&logo=ko-fi&logoColor=white" />](https://ko-fi.com/alismx)<br>
 
 - [Skylight Projects](https://skylight.digital/work/team-member/alis-akers/)
 
