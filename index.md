@@ -2,9 +2,7 @@
 
 I'm Alis, a DevOps engineer passionate about open-source, cloud-native technologies, and public health. I'm currently working at [Skylight](https://skylight.digital) on projects that enable public health agencies to leverage modern, cloud-based software solutions. Feel free to follow me on [GitHub](https://github.com/alismx) or connect with me on [LinkedIn](https://www.linkedin.com/in/alismx). 
 
-[<img align="left" href="https://github.com/alismx" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx)
-
-[<img alt="alismx-linked-in" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/alismx)<br>
+[<img alt="alismx-github" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx) [<img alt="alismx-linked-in" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/alismx) [<img alt="alismx-ko-fi" src="https://img.shields.io/badge/Ko--fi-FF5E5B?&style=for-the-badge&logo=ko-fi&logoColor=white" />](https://ko-fi.com/alismx)<br>
 
 - [Skylight Projects](https://skylight.digital/work/team-member/alis-akers/)
 
@@ -22,12 +20,12 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 
 ### 🌱 My pull requests
