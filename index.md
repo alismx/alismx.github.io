@@ -17,15 +17,15 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
+- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 
 ### 🌱 My pull requests
@@ -39,7 +39,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix(docs): update configuration URL in README.md 📜 ](https://github.com/MauriceNino/dashdot/pull/1227) on [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
 - [feat(github-actions): update AWS dev deploy workflow](https://github.com/CDCgov/dibbs-ecr-viewer/pull/942) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add gitsha to build scripts and packer configuration](https://github.com/CDCgov/dibbs-vm/pull/73) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [refactor(trigger-dev-workflow): remove redundant response handling fr…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/927) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
