@@ -17,8 +17,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -30,15 +30,15 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: add dependency on aws_s3_bucket.logging for aws_alb.ecs resource](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/38) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/77) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/76) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Potential fix for code scanning alert no. 1: Workflow does not contain permissions](https://github.com/alismx/alismx.github.io/pull/6) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [Potential fix for code scanning alert no. 2: Workflow does not contain permissions](https://github.com/alismx/alismx.github.io/pull/5) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [refactor: remove validation service configuration and related environ…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/37) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [chore: add Dependabot configuration for npm, docker and terraform wee…](https://github.com/CDCgov/dibbs-query-connector/pull/738) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [chore: add Dependabot config for npm, pip, docker, and docker-compose…](https://github.com/CDCgov/dibbs-ecr-refiner/pull/194) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [refactor: remove unused GitHub workflow and consolidate DB secrets](https://github.com/CDCgov/dibbs-aws/pull/75) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [fix(docs): update configuration URL in README.md 📜 ](https://github.com/MauriceNino/dashdot/pull/1227) on [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [feat(github-actions): update AWS dev deploy workflow](https://github.com/CDCgov/dibbs-ecr-viewer/pull/942) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [feat: add gitsha to build scripts and packer configuration](https://github.com/CDCgov/dibbs-vm/pull/73) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
