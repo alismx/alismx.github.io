@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add GCP as an option in the deployment environment and remove t…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1064) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: add dependency on aws_s3_bucket.logging for aws_alb.ecs resource](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/38) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/77) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/76) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -38,7 +39,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [refactor: remove validation service configuration and related environ…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/37) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [chore: add Dependabot configuration for npm, docker and terraform wee…](https://github.com/CDCgov/dibbs-query-connector/pull/738) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [chore: add Dependabot config for npm, pip, docker, and docker-compose…](https://github.com/CDCgov/dibbs-ecr-refiner/pull/194) on [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
-- [refactor: remove unused GitHub workflow and consolidate DB secrets](https://github.com/CDCgov/dibbs-aws/pull/75) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
