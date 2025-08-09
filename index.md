@@ -17,6 +17,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -25,7 +26,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 
 ### 🌱 My pull requests
