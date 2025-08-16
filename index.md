@@ -24,8 +24,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
-- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 🌱 My pull requests
