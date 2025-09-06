@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add SSH key name variable and pass it to modules and resources …](https://github.com/CDCgov/dibbs-aws/pull/78) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update YAML syntax, remove unnecessary quotes, and refine build …](https://github.com/CDCgov/dibbs-vm/pull/78) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add GCP as an option in the deployment environment and remove t…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1064) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: add dependency on aws_s3_bucket.logging for aws_alb.ecs resource](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/38) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -38,7 +39,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Potential fix for code scanning alert no. 1: Workflow does not contain permissions](https://github.com/alismx/alismx.github.io/pull/6) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [Potential fix for code scanning alert no. 2: Workflow does not contain permissions](https://github.com/alismx/alismx.github.io/pull/5) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [refactor: remove validation service configuration and related environ…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/37) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [chore: add Dependabot configuration for npm, docker and terraform wee…](https://github.com/CDCgov/dibbs-query-connector/pull/738) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 
 ### 📓 My gists
 
