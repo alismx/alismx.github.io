@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: set default bucket and prevent overwriting existing files in GC…](https://github.com/CDCgov/dibbs-vm/pull/83) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
+- [added code for application and db containers only](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add debug logs for checking existing database resources in terr…](https://github.com/CDCgov/dibbs-aws/pull/79) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add SSH key name variable and pass it to modules and resources …](https://github.com/CDCgov/dibbs-aws/pull/78) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update YAML syntax, remove unnecessary quotes, and refine build …](https://github.com/CDCgov/dibbs-vm/pull/78) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -37,8 +39,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: add dependency on aws_s3_bucket.logging for aws_alb.ecs resource](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/38) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/77) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/76) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [Potential fix for code scanning alert no. 1: Workflow does not contain permissions](https://github.com/alismx/alismx.github.io/pull/6) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [Potential fix for code scanning alert no. 2: Workflow does not contain permissions](https://github.com/alismx/alismx.github.io/pull/5) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
