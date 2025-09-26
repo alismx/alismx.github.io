@@ -32,7 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 - [feat: add scripts for uploading images to AWS and GCP, update build c…](https://github.com/CDCgov/dibbs-vm/pull/84) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: set default bucket and prevent overwriting existing files in GC…](https://github.com/CDCgov/dibbs-vm/pull/83) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [added code for application and db containers only](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
+- [QC VM code](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add debug logs for checking existing database resources in terr…](https://github.com/CDCgov/dibbs-aws/pull/79) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add SSH key name variable and pass it to modules and resources …](https://github.com/CDCgov/dibbs-aws/pull/78) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update YAML syntax, remove unnecessary quotes, and refine build …](https://github.com/CDCgov/dibbs-vm/pull/78) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
