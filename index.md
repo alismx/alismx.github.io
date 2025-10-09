@@ -17,8 +17,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1189) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [[Snyk] Security upgrade python from 3.13.7-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1185) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add scripts for uploading images to AWS and GCP, update build c…](https://github.com/CDCgov/dibbs-vm/pull/84) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: set default bucket and prevent overwriting existing files in GC…](https://github.com/CDCgov/dibbs-vm/pull/83) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [QC VM code](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: update YAML syntax, remove unnecessary quotes, and refine build …](https://github.com/CDCgov/dibbs-vm/pull/78) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add GCP as an option in the deployment environment and remove t…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1064) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: add dependency on aws_s3_bucket.logging for aws_alb.ecs resource](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/38) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/77) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [fix: replace terraform apply with terraform destroy in deployment wor…](https://github.com/CDCgov/dibbs-aws/pull/76) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
@@ -51,9 +51,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 👯 Recent followers
 
-- [seckinyasar](https://github.com/seckinyasar)
 - [ezgidemirci](https://github.com/ezgidemirci)
 - [J-Prichard-PHL](https://github.com/J-Prichard-PHL)
+- [shanice-skylight](https://github.com/shanice-skylight)
 
 ### 📈 My certifications
 
