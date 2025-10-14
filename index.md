@@ -25,8 +25,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 
 ### 🌱 My pull requests
 
