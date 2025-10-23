@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add readonlyRootFilesystem to ECS task definitions for enhanced…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/40) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1189) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [[Snyk] Security upgrade python from 3.13.7-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1185) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add scripts for uploading images to AWS and GCP, update build c…](https://github.com/CDCgov/dibbs-vm/pull/84) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add SSH key name variable and pass it to modules and resources …](https://github.com/CDCgov/dibbs-aws/pull/78) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update YAML syntax, remove unnecessary quotes, and refine build …](https://github.com/CDCgov/dibbs-vm/pull/78) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add GCP as an option in the deployment environment and remove t…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1064) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [fix: add dependency on aws_s3_bucket.logging for aws_alb.ecs resource](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/38) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
