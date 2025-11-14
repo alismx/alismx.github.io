@@ -17,19 +17,20 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 
 ### 🌱 My pull requests
 
+- [Update NavbarUSWDS to remove shutdown message](https://github.com/CDCgov/dibbs-site/pull/133) on [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [chore: update ECS module source to use new GitHub branch (alis/rorf) …](https://github.com/CDCgov/dibbs-aws/pull/81) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add readonlyRootFilesystem to ECS task definitions for enhanced…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/40) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1189) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [QC VM code](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: add debug logs for checking existing database resources in terr…](https://github.com/CDCgov/dibbs-aws/pull/79) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add SSH key name variable and pass it to modules and resources …](https://github.com/CDCgov/dibbs-aws/pull/78) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [fix: update YAML syntax, remove unnecessary quotes, and refine build …](https://github.com/CDCgov/dibbs-vm/pull/78) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
