@@ -17,19 +17,21 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 
 ### 🌱 My pull requests
 
+- [fix: update ECS module source to use specific branch](https://github.com/CDCgov/dibbs-aws/pull/82) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [feat: add alb_idle_timeout variable and configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/41) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update NavbarUSWDS to remove shutdown message](https://github.com/CDCgov/dibbs-site/pull/133) on [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [chore: update ECS module source to CDCgov/dibbs-ecr-viewer/aws version 0.9.0](https://github.com/CDCgov/dibbs-aws/pull/81) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add readonlyRootFilesystem to ECS task definitions for enhanced…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/40) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add scripts for uploading images to AWS and GCP, update build c…](https://github.com/CDCgov/dibbs-vm/pull/84) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: set default bucket and prevent overwriting existing files in GC…](https://github.com/CDCgov/dibbs-vm/pull/83) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [QC VM code](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [feat: add debug logs for checking existing database resources in terr…](https://github.com/CDCgov/dibbs-aws/pull/79) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat: add SSH key name variable and pass it to modules and resources …](https://github.com/CDCgov/dibbs-aws/pull/78) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
