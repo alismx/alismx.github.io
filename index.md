@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: update cw_retention_in_days to 365 days, CloudWatch.16](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/42) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: update ECS module source to use specific branch](https://github.com/CDCgov/dibbs-aws/pull/82) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add alb_idle_timeout variable and configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/41) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update NavbarUSWDS to remove shutdown message](https://github.com/CDCgov/dibbs-site/pull/133) on [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [[Snyk] Security upgrade python from 3.13.7-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1185) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add scripts for uploading images to AWS and GCP, update build c…](https://github.com/CDCgov/dibbs-vm/pull/84) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [feat: set default bucket and prevent overwriting existing files in GC…](https://github.com/CDCgov/dibbs-vm/pull/83) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [QC VM code](https://github.com/CDCgov/dibbs-vm/pull/82) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
