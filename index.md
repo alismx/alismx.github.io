@@ -51,9 +51,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 👯 Recent followers
 
+- [helallao](https://github.com/helallao)
+- [seckinyasar](https://github.com/seckinyasar)
 - [trinhminhtriet](https://github.com/trinhminhtriet)
-- [ezgidemirci](https://github.com/ezgidemirci)
-- [J-Prichard-PHL](https://github.com/J-Prichard-PHL)
 
 ### 📈 My certifications
 
