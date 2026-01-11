@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1278) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1277) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: update tf_branch and add event_type inputs to trigger-dev-workfl…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1274) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: update cw_retention_in_days to 365 days, CloudWatch.16](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/42) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: update ECS module source to use specific branch](https://github.com/CDCgov/dibbs-aws/pull/82) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [chore: update ECS module source to CDCgov/dibbs-ecr-viewer/aws version 0.9.0](https://github.com/CDCgov/dibbs-aws/pull/81) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add readonlyRootFilesystem to ECS task definitions for enhanced…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/40) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1189) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [[Snyk] Security upgrade python from 3.13.7-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1185) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [feat: add scripts for uploading images to AWS and GCP, update build c…](https://github.com/CDCgov/dibbs-vm/pull/84) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 
 ### 📓 My gists
 
