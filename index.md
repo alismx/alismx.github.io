@@ -17,6 +17,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -24,12 +25,13 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
-- [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
+- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 
 ### 🌱 My pull requests
 
+- [fix: add ecr processing timeout to ecs module](https://github.com/CDCgov/dibbs-aws/pull/86) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [fix: update ECS module source to alis/report_items branch](https://github.com/CDCgov/dibbs-aws/pull/85) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1278) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1277) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: update tf_branch and add event_type inputs to trigger-dev-workfl…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1274) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add alb_idle_timeout variable and configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/41) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update NavbarUSWDS to remove shutdown message](https://github.com/CDCgov/dibbs-site/pull/133) on [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [chore: update ECS module source to CDCgov/dibbs-ecr-viewer/aws version 0.9.0](https://github.com/CDCgov/dibbs-aws/pull/81) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat: add readonlyRootFilesystem to ECS task definitions for enhanced…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/40) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.0-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1189) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
