@@ -18,18 +18,19 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
+- [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 
 ### 🌱 My pull requests
 
+- [feat(waf): add AWS WAF configuration and variables](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/45) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: add ecr processing timeout to ecs module](https://github.com/CDCgov/dibbs-aws/pull/86) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update ECS module source to alis/report_items branch](https://github.com/CDCgov/dibbs-aws/pull/85) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1278) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: update ECS module source to use specific branch](https://github.com/CDCgov/dibbs-aws/pull/82) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add alb_idle_timeout variable and configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/41) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update NavbarUSWDS to remove shutdown message](https://github.com/CDCgov/dibbs-site/pull/133) on [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
-- [chore: update ECS module source to CDCgov/dibbs-ecr-viewer/aws version 0.9.0](https://github.com/CDCgov/dibbs-aws/pull/81) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
@@ -51,9 +51,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 👯 Recent followers
 
-- [helallao](https://github.com/helallao)
 - [trinhminhtriet](https://github.com/trinhminhtriet)
 - [ezgidemirci](https://github.com/ezgidemirci)
+- [J-Prichard-PHL](https://github.com/J-Prichard-PHL)
 
 ### 📈 My certifications
 
