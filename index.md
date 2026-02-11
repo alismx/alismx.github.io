@@ -17,20 +17,20 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 - [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot)
-- [CDCgov/dibbs-ecr-refiner](https://github.com/CDCgov/dibbs-ecr-refiner)
 
 ### 🌱 My pull requests
 
-- [feat(waf): add AWS WAF configuration and variables](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/45) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [feat(waf): add AWS WAF configuration, improve default compliance](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/45) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: add ecr processing timeout to ecs module](https://github.com/CDCgov/dibbs-aws/pull/86) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update ECS module source to alis/report_items branch](https://github.com/CDCgov/dibbs-aws/pull/85) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1278) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
