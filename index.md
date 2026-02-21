@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix(ecs): update ECS module source branch to report_items_1](https://github.com/CDCgov/dibbs-aws/pull/87) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat(waf): add AWS WAF configuration, improve default compliance](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/45) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: add ecr processing timeout to ecs module](https://github.com/CDCgov/dibbs-aws/pull/86) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [fix: update ECS module source to alis/report_items branch](https://github.com/CDCgov/dibbs-aws/pull/85) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -39,15 +40,14 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: update cw_retention_in_days to 365 days, CloudWatch.16](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/42) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: update ECS module source to use specific branch](https://github.com/CDCgov/dibbs-aws/pull/82) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [feat: add alb_idle_timeout variable and configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/41) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [Update NavbarUSWDS to remove shutdown message](https://github.com/CDCgov/dibbs-site/pull/133) on [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 
 ### 📓 My gists
 
+- [How to: Use qemu-img command to convert between vmdk, raw, qcow2, vdi, vhd, vhdx formats/disk images (qemu-img create, snapshot, resize etc.)](https://gist.github.com/9894bbbd9640074416f258bbaf3874ec)
 - [Emulating ARM with QEMU on Debian/Ubuntu](https://gist.github.com/3107fdd62a87607d7cc7b1368d84fc52)
 - [Debian 12 preseed file](https://gist.github.com/717776684587d3467b8c3980d2cba4e3)
 - [](https://gist.github.com/eb554c67c7013b27c0e16461c3321df9)
 - [](https://gist.github.com/a8c473968f0d87c0532944017f844363)
-- [Hidden content in markdown](https://gist.github.com/cffeb79c933f98279c46906f390fd3a0)
 
 ### 👯 Recent followers
 
