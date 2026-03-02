@@ -17,12 +17,12 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
-- [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Add update.sh script for playbook updates](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/20) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Update README with project documentation](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/13) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Update dockerless to depends on elastic container registry](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/46) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [refactor: replace `cat` with `cp` for copying wizard config to env file](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/4) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [fix(ecs): update ECS module source branch to report_items_1](https://github.com/CDCgov/dibbs-aws/pull/87) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: update ECS module source to alis/report_items branch](https://github.com/CDCgov/dibbs-aws/pull/85) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1278) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [[Snyk] Security upgrade python from 3.13.6-alpine to 3.14.2-alpine](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1277) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [fix: update tf_branch and add event_type inputs to trigger-dev-workfl…](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1274) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [fix: update cw_retention_in_days to 365 days, CloudWatch.16](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/42) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
