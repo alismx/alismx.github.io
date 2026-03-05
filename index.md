@@ -17,9 +17,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
 - [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
@@ -30,16 +30,16 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Revert &#34;Fix: Handle missing /dev/tty gracefully&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/35) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix: Handle missing /dev/tty gracefully](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/34) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix: Correct variable references in confirm_dot_env_var function](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/32) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix: Create empty .env files if they don&#39;t exist](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/30) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix wizard script path errors](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/29) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Revert &#34;Fix: Exit script if sudo is unavailable&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/27) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix: Exit script if sudo is unavailable](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/26) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Update paths from /opt and /home/ecr-viewer to use ~](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/23) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Alis/env var updates](https://github.com/CDCgov/dibbs-vm/pull/89) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [Patch release: docker_dep changes](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/47) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [Issue #17: Add user privilege checks](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/22) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Add update.sh script for playbook updates](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/20) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Update README with project documentation](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/13) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Update dockerless to depends on elastic container registry](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/46) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [refactor: replace `cat` with `cp` for copying wizard config to env file](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/4) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [fix(ecs): update ECS module source branch to report_items_1](https://github.com/CDCgov/dibbs-aws/pull/87) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [feat(waf): add AWS WAF configuration, improve default compliance](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/45) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [fix: add ecr processing timeout to ecs module](https://github.com/CDCgov/dibbs-aws/pull/86) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
