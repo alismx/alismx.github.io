@@ -17,9 +17,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
 - [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: Prompt for sudo when running playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/38) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [refactor: Convert to Ansible role structure](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/36) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Revert &#34;Fix: Handle missing /dev/tty gracefully&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/35) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Handle missing /dev/tty gracefully](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/34) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Correct variable references in confirm_dot_env_var function](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/32) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Revert &#34;Fix: Exit script if sudo is unavailable&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/27) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Exit script if sudo is unavailable](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/26) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Update paths from /opt and /home/ecr-viewer to use ~](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/23) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Alis/env var updates](https://github.com/CDCgov/dibbs-vm/pull/89) on [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
-- [Patch release: docker_dep changes](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/47) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
