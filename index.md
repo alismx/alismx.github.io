@@ -30,16 +30,16 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
-- [fix: Prompt for sudo when running playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/38) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Add Checkov GitHub workflow](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/48) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [refactor: consistent file path variables](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/42) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [fix: resolve ansible-lint violations](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/40) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [refactor: Convert to Ansible role with force_wizard support](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/38) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [refactor: Convert to Ansible role structure](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/36) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Revert &#34;Fix: Handle missing /dev/tty gracefully&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/35) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Handle missing /dev/tty gracefully](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/34) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Correct variable references in confirm_dot_env_var function](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/32) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Create empty .env files if they don&#39;t exist](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/30) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix wizard script path errors](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/29) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Revert &#34;Fix: Exit script if sudo is unavailable&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/27) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix: Exit script if sudo is unavailable](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/26) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Update paths from /opt and /home/ecr-viewer to use ~](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/23) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
