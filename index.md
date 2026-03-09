@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Fix: Correct AZURE_PG_DUAL CONFIG_NAME in wizard.sh](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/45) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Add Checkov security scan workflow](https://github.com/CDCgov/dibbs-azure/pull/17) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [Add Checkov GitHub workflow](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/48) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [refactor: consistent file path variables](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/42) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Revert &#34;Fix: Handle missing /dev/tty gracefully&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/35) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Handle missing /dev/tty gracefully](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/34) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Correct variable references in confirm_dot_env_var function](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/32) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix: Create empty .env files if they don&#39;t exist](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/30) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
