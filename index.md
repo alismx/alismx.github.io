@@ -17,10 +17,10 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
 - [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -30,16 +30,16 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Clear wizard file contents before and after use](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/54) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix shell source command for POSIX /bin/sh compatibility](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/53) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Read all environment variables from .env file in start_stack](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/52) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix: load .env file variables as facts when not already defined](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/51) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix: exclude empty strings from .env file writes](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/50) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix CONFIG_NAME not defined error in AWS/GCP settings](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/49) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Fix case mismatch in Docker and fail2ban handler notifications](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/48) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Add sudo to install commands in prereqs script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/47) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Add sudo prompt to prereqs script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/46) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: Correct AZURE_PG_DUAL CONFIG_NAME in wizard.sh](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/45) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Add Checkov security scan workflow](https://github.com/CDCgov/dibbs-azure/pull/17) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
-- [Add Checkov GitHub workflow](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/48) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [refactor: consistent file path variables](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/42) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [fix: resolve ansible-lint violations](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/40) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [refactor: Convert to Ansible role with force_wizard support](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/38) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [refactor: Convert to Ansible role structure](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/36) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Revert &#34;Fix: Handle missing /dev/tty gracefully&#34;](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/35) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix: Handle missing /dev/tty gracefully](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/34) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix: Correct variable references in confirm_dot_env_var function](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/32) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
