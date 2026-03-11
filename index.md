@@ -18,18 +18,20 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
 - [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
-- [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 - [CDCgov/dibbs-site](https://github.com/CDCgov/dibbs-site)
 
 ### 🌱 My pull requests
 
+- [Add when condition to CONFIG_NAME write in wizard.yaml](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/56) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
+- [Delete update.sh script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/55) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Clear wizard file contents before and after use](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/54) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix shell source command for POSIX /bin/sh compatibility](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/53) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Read all environment variables from .env file in start_stack](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/52) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Fix CONFIG_NAME not defined error in AWS/GCP settings](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/49) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix case mismatch in Docker and fail2ban handler notifications](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/48) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Add sudo to install commands in prereqs script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/47) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Add sudo prompt to prereqs script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/46) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix: Correct AZURE_PG_DUAL CONFIG_NAME in wizard.sh](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/45) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
