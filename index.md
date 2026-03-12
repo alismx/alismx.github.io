@@ -17,9 +17,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [ip_rules](https://github.com/CDCgov/dibbs-azure/pull/18) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [Add when condition to CONFIG_NAME write in wizard.yaml](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/56) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Delete update.sh script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/55) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Clear wizard file contents before and after use](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/54) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Fix: exclude empty strings from .env file writes](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/50) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix CONFIG_NAME not defined error in AWS/GCP settings](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/49) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix case mismatch in Docker and fail2ban handler notifications](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/48) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Add sudo to install commands in prereqs script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/47) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
