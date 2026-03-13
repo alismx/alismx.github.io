@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [docs: add comparison document for sunsetting dibbs-vm in favor of pla…](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/57) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [ip_rules](https://github.com/CDCgov/dibbs-azure/pull/18) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [Add when condition to CONFIG_NAME write in wizard.yaml](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/56) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Delete update.sh script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/55) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Fix: load .env file variables as facts when not already defined](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/51) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix: exclude empty strings from .env file writes](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/50) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix CONFIG_NAME not defined error in AWS/GCP settings](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/49) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix case mismatch in Docker and fail2ban handler notifications](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/48) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
