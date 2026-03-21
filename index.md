@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: secure GitHub Actions workflow - remove inputs and add permissions](https://github.com/skylight-hq/dibbs-landing/pull/14) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [chore(ci): add Checkov security scanning workflow](https://github.com/CDCgov/dibbs-query-connector/pull/909) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [feat(ecs): update ECS module source to use feature branch](https://github.com/CDCgov/dibbs-aws/pull/88) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [docs: add comparison document for sunsetting dibbs-vm in favor of pla…](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/57) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Clear wizard file contents before and after use](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/54) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Fix shell source command for POSIX /bin/sh compatibility](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/53) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Read all environment variables from .env file in start_stack](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/52) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix: load .env file variables as facts when not already defined](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/51) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
