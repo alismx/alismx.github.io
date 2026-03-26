@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore(governance): reduce S3 object retention periods and add configu…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/50) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update dependabot.yml to include npm and GitHub Actions](https://github.com/skylight-hq/dibbs-landing/pull/21) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [fix: secure GitHub Actions workflow - remove inputs and add permissions](https://github.com/skylight-hq/dibbs-landing/pull/14) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [chore(ci): add Checkov security scanning workflow](https://github.com/CDCgov/dibbs-query-connector/pull/909) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Add when condition to CONFIG_NAME write in wizard.yaml](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/56) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Delete update.sh script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/55) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [Clear wizard file contents before and after use](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/54) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Fix shell source command for POSIX /bin/sh compatibility](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/53) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
