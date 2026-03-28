@@ -17,9 +17,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix(s3-logging): relax PutObject resource ARN for CloudTrail](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [fix: add s3:PutObjectAcl permission for ALB access logs](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/51) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [chore(governance): reduce S3 object retention periods and add configu…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/50) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update dependabot.yml to include npm and GitHub Actions](https://github.com/skylight-hq/dibbs-landing/pull/21) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [fix: secure GitHub Actions workflow - remove inputs and add permissions](https://github.com/skylight-hq/dibbs-landing/pull/14) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [docs: add comparison document for sunsetting dibbs-vm in favor of pla…](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/57) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [ip_rules](https://github.com/CDCgov/dibbs-azure/pull/18) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [Add when condition to CONFIG_NAME write in wizard.yaml](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/56) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Delete update.sh script](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/55) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [Clear wizard file contents before and after use](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/54) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
