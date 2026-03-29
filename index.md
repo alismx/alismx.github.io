@@ -17,8 +17,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [alismx/nomad](https://github.com/alismx/nomad)
+- [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
@@ -26,7 +27,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [CDCgov/dibbs-vm](https://github.com/CDCgov/dibbs-vm)
 - [alismx/generate-pg-data](https://github.com/alismx/generate-pg-data)
 - [alismx/terraform-provider-scaffolding-framework](https://github.com/alismx/terraform-provider-scaffolding-framework)
-- [alismx/hugo-theme-stack-starter](https://github.com/alismx/hugo-theme-stack-starter)
 
 ### 🌱 My pull requests
 
