@@ -30,7 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
-- [fix(s3-logging): relax PutObject resource ARN for CloudTrail](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [Use Node.js script for database migrations](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1400) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [fix: add ECR scanning and relax S3 logging for ALB](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: add s3:PutObjectAcl permission for ALB access logs](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/51) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [chore(governance): reduce S3 object retention periods and add configu…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/50) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update dependabot.yml to include npm and GitHub Actions](https://github.com/skylight-hq/dibbs-landing/pull/21) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat(ecs): update ECS module source to use feature branch](https://github.com/CDCgov/dibbs-aws/pull/88) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [docs: add comparison document for sunsetting dibbs-vm in favor of pla…](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/57) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 - [ip_rules](https://github.com/CDCgov/dibbs-azure/pull/18) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
-- [Add when condition to CONFIG_NAME write in wizard.yaml](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/56) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
 ### 📓 My gists
 
