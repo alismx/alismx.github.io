@@ -18,8 +18,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [alismx/nomad](https://github.com/alismx/nomad)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [alismx/nomad](https://github.com/alismx/nomad)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -30,16 +30,16 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Configure Dependabot for Terraform modules](https://github.com/CDCgov/dibbs-aws/pull/90) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [refactor: init script run](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1402) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Use Node.js script for database migrations](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1400) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [fix: add ECR scanning and relax S3 logging for ALB](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [feat: add ECR enhanced scanning and fix S3 logging configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: add s3:PutObjectAcl permission for ALB access logs](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/51) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [chore(governance): reduce S3 object retention periods and add configu…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/50) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Update dependabot.yml to include npm and GitHub Actions](https://github.com/skylight-hq/dibbs-landing/pull/21) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [fix: secure GitHub Actions workflow - remove inputs and add permissions](https://github.com/skylight-hq/dibbs-landing/pull/14) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [chore(ci): add Checkov security scanning workflow](https://github.com/CDCgov/dibbs-query-connector/pull/909) on [CDCgov/dibbs-query-connector](https://github.com/CDCgov/dibbs-query-connector)
 - [feat(ecs): update ECS module source to use feature branch](https://github.com/CDCgov/dibbs-aws/pull/88) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [docs: add comparison document for sunsetting dibbs-vm in favor of pla…](https://github.com/alismx/dibbs-ecr-viewer-playbook/pull/57) on [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
-- [ip_rules](https://github.com/CDCgov/dibbs-azure/pull/18) on [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 
 ### 📓 My gists
 
