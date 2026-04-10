@@ -17,9 +17,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
-- [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
-- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
+- [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/nomad](https://github.com/alismx/nomad)
@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [docs (#2)](https://github.com/alismx/dibbs-cloud-tools/pull/3) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
 - [chore: add i-am-devops-eng.png image file](https://github.com/alismx/DevOpsMemes/pull/1) on [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [docs](https://github.com/alismx/dibbs-cloud-tools/pull/2) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
 - [refactor: fix INTREGRATED typo and update env config structure](https://github.com/alismx/dibbs-cloud-tools/pull/1) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Use Node.js script for database migrations](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1400) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add ECR enhanced scanning and fix S3 logging configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: add s3:PutObjectAcl permission for ALB access logs](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/51) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [chore(governance): reduce S3 object retention periods and add configu…](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/50) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
