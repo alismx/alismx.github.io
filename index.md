@@ -30,6 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore(security): add permissions and descriptions to security hardening](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [Adding fhir-converter-proxy](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/54) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [docs (#2)](https://github.com/alismx/dibbs-cloud-tools/pull/3) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
 - [chore: add i-am-devops-eng.png image file](https://github.com/alismx/DevOpsMemes/pull/1) on [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
 - [docs](https://github.com/alismx/dibbs-cloud-tools/pull/2) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
@@ -38,8 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Configure Dependabot for Terraform modules](https://github.com/CDCgov/dibbs-aws/pull/90) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [refactor: init script run](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1402) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Use Node.js script for database migrations](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1400) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [feat: add ECR enhanced scanning and fix S3 logging configuration](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/52) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [fix: add s3:PutObjectAcl permission for ALB access logs](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/51) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
