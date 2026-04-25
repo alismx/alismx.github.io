@@ -30,7 +30,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
-- [chore(security): add permissions and descriptions to security hardening](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [chore(security): add checkov skips to suppress known infrastructure warnings](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Adding fhir-converter-proxy](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/54) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [docs (#2)](https://github.com/alismx/dibbs-cloud-tools/pull/3) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
 - [chore: add i-am-devops-eng.png image file](https://github.com/alismx/DevOpsMemes/pull/1) on [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat(security): enable enhanced ECR registry scanning](https://github.com/CDCgov/dibbs-aws/pull/92) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Configure Dependabot for Terraform modules](https://github.com/CDCgov/dibbs-aws/pull/90) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [refactor: init script run](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1402) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [Use Node.js script for database migrations](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1400) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
