@@ -30,6 +30,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [chore(security): add checkov skips to suppress known infrastructure warnings](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Adding fhir-converter-proxy](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/54) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -39,7 +40,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [refactor: fix INTREGRATED typo and update env config structure](https://github.com/alismx/dibbs-cloud-tools/pull/1) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
 - [feat(security): enable enhanced ECR registry scanning](https://github.com/CDCgov/dibbs-aws/pull/92) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Configure Dependabot for Terraform modules](https://github.com/CDCgov/dibbs-aws/pull/90) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [refactor: init script run](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1402) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
