@@ -32,7 +32,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 - [feat: add eCR Viewer VM deployment scripts and README rewrite](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [chore(security): add descriptions, checkov skips, and CI permissions](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [chore(security): harden RDS, EC2, security groups, OIDC, and deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Adding fhir-converter-proxy](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/54) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [docs (#2)](https://github.com/alismx/dibbs-cloud-tools/pull/3) on [alismx/dibbs-cloud-tools](https://github.com/alismx/dibbs-cloud-tools)
 - [chore: add i-am-devops-eng.png image file](https://github.com/alismx/DevOpsMemes/pull/1) on [alismx/DevOpsMemes](https://github.com/alismx/DevOpsMemes)
