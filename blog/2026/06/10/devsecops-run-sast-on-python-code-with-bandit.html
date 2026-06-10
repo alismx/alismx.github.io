@@ -10,31 +10,29 @@
       
       
       
-        <link rel="canonical" href="https://alismx.dev/blog/index.html">
+        <link rel="canonical" href="https://alismx.dev/blog/2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html">
       
       
-        <link rel="prev" href="../index.html">
+        <link rel="prev" href="../09/devsecops-scan-for-secrets-in-your-git-repository.html">
       
-      
-        <link rel="next" href="category/devsecops.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Blog - Alis Akers</title>
+        <title>DevSecOps: Run SAST on Python Code with Bandit - Alis Akers</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#devsecops-run-sast-on-python-code-with-bandit" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Alis Akers" class="md-header__button md-logo" aria-label="Alis Akers" data-md-component="logo">
+    <a href="../../../../index.html" title="Alis Akers" class="md-header__button md-logo" aria-label="Alis Akers" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              DevSecOps: Run SAST on Python Code with Bandit
             
           </span>
         </div>
@@ -223,7 +221,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -234,7 +234,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Alis Akers" class="md-nav__button md-logo" aria-label="Alis Akers" data-md-component="logo">
+    <a href="../../../../index.html" title="Alis Akers" class="md-nav__button md-logo" aria-label="Alis Akers" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -264,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../../../index.html" class="md-nav__link">
         
   
   
@@ -341,19 +341,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -369,7 +360,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -431,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive/2026.html" class="md-nav__link">
+      <a href="../../../archive/2026.html" class="md-nav__link">
         
   
   
@@ -516,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/devsecops.html" class="md-nav__link">
+      <a href="../../../category/devsecops.html" class="md-nav__link">
         
   
   
@@ -561,62 +551,352 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
-<p>Posts about stuff and DevSecOps.</p>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/alismx.png" alt="Alis Akers">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2026-06-10 00:00:00+00:00">June 10, 2026</time></li>
-        
-          <li class="md-meta__item">
-            in
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../index.html" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
             
-              <a href="category/devsecops.html" class="md-meta__link">DevSecOps</a></li>
-        
-        
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/alismx.png" alt="Alis Akers">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/alismx">Alis Akers</a>
+                        
+                      </strong>
+                      <br>
+                      DevOps engineer
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-06-10 00:00:00+00:00" class="md-ellipsis">June 10, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../category/devsecops.html">DevSecOps</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              4 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
-          <li class="md-meta__item">
             
-              4 min read
-            
-          </li>
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-bandit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Bandit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Bandit">
+      <ul class="md-nav__list">
         
-        
-          <span class="md-pin"></span>
+          <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extras
+      
+    </span>
+  </a>
+  
+</li>
         
       </ul>
+    </nav>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#understand-the-rule-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand the rule IDs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan a project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yaml-recommended-works-with-all-extras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML (recommended, works with all extras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppress-individual-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppress individual findings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#baseline-ignore-known-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline: ignore known vulnerabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-to-local-git-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add to local git hooks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-to-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add to CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+          
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="devsecops-run-sast-on-python-code-with-bandit"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html">DevSecOps: Run SAST on Python Code with Bandit</a></h2>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">bandit</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ci</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">git</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">github</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">python</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sast</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">security</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="devsecops-run-sast-on-python-code-with-bandit">DevSecOps: Run SAST on Python Code with Bandit<a class="headerlink" href="#devsecops-run-sast-on-python-code-with-bandit" title="Permanent link">&para;</a></h1>
 <p>Insecure Python patterns (<code>eval()</code>, <code>os.system()</code>, hardcoded credentials) end up in production repos. Bandit scans Python code to find them.</p>
 <p><strong>TL;DR</strong>: Install Bandit, configure your repository, run a scan, and add it to your CI pipeline to catch security issues before they reach production.</p>
 <hr />
-<h3 id="install-bandit"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#install-bandit">Install Bandit</a></h3>
+<h2 id="install-bandit">Install Bandit<a class="headerlink" href="#install-bandit" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>bandit
 </code></pre></div>
 <p>The apt package is outdated at 1.6.2. Use pip for the current version (1.9.4).</p>
 <p>Verify:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bandit<span class="w"> </span>--version
 </code></pre></div>
-<h4 id="extras"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#extras">Extras</a></h4>
+<h3 id="extras">Extras<a class="headerlink" href="#extras" title="Permanent link">&para;</a></h3>
 <p>Bandit has optional extras for additional functionality:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># SARIF output formatter (for GitHub and other tools)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>pip<span class="w"> </span>install<span class="w"> </span>bandit<span class="o">[</span>sarif<span class="o">]</span>
@@ -629,7 +909,7 @@
 </code></pre></div>
 <p>These aren't needed to start. They become useful once you're past the basic scanning phase.</p>
 <hr />
-<h3 id="understand-the-rule-ids"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#understand-the-rule-ids">Understand the rule IDs</a></h3>
+<h2 id="understand-the-rule-ids">Understand the rule IDs<a class="headerlink" href="#understand-the-rule-ids" title="Permanent link">&para;</a></h2>
 <p>Bandit uses alphanumeric rule IDs. The letter prefix groups them by category:</p>
 <table>
 <thead>
@@ -678,7 +958,7 @@
 </tbody>
 </table>
 <p>The most commonly skipped rules are B101 (assert statements) and B602 (os.system). Whether you skip them depends on your code. If you're running Bandit on test files or production code with assertions, they'll generate noise.</p>
-<h3 id="scan-a-project"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#scan-a-project">Scan a project</a></h3>
+<h2 id="scan-a-project">Scan a project<a class="headerlink" href="#scan-a-project" title="Permanent link">&para;</a></h2>
 <p>Basic usage:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Single file</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>bandit<span class="w"> </span>single_file.py
@@ -712,7 +992,7 @@
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>--confidence-level<span class="w"> </span>high
 </code></pre></div>
 <hr />
-<h3 id="output-formats"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#output-formats">Output formats</a></h3>
+<h2 id="output-formats">Output formats<a class="headerlink" href="#output-formats" title="Permanent link">&para;</a></h2>
 <p>Bandit supports several output formats. The default is plain text. For CI integration, use JSON or SARIF.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Default: human-readable text</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.
@@ -724,9 +1004,9 @@
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>-f<span class="w"> </span>sarif<span class="w"> </span>-o<span class="w"> </span>findings.sarif
 </code></pre></div>
 <hr />
-<h3 id="configuration-files"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#configuration-files">Configuration files</a></h3>
+<h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h2>
 <p>You can configure Bandit with a YAML or TOML file, or an INI file called <code>.bandit</code>.</p>
-<h4 id="yaml-recommended-works-with-all-extras"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#yaml-recommended-works-with-all-extras">YAML (recommended, works with all extras)</a></h4>
+<h3 id="yaml-recommended-works-with-all-extras">YAML (recommended, works with all extras)<a class="headerlink" href="#yaml-recommended-works-with-all-extras" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># bandit.yaml</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">skips</span><span class="p">:</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">B101</span>
@@ -738,7 +1018,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>bandit<span class="w"> </span>-c<span class="w"> </span>bandit.yaml<span class="w"> </span>-r<span class="w"> </span>.
 </code></pre></div>
-<h4 id="toml"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#toml">TOML</a></h4>
+<h3 id="toml">TOML<a class="headerlink" href="#toml" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># pyproject.toml</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">[tool.bandit]</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">exclude_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;migrations&quot;</span><span class="p">]</span>
@@ -746,13 +1026,13 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>bandit<span class="w"> </span>-c<span class="w"> </span>pyproject.toml<span class="w"> </span>-r<span class="w"> </span>.
 </code></pre></div>
-<h4 id="config-generator"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#config-generator">Config generator</a></h4>
+<h3 id="config-generator">Config generator<a class="headerlink" href="#config-generator" title="Permanent link">&para;</a></h3>
 <p>Bandit ships <code>bandit-config-generator</code> which generates a full configuration file with all detected plugins:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>bandit-config-generator<span class="w"> </span>-s<span class="w"> </span>B101,B602<span class="w"> </span>-o<span class="w"> </span>bandit.yaml
 </code></pre></div>
 <p>This is useful for understanding what plugins are available and their default settings. Edit the output down to what your project actually needs.</p>
 <hr />
-<h3 id="suppress-individual-findings"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#suppress-individual-findings">Suppress individual findings</a></h3>
+<h2 id="suppress-individual-findings">Suppress individual findings<a class="headerlink" href="#suppress-individual-findings" title="Permanent link">&para;</a></h2>
 <p>If a line triggers a finding that you've reviewed and determined is safe, add <code># nosec</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># This hash is for unique IDs only, not security</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">the_hash</span> <span class="o">=</span> <span class="n">md5</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1"># nosec</span>
@@ -765,7 +1045,7 @@
 </code></pre></div>
 <p>Always add a comment explaining <em>why</em> you're suppressing the finding. Without context, future reviewers won't know if the suppression is intentional or lazy.</p>
 <hr />
-<h3 id="baseline-ignore-known-vulnerabilities"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#baseline-ignore-known-vulnerabilities">Baseline: ignore known vulnerabilities</a></h3>
+<h2 id="baseline-ignore-known-vulnerabilities">Baseline: ignore known vulnerabilities<a class="headerlink" href="#baseline-ignore-known-vulnerabilities" title="Permanent link">&para;</a></h2>
 <p>If you have findings that are known and not currently actionable (e.g., a cleartext password in a unit test), generate a baseline and pass it to subsequent scans:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Generate baseline</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>bandit<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>baseline.json<span class="w"> </span>-r<span class="w"> </span>.
@@ -775,7 +1055,7 @@
 </code></pre></div>
 <p>This is cleaner than suppressing individual lines when you have dozens of known-vulnerabilities.</p>
 <hr />
-<h3 id="add-to-local-git-hooks"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#add-to-local-git-hooks">Add to local git hooks</a></h3>
+<h2 id="add-to-local-git-hooks">Add to local git hooks<a class="headerlink" href="#add-to-local-git-hooks" title="Permanent link">&para;</a></h2>
 <p>Add Bandit as a pre-commit git hook:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="ch">#!/bin/sh</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1"># .git/hooks/pre-commit</span>
@@ -787,7 +1067,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
 </code></pre></div>
 <hr />
-<h3 id="add-to-cicd"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#add-to-cicd">Add to CI/CD</a></h3>
+<h2 id="add-to-cicd">Add to CI/CD<a class="headerlink" href="#add-to-cicd" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># .github/workflows/bandit.yml</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bandit SAST</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
@@ -811,7 +1091,7 @@
 </code></pre></div>
 <p>The SARIF output format integrates directly with GitHub's code scanning UI, which is nicer than trying to parse plain-text results.</p>
 <hr />
-<h3 id="takeaways"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#takeaways">Takeaways</a></h3>
+<h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Bandit catches the common things: <code>eval()</code>, <code>os.system()</code>, weak crypto, hardcoded secrets</li>
 <li>Use <code>--severity-level</code> and <code>--confidence-level</code> to control finding noise</li>
@@ -822,136 +1102,25 @@
 <li>The apt version is stale. Use pip for the current rule set.</li>
 <li>Always explain <em>why</em> when you skip a rule or add a <code># nosec</code> comment</li>
 </ul>
-    
-    
-      <hr>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/alismx.png" alt="Alis Akers">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2026-06-09 00:00:00+00:00">June 9, 2026</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/devsecops.html" class="md-meta__link">DevSecOps</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-          <span class="md-pin"></span>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="devsecops-scan-for-secrets-in-your-git-repository"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html">DevSecOps: Scan for Secrets in Your Git Repository</a></h2>
-<p>Accidentally committed API keys and tokens cause breaches. Gitleaks scans Git history for these patterns.</p>
-<p><strong>TL;DR</strong>: Install gitleaks, configure your repository, run a scan, and add it to your CI pipeline to catch secrets before they reach production.</p>
-<hr />
-<h3 id="install-gitleaks"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#install-gitleaks">Install gitleaks</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
-</code></pre></div>
-<p>Verify the install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gitleaks<span class="w"> </span>--version
-</code></pre></div>
-<h3 id="configure-gitleaks"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#configure-gitleaks">Configure gitleaks</a></h3>
-<p>Create a <code>gitleaks.toml</code> file in your repository root:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[extend]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;github.com/gitleaks/gitleaks&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">[allowlist]</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;global allow lists&quot;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">regexes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1"># patterns to allow</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">]</span>
-</code></pre></div>
-<p>Add a custom rule:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[[rules]]</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-custom-secret&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Custom secret pattern&quot;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;(your-pattern-here)&#39;&#39;&#39;</span>
-</code></pre></div>
-<h3 id="scan-your-repository"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#scan-your-repository">Scan Your Repository</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Full history scan</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Verbose output (shows actual secrets)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Verbose output (redacts actual secrets)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact
-</code></pre></div>
-<h3 id="add-to-local-git-hooks"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#add-to-local-git-hooks">Add to local git hooks</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/sh</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># .git/hooks/pre-commit</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact<span class="w"> </span>/dev/null
-</code></pre></div>
-<p>Make it executable:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
-</code></pre></div>
-<h3 id="add-gitleaks-to-cicd"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#add-gitleaks-to-cicd">Add gitleaks to CI/CD</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">scan</span><span class="p">:</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v6</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks/gitleaks-action@v3</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
-</code></pre></div>
-<h3 id="takeaways"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#takeaways">Takeaways</a></h3>
-<ul>
-<li>Scan the full Git history. People commit secrets and then delete them from current files, but the values remain in commit history.</li>
-<li>Use <code>--verbose</code> when investigating findings. It reveals the secret value, not just the file and line.</li>
-<li>Add gitleaks to your CI on pull requests. Preventing the secret from reaching production is cheaper than responding after it does.</li>
-</ul>
-    
-    
-      <hr>
-    
-  </div>
-</article>
-      
-      
-        
-          
 
 
 
-<nav class="md-pagination">
+
+
+
+
   
-</nav>
-        
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -1003,10 +1172,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

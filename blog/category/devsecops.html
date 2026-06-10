@@ -583,6 +583,267 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2026-06-10 00:00:00+00:00">June 10, 2026</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="devsecops.html" class="md-meta__link">DevSecOps</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+        
+          <span class="md-pin"></span>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="devsecops-run-sast-on-python-code-with-bandit"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html">DevSecOps: Run SAST on Python Code with Bandit</a></h2>
+<p>Insecure Python patterns (<code>eval()</code>, <code>os.system()</code>, hardcoded credentials) end up in production repos. Bandit scans Python code to find them.</p>
+<p><strong>TL;DR</strong>: Install Bandit, configure your repository, run a scan, and add it to your CI pipeline to catch security issues before they reach production.</p>
+<hr />
+<h3 id="install-bandit"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#install-bandit">Install Bandit</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>pip<span class="w"> </span>install<span class="w"> </span>bandit
+</code></pre></div>
+<p>The apt package is outdated at 1.6.2. Use pip for the current version (1.9.4).</p>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>bandit<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="extras"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#extras">Extras</a></h4>
+<p>Bandit has optional extras for additional functionality:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1"># SARIF output formatter (for GitHub and other tools)</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>pip<span class="w"> </span>install<span class="w"> </span>bandit<span class="o">[</span>sarif<span class="o">]</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="c1"># Baseline comparison (ignore known-vulnerabilities)</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>pip<span class="w"> </span>install<span class="w"> </span>bandit<span class="o">[</span>baseline<span class="o">]</span>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="c1"># TOML configuration support</span>
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>pip<span class="w"> </span>install<span class="w"> </span>bandit<span class="o">[</span>toml<span class="o">]</span>
+</code></pre></div>
+<p>These aren't needed to start. They become useful once you're past the basic scanning phase.</p>
+<hr />
+<h3 id="understand-the-rule-ids"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#understand-the-rule-ids">Understand the rule IDs</a></h3>
+<p>Bandit uses alphanumeric rule IDs. The letter prefix groups them by category:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Category</th>
+<th>What it checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B1xx</td>
+<td>Assertion</td>
+<td><code>assert</code> statements in production code</td>
+</tr>
+<tr>
+<td>B2xx</td>
+<td>Exec/eval</td>
+<td><code>eval()</code>, <code>exec()</code>, <code>pickle</code> usage</td>
+</tr>
+<tr>
+<td>B3xx</td>
+<td>Blacklist calls</td>
+<td>Dangerous function calls (shell injection, SSL bypass)</td>
+</tr>
+<tr>
+<td>B4xx</td>
+<td>Blacklist imports</td>
+<td>Insecure imports (pickle, xml, subprocess with shell=True)</td>
+</tr>
+<tr>
+<td>B5xx</td>
+<td>Crypto</td>
+<td>Weak crypto algorithms (MD5, DES, RC4)</td>
+</tr>
+<tr>
+<td>B6xx</td>
+<td>OS</td>
+<td><code>os.system()</code>, <code>subprocess</code> with shell=True, command injection</td>
+</tr>
+<tr>
+<td>B7xx</td>
+<td>Network</td>
+<td>SSL/TLS misconfiguration, insecure protocols</td>
+</tr>
+</tbody>
+</table>
+<p>The most commonly skipped rules are B101 (assert statements) and B602 (os.system). Whether you skip them depends on your code. If you're running Bandit on test files or production code with assertions, they'll generate noise.</p>
+<h3 id="scan-a-project"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#scan-a-project">Scan a project</a></h3>
+<p>Basic usage:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="c1"># Single file</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>bandit<span class="w"> </span>single_file.py
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="c1"># Entire directory</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>bandit<span class="w"> </span>-r<span class="w"> </span>/path/to/project
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="c1"># Limit context lines shown in output</span>
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>bandit<span class="w"> </span>examples/*.py<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--severity-level<span class="w"> </span>high
+</code></pre></div>
+<p>Skip specific rules by ID:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>--skip<span class="w"> </span>B101,B602
+</code></pre></div>
+<p>Skip specific directories:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>--exclude<span class="w"> </span>./tests/
+</code></pre></div>
+<p>Scan from stdin:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>cat<span class="w"> </span>examples/imports.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>bandit<span class="w"> </span>-
+</code></pre></div>
+<p>You can filter by severity or confidence level:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1"># Medium security level</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>-ll
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="c1"># High security + High confidence</span>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>-lll<span class="w"> </span>-iii
+<a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>
+<a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a><span class="c1"># By severity name</span>
+<a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>--severity-level<span class="w"> </span>high
+<a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>
+<a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a><span class="c1"># By confidence name</span>
+<a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>--confidence-level<span class="w"> </span>high
+</code></pre></div>
+<hr />
+<h3 id="output-formats"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#output-formats">Output formats</a></h3>
+<p>Bandit supports several output formats. The default is plain text. For CI integration, use JSON or SARIF.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1"># Default: human-readable text</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="c1"># JSON (parseable in CI)</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>findings.json
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a><span class="c1"># SARIF (for GitHub and other tools)</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>-f<span class="w"> </span>sarif<span class="w"> </span>-o<span class="w"> </span>findings.sarif
+</code></pre></div>
+<hr />
+<h3 id="configuration-files"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#configuration-files">Configuration files</a></h3>
+<p>You can configure Bandit with a YAML or TOML file, or an INI file called <code>.bandit</code>.</p>
+<h4 id="yaml-recommended-works-with-all-extras"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#yaml-recommended-works-with-all-extras">YAML (recommended, works with all extras)</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="c1"># bandit.yaml</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="nt">skips</span><span class="p">:</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">B101</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">B602</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>
+<a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a><span class="nt">exclude_dirs</span><span class="p">:</span>
+<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests</span>
+<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">migrations</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>bandit<span class="w"> </span>-c<span class="w"> </span>bandit.yaml<span class="w"> </span>-r<span class="w"> </span>.
+</code></pre></div>
+<h4 id="toml"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#toml">TOML</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="c1"># pyproject.toml</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="k">[tool.bandit]</span>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="n">exclude_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;migrations&quot;</span><span class="p">]</span>
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a><span class="n">skips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;B101&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B602&quot;</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>bandit<span class="w"> </span>-c<span class="w"> </span>pyproject.toml<span class="w"> </span>-r<span class="w"> </span>.
+</code></pre></div>
+<h4 id="config-generator"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#config-generator">Config generator</a></h4>
+<p>Bandit ships <code>bandit-config-generator</code> which generates a full configuration file with all detected plugins:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>bandit-config-generator<span class="w"> </span>-s<span class="w"> </span>B101,B602<span class="w"> </span>-o<span class="w"> </span>bandit.yaml
+</code></pre></div>
+<p>This is useful for understanding what plugins are available and their default settings. Edit the output down to what your project actually needs.</p>
+<hr />
+<h3 id="suppress-individual-findings"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#suppress-individual-findings">Suppress individual findings</a></h3>
+<p>If a line triggers a finding that you've reviewed and determined is safe, add <code># nosec</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="c1"># This hash is for unique IDs only, not security</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="n">the_hash</span> <span class="o">=</span> <span class="n">md5</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1"># nosec</span>
+</code></pre></div>
+<p>The whole line gets suppressed. If you only want to suppress specific checks on that line, name them:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;/bin/ls *&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># nosec B602, B607</span>
+</code></pre></div>
+<p>You can use full test names instead of IDs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">assert</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[]</span>  <span class="c1"># nosec assert_used</span>
+</code></pre></div>
+<p>Always add a comment explaining <em>why</em> you're suppressing the finding. Without context, future reviewers won't know if the suppression is intentional or lazy.</p>
+<hr />
+<h3 id="baseline-ignore-known-vulnerabilities"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#baseline-ignore-known-vulnerabilities">Baseline: ignore known vulnerabilities</a></h3>
+<p>If you have findings that are known and not currently actionable (e.g., a cleartext password in a unit test), generate a baseline and pass it to subsequent scans:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1"># Generate baseline</span>
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>bandit<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>baseline.json<span class="w"> </span>-r<span class="w"> </span>.
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>
+<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a><span class="c1"># Subsequent scans ignore baseline findings</span>
+<a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>bandit<span class="w"> </span>-b<span class="w"> </span>baseline.json<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-r<span class="w"> </span>.
+</code></pre></div>
+<p>This is cleaner than suppressing individual lines when you have dozens of known-vulnerabilities.</p>
+<hr />
+<h3 id="add-to-local-git-hooks"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#add-to-local-git-hooks">Add to local git hooks</a></h3>
+<p>Add Bandit as a pre-commit git hook:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="ch">#!/bin/sh</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="c1"># .git/hooks/pre-commit</span>
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>
+<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>bandit
+<a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>bandit<span class="w"> </span>-r<span class="w"> </span>.<span class="w"> </span>-ll<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>/dev/null
+</code></pre></div>
+<p>Make it executable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
+</code></pre></div>
+<hr />
+<h3 id="add-to-cicd"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#add-to-cicd">Add to CI/CD</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="c1"># .github/workflows/bandit.yml</span>
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bandit SAST</span>
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a><span class="w">  </span><span class="nt">scan</span><span class="p">:</span>
+<a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+<a id="__codelineno-62-10" name="__codelineno-62-10" href="#__codelineno-62-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
+<a id="__codelineno-62-11" name="__codelineno-62-11" href="#__codelineno-62-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-62-12" name="__codelineno-62-12" href="#__codelineno-62-12"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.12&#39;</span>
+<a id="__codelineno-62-13" name="__codelineno-62-13" href="#__codelineno-62-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Bandit</span>
+<a id="__codelineno-62-14" name="__codelineno-62-14" href="#__codelineno-62-14"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install bandit[sarif]</span>
+<a id="__codelineno-62-15" name="__codelineno-62-15" href="#__codelineno-62-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Bandit</span>
+<a id="__codelineno-62-16" name="__codelineno-62-16" href="#__codelineno-62-16"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bandit -r . -f sarif -o bandit-results.sarif</span>
+<a id="__codelineno-62-17" name="__codelineno-62-17" href="#__codelineno-62-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload SARIF</span>
+<a id="__codelineno-62-18" name="__codelineno-62-18" href="#__codelineno-62-18"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github/codeql-action/upload-sarif@v3</span>
+<a id="__codelineno-62-19" name="__codelineno-62-19" href="#__codelineno-62-19"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-62-20" name="__codelineno-62-20" href="#__codelineno-62-20"></a><span class="w">          </span><span class="nt">sarif_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bandit-results.sarif</span>
+</code></pre></div>
+<p>The SARIF output format integrates directly with GitHub's code scanning UI, which is nicer than trying to parse plain-text results.</p>
+<hr />
+<h3 id="takeaways"><a class="toclink" href="../2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#takeaways">Takeaways</a></h3>
+<ul>
+<li>Bandit catches the common things: <code>eval()</code>, <code>os.system()</code>, weak crypto, hardcoded secrets</li>
+<li>Use <code>--severity-level</code> and <code>--confidence-level</code> to control finding noise</li>
+<li><code># nosec</code> suppresses a line. Name the specific checks if you only want to suppress certain ones</li>
+<li>Baseline files are cleaner than suppressing individual findings for known-vulnerabilities</li>
+<li>SARIF output integrates with GitHub code scanning</li>
+<li>Local git hooks catch findings before they reach CI</li>
+<li>The apt version is stale. Use pip for the current rule set.</li>
+<li>Always explain <em>why</em> when you skip a rule or add a <code># nosec</code> comment</li>
+</ul>
+    
+    
+      <hr>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/alismx.png" alt="Alis Akers">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2026-06-09 00:00:00+00:00">June 9, 2026</time></li>
         
           <li class="md-meta__item">
@@ -611,51 +872,61 @@
 <p><strong>TL;DR</strong>: Install gitleaks, configure your repository, run a scan, and add it to your CI pipeline to catch secrets before they reach production.</p>
 <hr />
 <h3 id="install-gitleaks"><a class="toclink" href="../2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#install-gitleaks">Install gitleaks</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
 </code></pre></div>
 <p>Verify the install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>gitleaks<span class="w"> </span>--version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>gitleaks<span class="w"> </span>--version
 </code></pre></div>
 <h3 id="configure-gitleaks"><a class="toclink" href="../2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#configure-gitleaks">Configure gitleaks</a></h3>
 <p>Create a <code>gitleaks.toml</code> file in your repository root:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">[extend]</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;github.com/gitleaks/gitleaks&quot;</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">[allowlist]</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;global allow lists&quot;</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">regexes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="c1"># patterns to allow</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">[extend]</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;github.com/gitleaks/gitleaks&quot;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">[allowlist]</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;global allow lists&quot;</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">regexes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="c1"># patterns to allow</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">]</span>
 </code></pre></div>
 <p>Add a custom rule:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">[[rules]]</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-custom-secret&quot;</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Custom secret pattern&quot;</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;(your-pattern-here)&#39;&#39;&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">[[rules]]</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-custom-secret&quot;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Custom secret pattern&quot;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;(your-pattern-here)&#39;&#39;&#39;</span>
 </code></pre></div>
 <h3 id="scan-your-repository"><a class="toclink" href="../2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#scan-your-repository">Scan Your Repository</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Full history scan</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Verbose output (shows actual secrets)</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Verbose output (redacts actual secrets)</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Full history scan</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Verbose output (shows actual secrets)</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="c1"># Verbose output (redacts actual secrets)</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact
+</code></pre></div>
+<h3 id="add-to-local-git-hooks"><a class="toclink" href="../2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#add-to-local-git-hooks">Add to local git hooks</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="ch">#!/bin/sh</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1"># .git/hooks/pre-commit</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact<span class="w"> </span>/dev/null
+</code></pre></div>
+<p>Make it executable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
 </code></pre></div>
 <h3 id="add-gitleaks-to-cicd"><a class="toclink" href="../2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#add-gitleaks-to-cicd">Add gitleaks to CI/CD</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nt">scan</span><span class="p">:</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v6</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks/gitleaks-action@v3</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">  </span><span class="nt">scan</span><span class="p">:</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v6</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks/gitleaks-action@v3</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
 </code></pre></div>
 <h3 id="takeaways"><a class="toclink" href="../2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#takeaways">Takeaways</a></h3>
 <ul>
