@@ -1,6 +1,6 @@
 I'm Alis, a DevOps engineer passionate about open-source, cloud-native technologies, and public health. I'm currently working at [Skylight](https://skylight.digital) on projects that enable public health agencies to leverage modern, cloud-based software solutions. Feel free to follow me on [GitHub](https://github.com/alismx) or connect with me on [LinkedIn](https://www.linkedin.com/in/alismx). 
 
-[<img alt="alismx-github" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx) [<img alt="alismx-linked-in" src="https://img.shields.io/badge/linkedin-blue.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/alismx) [<img alt="alismx-ko-fi" src="https://img.shields.io/badge/Ko--fi-FF5E5B?&style=for-the-badge&logo=ko-fi&logoColor=white" />](https://ko-fi.com/alismx)<br>
+[<img alt="alismx-github" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white" />](https://github.com/alismx) [<img alt="alismx-linked-in" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/alismx) [<img alt="alismx-ko-fi" src="https://img.shields.io/badge/Ko--fi-FF5E5B?&style=for-the-badge&logo=ko-fi&logoColor=white" />](https://ko-fi.com/alismx)<br>
 
 - [Skylight Projects](https://skylight.digital/work/team-member/alis-akers/)
 
@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: update site navigation, colors, and plugins](https://github.com/alismx/alismx.github.io/pull/14) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [docs: migrate gitleaks post and add Bandit SAST post](https://github.com/alismx/alismx.github.io/pull/13) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [docs: migrate blog and docs structure](https://github.com/alismx/alismx.github.io/pull/12) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat(security): add inspector2:Enable and update ECS module ref](https://github.com/CDCgov/dibbs-aws/pull/97) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [refactor: restructure ECS README into user-focused deployment guide](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1459) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add eCR Viewer VM deployment scripts and README rewrite](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [chore(security): harden RDS, EC2, security groups, OIDC, and deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
