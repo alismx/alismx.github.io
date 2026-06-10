@@ -1,0 +1,61 @@
+site_name: Alis Akers
+site_description: Alis Akers - DevOps engineer, open-source, cloud-native technologies, public health.
+site_url: https://alismx.dev
+repo_url: https://github.com/alismx/alismx.github.io
+repo_name: alismx/alismx.github.io
+
+docs_dir: docs
+
+nav:
+  - DevSecOps: index.md
+  - Blog:
+    - blog/index.md
+
+plugins:
+  - search
+  - offline
+  - tags
+  - blog:
+      blog_dir: blog
+      post_readtime: true
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  language: en
+  features:
+    - content.code.copy
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alismx
+  copyright: Copyright &copy; 2015 - 2026 Alis Akers
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
