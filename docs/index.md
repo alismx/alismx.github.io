@@ -13,7 +13,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
   - [CDC SimpleReport](https://skylight.digital/work/experience/cdc-simplereport/)
     - A free tool that makes it easy for non-traditional and under-resourced disease testing sites to record results for diagnostic tests and quickly report data to public health departments.
 
-### My work
+### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -26,32 +26,34 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [alismx/dibbs-ecr-viewer-playbook](https://github.com/alismx/dibbs-ecr-viewer-playbook)
 
-### My pull requests
+### 🌱 My pull requests
 
+- [docs: migrate blog and docs structure](https://github.com/alismx/alismx.github.io/pull/12) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat(security): add inspector2:Enable and update ECS module ref](https://github.com/CDCgov/dibbs-aws/pull/97) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [refactor: move SQLi_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/56) on [CDCgov/terraform-aws-dibbs-ecr-viewer]
-- [fix(ecs): update ECS module ref to commit with WAF fix](https://github.com/CDCgov/dibbs-aws/pull/96) on [CDCgov/dibbs-aws]
-- [refactor: move CrossSiteScripting_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/55) on [CDCgov/terraform-aws-dibbs-ecr-viewer]
-- [refactor: restructure ECS README into user-focused deployment guide](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1459) on [CDCgov/dibbs-ecr-viewer]
-- [feat: add eCR Viewer VM deployment scripts and README rewrite](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435) on [CDCgov/dibbs-ecr-viewer]
-- [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer]
-- [chore(security): harden RDS, EC2, security groups, OIDC, and deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws]
-- [Adding fhir-converter-proxy](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/54) on [CDCgov/terraform-aws-dibbs-ecr-viewer]
-- [docs (#2)](https://github.com/alismx/dibbs-cloud-tools/pull/3) on [alismx/dibbs-cloud-tools]
+- [refactor: move SQLi_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/56) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [fix(ecs): update ECS module ref to commit with WAF fix](https://github.com/CDCgov/dibbs-aws/pull/96) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [refactor: move CrossSiteScripting_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/55) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
+- [refactor: restructure ECS README into user-focused deployment guide](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1459) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [feat: add eCR Viewer VM deployment scripts and README rewrite](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [chore(security): harden RDS, EC2, security groups, OIDC, and deployment workflows](https://github.com/CDCgov/dibbs-aws/pull/94) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [Adding fhir-converter-proxy](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/54) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
-### My gists
+### 📓 My gists
 
-- [How to: Use qemu-img command to convert between vmdk, raw, qcow2, vdi, vhd, vhdx formats/disk images](https://gist.github.com/9894bbbd9640074416f258bbaf3874ec)
+- [How to: Use qemu-img command to convert between vmdk, raw, qcow2, vdi, vhd, vhdx formats/disk images (qemu-img create, snapshot, resize etc.)](https://gist.github.com/9894bbbd9640074416f258bbaf3874ec)
 - [Emulating ARM with QEMU on Debian/Ubuntu](https://gist.github.com/3107fdd62a87607d7cc7b1368d84fc52)
 - [Debian 12 preseed file](https://gist.github.com/717776684587d3467b8c3980d2cba4e3)
+- [](https://gist.github.com/eb554c67c7013b27c0e16461c3321df9)
+- [](https://gist.github.com/a8c473968f0d87c0532944017f844363)
 
-### Recent followers
+### 👯 Recent followers
 
 - [urbantech](https://github.com/urbantech)
 - [trinhminhtriet](https://github.com/trinhminhtriet)
 - [ezgidemirci](https://github.com/ezgidemirci)
 
-### Certifications
+### 📈 My certifications
 
 #### Microsoft
 
