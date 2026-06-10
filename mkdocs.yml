@@ -7,13 +7,14 @@ repo_name: alismx/alismx.github.io
 docs_dir: docs
 
 nav:
-  - DevSecOps: index.md
-  - Blog:
+  - alismx profile: index.md
+  - alismx posts:
     - blog/index.md
 
 plugins:
   - search
   - offline
+  - privacy
   - tags
   - blog:
       blog_dir: blog
@@ -22,23 +23,27 @@ plugins:
 theme:
   name: material
   icon:
-    repo: fontawesome/brands/github
+    repo: fontawesome/brands/git-alt
   language: en
   features:
     - content.code.copy
     - toc.integrate
+    - search.share
+    - header.autohide
+    - navigation.footer
+  font: false
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: deep orange
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
