@@ -7,6 +7,7 @@ categories:
 tags:
   - gitleaks
   - secrets
+  - github
   - git
   - ci
 pin: true
