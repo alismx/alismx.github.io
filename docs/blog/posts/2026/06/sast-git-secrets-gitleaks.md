@@ -7,8 +7,10 @@ categories:
 tags:
   - gitleaks
   - secrets
+  - sast
   - github
   - git
+  - security
   - ci
 pin: true
 ---
@@ -68,6 +70,22 @@ gitleaks detect --source . --verbose
 
 # Verbose output (redacts actual secrets)
 gitleaks detect --source . --verbose --redact
+```
+
+## Add to local git hooks
+
+```bash
+#!/bin/sh
+# .git/hooks/pre-commit
+
+sudo apt install gitleaks
+gitleaks detect --source . --verbose --redact /dev/null
+```
+
+Make it executable:
+
+```bash
+chmod +x .git/hooks/pre-commit
 ```
 
 ## Add gitleaks to CI/CD
