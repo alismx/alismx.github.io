@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: regenerate site and update generated files](https://github.com/alismx/alismx.github.io/pull/15) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: update site navigation, colors, and plugins](https://github.com/alismx/alismx.github.io/pull/14) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [docs: migrate gitleaks post and add Bandit SAST post](https://github.com/alismx/alismx.github.io/pull/13) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [docs: migrate blog and docs structure](https://github.com/alismx/alismx.github.io/pull/12) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [refactor: move CrossSiteScripting_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/55) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [refactor: restructure ECS README into user-focused deployment guide](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1459) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [feat: add eCR Viewer VM deployment scripts and README rewrite](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
-- [feat: add complete deployment infrastructure for eCR Viewer](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1423) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
