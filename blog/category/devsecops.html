@@ -582,6 +582,98 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2026-06-11 00:00:00+00:00">June 11, 2026</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="devsecops.html" class="md-meta__link">DevSecOps</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+        
+          <span class="md-pin"></span>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="devsecops-manage-terraform-versions-with-tfenv"><a class="toclink" href="../2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html">DevSecOps: Manage Terraform Versions with tfenv</a></h2>
+<p>State file incompatibility between Terraform versions breaks your pipelines. tfenv manages multiple versions so you can pin a specific version, switch between them, and keep CI aligned with your local environment.</p>
+<p><strong>TL;DR</strong>: Install tfenv, switch to the version your project needs, and pin it in CI to prevent version drift between local and remote environments.</p>
+<hr />
+<h3 id="install-tfenv"><a class="toclink" href="../2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html#install-tfenv">Install tfenv</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tfutils/tfenv.git<span class="w"> </span>~/.tfenv
+</code></pre></div>
+<p>Add it to your shell profile:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># ~/.bashrc, ~/.zshrc, etc.</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>tfenv<span class="w"> </span>--version
+</code></pre></div>
+<hr />
+<h3 id="check-available-versions"><a class="toclink" href="../2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html#check-available-versions">Check available versions</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># All available versions</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>tfenv<span class="w"> </span>list-remote
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Filter for a specific major version (1)</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^1\.&quot;</span>
+</code></pre></div>
+<p>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are compatible with existing state.</p>
+<hr />
+<h3 id="switch-versions"><a class="toclink" href="../2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html#switch-versions">Switch versions</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Install a specific version</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>tfenv<span class="w"> </span>install<span class="w"> </span><span class="m">1</span>.15.0
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># List installed versions</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>tfenv<span class="w"> </span>list
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Switch to a version </span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>tfenv<span class="w"> </span>use<span class="w"> </span><span class="m">1</span>.15.0
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="c1"># Write current version to .terraform-version</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>tfenv<span class="w"> </span>pin
+</code></pre></div>
+<p>This file is tracked in git. Anyone who runs <code>tfenv use</code> (or <code>terraform</code> with tfenv installed) will use the pinned version.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Reads from .terraform-version by default</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>tfenv<span class="w"> </span>use
+</code></pre></div>
+<hr />
+<h3 id="takeaways"><a class="toclink" href="../2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html#takeaways">Takeaways</a></h3>
+<ul>
+<li><code>.terraform-version</code> is tracked in git, so the whole team uses the same Terraform version. This is the source of truth.</li>
+<li><code>tfenv use</code> reads from <code>.terraform-version</code> by default. <code>tfenv pin</code> writes to it. The primary workflow is both without arguments.</li>
+<li>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are safe.</li>
+</ul>
+    
+    
+      <hr>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../assets/external/github.com/alismx.png" alt="Alis Akers">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2026-06-10 00:00:00+00:00">June 10, 2026</time></li>
         
           <li class="md-meta__item">

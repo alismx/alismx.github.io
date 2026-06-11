@@ -10,29 +10,29 @@
       
       
       
-        <link rel="canonical" href="https://alismx.dev/index.html">
+        <link rel="canonical" href="https://alismx.dev/blog/2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html">
       
       
+        <link rel="prev" href="../10/devsecops-run-sast-on-python-code-with-bandit.html">
       
-        <link rel="next" href="blog/index.html">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Alis Akers</title>
+        <title>DevSecOps: Manage Terraform Versions with tfenv - Alis Akers</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -40,14 +40,14 @@
     
     
       
-        <script src="assets/external/unpkg.com/iframe-worker/shim.js"></script>
+        <script src="../../../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
       
     
     
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#my-work" class="md-skip">
+        <a href="#devsecops-manage-terraform-versions-with-tfenv" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Alis Akers" class="md-header__button md-logo" aria-label="Alis Akers" data-md-component="logo">
+    <a href="../../../../index.html" title="Alis Akers" class="md-header__button md-logo" aria-label="Alis Akers" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              alismx profile
+              DevSecOps: Manage Terraform Versions with tfenv
             
           </span>
         </div>
@@ -220,7 +220,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -231,7 +233,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Alis Akers" class="md-nav__button md-logo" aria-label="Alis Akers" data-md-component="logo">
+    <a href="../../../../index.html" title="Alis Akers" class="md-nav__button md-logo" aria-label="Alis Akers" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -258,35 +260,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    alismx profile
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
         
   
   
@@ -302,107 +279,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#my-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 My work
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-pull-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🌱 My pull requests
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-gists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📓 My gists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recent-followers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        👯 Recent followers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-certifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📈 My certifications
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📈 My certifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#microsoft" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Microsoft
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pluralsight-a-cloud-guru-formerly-linux-academy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pluralsight (A Cloud Guru, formerly Linux Academy)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -411,18 +287,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -443,7 +321,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -458,12 +336,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="blog/index.html" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -540,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/archive/2026.html" class="md-nav__link">
+      <a href="../../../archive/2026.html" class="md-nav__link">
         
   
   
@@ -625,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="blog/category/devsecops.html" class="md-nav__link">
+      <a href="../../../category/devsecops.html" class="md-nav__link">
         
   
   
@@ -670,110 +550,280 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  
-  
-
-
-  <h1>alismx profile</h1>
-
-<p>I'm Alis, a DevOps engineer passionate about open-source, cloud-native technologies, and public health. I'm currently working at <a href="https://skylight.digital">Skylight</a> on projects that enable public health agencies to leverage modern, cloud-based software solutions. Feel free to follow me on <a href="https://github.com/alismx">GitHub</a> or connect with me on <a href="https://www.linkedin.com/in/alismx">LinkedIn</a>. </p>
-<p><a href="https://github.com/alismx"><img alt="alismx-github" src="assets/external/img.shields.io/badge/GitHub-181717.6dc9937e.svg"></a> <a href="https://www.linkedin.com/in/alismx"><img alt="alismx-linked-in" src="assets/external/img.shields.io/badge/linkedin-blue.f628e5b7.svg"></a> <a href="https://ko-fi.com/alismx"><img alt="alismx-ko-fi" src="assets/external/img.shields.io/badge/Ko--fi-FF5E5B.8d9b2382.svg"></a><br></p>
-<ul>
-<li>
-<p><a href="https://skylight.digital/work/team-member/alis-akers/">Skylight Projects</a></p>
-</li>
-<li>
-<p><a href="https://skylight.digital/work/experience/cdc-dibbs-cloud-enablement/">CDC Cloud Enablement</a></p>
-<ul>
-<li>Enabling public health agencies with flexible cloud hosting options so they can leverage modern, cloud-based software solutions with fewer costs and maintenance burdens.</li>
-</ul>
-</li>
-<li>
-<p><a href="https://skylight.digital/work/experience/cdc-dibbs/">CDC DIBBS</a></p>
-<ul>
-<li>An open-source, modular toolkit designed to automate data processing, reduce manual effort, and address critical data challenges within a modern public health data infrastructure.</li>
-</ul>
-</li>
-<li>
-<p><a href="https://skylight.digital/work/experience/cdc-simplereport/">CDC SimpleReport</a></p>
-<ul>
-<li>A free tool that makes it easy for non-traditional and under-resourced disease testing sites to record results for diagnostic tests and quickly report data to public health departments.</li>
-</ul>
-</li>
-</ul>
-<h3 id="my-work">🚀 My work<a class="headerlink" href="#my-work" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/alismx/alismx.github.io">alismx/alismx.github.io</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-aws">CDCgov/dibbs-aws</a></li>
-<li><a href="https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer">CDCgov/terraform-aws-dibbs-ecr-viewer</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-ecr-viewer">CDCgov/dibbs-ecr-viewer</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-azure">CDCgov/dibbs-azure</a></li>
-<li><a href="https://github.com/alismx/dibbs-cloud-tools">alismx/dibbs-cloud-tools</a></li>
-<li><a href="https://github.com/alismx/DevOpsMemes">alismx/DevOpsMemes</a></li>
-<li><a href="https://github.com/alismx/nomad">alismx/nomad</a></li>
-<li><a href="https://github.com/skylight-hq/dibbs-landing">skylight-hq/dibbs-landing</a></li>
-<li><a href="https://github.com/alismx/dibbs-ecr-viewer-playbook">alismx/dibbs-ecr-viewer-playbook</a></li>
-</ul>
-<h3 id="my-pull-requests">🌱 My pull requests<a class="headerlink" href="#my-pull-requests" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/alismx/alismx.github.io/pull/15">chore: regenerate site and update generated files</a> on <a href="https://github.com/alismx/alismx.github.io">alismx/alismx.github.io</a></li>
-<li><a href="https://github.com/alismx/alismx.github.io/pull/14">chore: update site navigation, colors, and plugins</a> on <a href="https://github.com/alismx/alismx.github.io">alismx/alismx.github.io</a></li>
-<li><a href="https://github.com/alismx/alismx.github.io/pull/13">docs: migrate gitleaks post and add Bandit SAST post</a> on <a href="https://github.com/alismx/alismx.github.io">alismx/alismx.github.io</a></li>
-<li><a href="https://github.com/alismx/alismx.github.io/pull/12">docs: migrate blog and docs structure</a> on <a href="https://github.com/alismx/alismx.github.io">alismx/alismx.github.io</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-aws/pull/97">feat(security): add inspector2:Enable and update ECS module ref</a> on <a href="https://github.com/CDCgov/dibbs-aws">CDCgov/dibbs-aws</a></li>
-<li><a href="https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/56">refactor: move SQLi_BODY to count</a> on <a href="https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer">CDCgov/terraform-aws-dibbs-ecr-viewer</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-aws/pull/96">fix(ecs): update ECS module ref to commit with WAF fix</a> on <a href="https://github.com/CDCgov/dibbs-aws">CDCgov/dibbs-aws</a></li>
-<li><a href="https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/55">refactor: move CrossSiteScripting_BODY to count</a> on <a href="https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer">CDCgov/terraform-aws-dibbs-ecr-viewer</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-ecr-viewer/pull/1459">refactor: restructure ECS README into user-focused deployment guide</a> on <a href="https://github.com/CDCgov/dibbs-ecr-viewer">CDCgov/dibbs-ecr-viewer</a></li>
-<li><a href="https://github.com/CDCgov/dibbs-ecr-viewer/pull/1435">feat: add eCR Viewer VM deployment scripts and README rewrite</a> on <a href="https://github.com/CDCgov/dibbs-ecr-viewer">CDCgov/dibbs-ecr-viewer</a></li>
-</ul>
-<h3 id="my-gists">📓 My gists<a class="headerlink" href="#my-gists" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://gist.github.com/9894bbbd9640074416f258bbaf3874ec">How to: Use qemu-img command to convert between vmdk, raw, qcow2, vdi, vhd, vhdx formats/disk images (qemu-img create, snapshot, resize etc.)</a></li>
-<li><a href="https://gist.github.com/3107fdd62a87607d7cc7b1368d84fc52">Emulating ARM with QEMU on Debian/Ubuntu</a></li>
-<li><a href="https://gist.github.com/717776684587d3467b8c3980d2cba4e3">Debian 12 preseed file</a></li>
-<li><a href="https://gist.github.com/eb554c67c7013b27c0e16461c3321df9"></a></li>
-<li><a href="https://gist.github.com/a8c473968f0d87c0532944017f844363"></a></li>
-</ul>
-<h3 id="recent-followers">👯 Recent followers<a class="headerlink" href="#recent-followers" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/urbantech">urbantech</a></li>
-<li><a href="https://github.com/trinhminhtriet">trinhminhtriet</a></li>
-<li><a href="https://github.com/ezgidemirci">ezgidemirci</a></li>
-</ul>
-<h3 id="my-certifications">📈 My certifications<a class="headerlink" href="#my-certifications" title="Permanent link">&para;</a></h3>
-<h4 id="microsoft">Microsoft<a class="headerlink" href="#microsoft" title="Permanent link">&para;</a></h4>
-<p><a href="https://www.credly.com/badges/460c0273-ed19-4f0c-8d38-4ee994dfeb22/public_url"><img align="left"/>Azure Fundamentals</a></p>
-<h4 id="pluralsight-a-cloud-guru-formerly-linux-academy">Pluralsight (A Cloud Guru, formerly Linux Academy)<a class="headerlink" href="#pluralsight-a-cloud-guru-formerly-linux-academy" title="Permanent link">&para;</a></h4>
-<p><a href="https://app.pluralsight.com/profile/alismx"><img align="left"/>Essential Container Concepts</a></p>
-<p><a href="https://app.pluralsight.com/profile/alismx"><img align="left"/>LPI Linux Essentials</a></p>
-<p><a href="https://app.pluralsight.com/profile/alismx"><img align="left"/>Kubernetes Essentials</a></p>
-<p><a href="https://app.pluralsight.com/profile/alismx"><img align="left"/>AWS Concepts</a></p>
-<p><a href="https://app.pluralsight.com/profile/alismx"><img align="left"/>AWS Essentials</a></p>
-<p><a href="https://app.pluralsight.com/profile/alismx"><img align="left"/>DevOps Essentials</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../index.html" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
             </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../../../assets/external/github.com/alismx.png" alt="Alis Akers">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/alismx">Alis Akers</a>
+                        
+                      </strong>
+                      <br>
+                      DevOps engineer
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-06-11 00:00:00+00:00" class="md-ellipsis">June 11, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../category/devsecops.html">DevSecOps</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              1 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-tfenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install tfenv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-available-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check available versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">ci</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">git</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">github</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">terraform</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tfenv</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">version</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="devsecops-manage-terraform-versions-with-tfenv">DevSecOps: Manage Terraform Versions with tfenv<a class="headerlink" href="#devsecops-manage-terraform-versions-with-tfenv" title="Permanent link">&para;</a></h1>
+<p>State file incompatibility between Terraform versions breaks your pipelines. tfenv manages multiple versions so you can pin a specific version, switch between them, and keep CI aligned with your local environment.</p>
+<p><strong>TL;DR</strong>: Install tfenv, switch to the version your project needs, and pin it in CI to prevent version drift between local and remote environments.</p>
+<hr />
+<h2 id="install-tfenv">Install tfenv<a class="headerlink" href="#install-tfenv" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tfutils/tfenv.git<span class="w"> </span>~/.tfenv
+</code></pre></div>
+<p>Add it to your shell profile:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ~/.bashrc, ~/.zshrc, etc.</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tfenv<span class="w"> </span>--version
+</code></pre></div>
+<hr />
+<h2 id="check-available-versions">Check available versions<a class="headerlink" href="#check-available-versions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># All available versions</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tfenv<span class="w"> </span>list-remote
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Filter for a specific major version (1)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^1\.&quot;</span>
+</code></pre></div>
+<p>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are compatible with existing state.</p>
+<hr />
+<h2 id="switch-versions">Switch versions<a class="headerlink" href="#switch-versions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Install a specific version</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>tfenv<span class="w"> </span>install<span class="w"> </span><span class="m">1</span>.15.0
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># List installed versions</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>tfenv<span class="w"> </span>list
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Switch to a version </span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>tfenv<span class="w"> </span>use<span class="w"> </span><span class="m">1</span>.15.0
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Write current version to .terraform-version</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>tfenv<span class="w"> </span>pin
+</code></pre></div>
+<p>This file is tracked in git. Anyone who runs <code>tfenv use</code> (or <code>terraform</code> with tfenv installed) will use the pinned version.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Reads from .terraform-version by default</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>tfenv<span class="w"> </span>use
+</code></pre></div>
+<hr />
+<h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>.terraform-version</code> is tracked in git, so the whole team uses the same Terraform version. This is the source of truth.</li>
+<li><code>tfenv use</code> reads from <code>.terraform-version</code> by default. <code>tfenv pin</code> writes to it. The primary workflow is both without arguments.</li>
+<li>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are safe.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -784,24 +834,26 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        
           
-          <a href="blog/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: blog">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                blog
-              </div>
-            </div>
+          <a href="../10/devsecops-run-sast-on-python-code-with-bandit.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevSecOps: Run SAST on Python Code with Bandit">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                DevSecOps: Run SAST on Python Code with Bandit
+              </div>
             </div>
           </a>
+        
         
       </nav>
     
@@ -847,10 +899,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "toc.integrate", "search.share", "header.autohide", "navigation.footer"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "toc.integrate", "search.share", "header.autohide", "navigation.footer"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
