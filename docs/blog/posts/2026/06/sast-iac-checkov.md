@@ -14,11 +14,20 @@ tags:
   - dockerfile
   - bicep
   - ansible
+  - argoworkflows
+  - serverlessframework
+  - awssam
+  - openapi
+  - azurepipelines
   - helm
   - kustomize
-  - sarif
+  - awscdk
   - githubactions
   - gitlab
+  - bitbucket
+  - sca
+  - sarif
+  - git
   - security
 pin: true
 ---

@@ -12,6 +12,14 @@ tags:
   - git
   - security
   - ci
+  - sarif
+  - pre-commit
+  - baseline
+  - yaml
+  - toml
+  - rule
+  - severity
+  - confidence
 pin: true
 ---
 

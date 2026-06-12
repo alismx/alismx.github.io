@@ -7,10 +7,14 @@ categories:
 tags:
   - tfenv
   - terraform
+  - opentofu
   - version
   - github
   - ci
   - git
+  - pin
+  - shell
+  - semver
 pin: true
 ---
 

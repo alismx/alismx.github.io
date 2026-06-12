@@ -12,6 +12,11 @@ tags:
   - git
   - security
   - ci
+  - precommit
+  - detect
+  - allowlist
+  - rule
+  - redact
 pin: true
 ---
 
