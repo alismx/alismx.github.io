@@ -34,7 +34,7 @@ pin: true
 
 # DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov
 
-Infrastructure code often passes syntax checks but contains security misconfigurations. Open buckets, unencrypted databases, overly permissive access policies. Checkov scans IaC files across 20+ formats for these patterns before you deploy.
+Infrastructure code contains security misconfigurations. Open buckets, unencrypted databases, overly permissive access policies. Checkov scans IaC files across 20+ formats for these patterns before you deploy.
 
 **TL;DR**: Install checkov, scan your IaC directory, configure your repository, and add it to your CI pipeline to catch infrastructure misconfigurations before they reach production.
 
@@ -171,7 +171,7 @@ SARIF integrates with GitHub Code Scanning and GitLab SAST which renders finding
 
 ## Add to CI/CD
 
-The `checkov-action` with the `github_failed_only` output format reports findings as inline checks on the pull request.
+The `checkov-action` with the `github_failed_only` output reports failures on the GitHub action page.
 
 ```yaml
 # .github/workflows/checkov.yml

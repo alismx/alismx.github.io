@@ -7,8 +7,8 @@ repo_name: alismx/alismx.github.io
 docs_dir: docs
 
 nav:
-  - alismx profile: index.md
-  - alismx posts:
+  - profile: index.md
+  - posts:
     - blog/index.md
 
 plugins:
