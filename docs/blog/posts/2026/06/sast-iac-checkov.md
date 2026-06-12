@@ -97,9 +97,7 @@ Checkov evaluates organization and repository settings from the respective APIs,
 | [Bitbucket Pipelines](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md) | .yml | `#checkov:skip=CKV_CIRCLECIPIPELINES_1: reason` |
 | [Bitbucket Configuration](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md) | .json (fetched from Bitbucket API) | CLI only (`--skip-check`) |
 
-See the [GitHub](https://www.checkov.io/7.Scan%20Examples/Github.html), [GitLab](https://www.checkov.io/7.Scan%20Examples/Gitlab.html), and [Bitbucket](https://www.checkov.io/7.Scan%20Examples/Bitbucket.html) scan examples for required environment variables.
-
-See the [GitHub](https://www.checkov.io/5.Policy%20Index/github_configuration.html), [GitLab](https://www.checkov.io/5.Policy%20Index/gitlab_configuration.html), and [Bitbucket](https://www.checkov.io/5.Policy%20Index/bitbucket_configuration.html) documentation for required environment variables.
+See the [GitHub](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md), [GitLab](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md), and [Bitbucket](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md) scan examples for required environment variables.
 
 ### Other
 
@@ -109,34 +107,30 @@ See the [GitHub](https://www.checkov.io/5.Policy%20Index/github_configuration.ht
 | [Git History](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Git%20History.md) | (repository commit history, not a file format) | CLI only (`--skip-check`) |
 | [Terraform Plan](https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Terraform%20Plan%20Scanning.md) | .tfplan (Terraform plan output, not source) | CLI only (`--skip-check`) |
 
-Checkov's full policy index is auto-generated from the source and available at [5.Policy Index](https://www.checkov.io/5.Policy%20Index/all.html).
+Checkov's full policy index is auto-generated from the source and available at [Policy Index](https://www.checkov.io/5.Policy%20Index/all.html).
 
 **Notes on auto-detected types**: Helm and Kustomize auto-detect config file presence, then template out to Kubernetes manifests for scanning. AWS CDK requires running `cdk synth` to generate a CloudFormation JSON template, which checkov then scans.
-
-**VCS configuration types** (GitHub Configuration, GitLab Configuration, Bitbucket Configuration) fetch organization settings from their respective APIs and evaluate them as JSON data. You must provide a personal access token for each platform.
 
 ---
 
 ## Configuration files
 
-You can configure checkov with a YAML file in the root of your repo:
+You can configure checkov with a YAML file in your repo:
 
 ```yaml
-# checkov.yaml
+# .checkov.yaml
 check:
   skip-check:
     - CKV_AWS_21
     - CKV_AWS_34
-
-soft-fail: true
 compact: true
 ```
 
-The `skip-check` list matches `--skip-check` on the command line. The `soft-fail` flag makes checkov exit with code 0 even when findings exist, which is useful when you want CI to pass but still report findings. The `compact` flag collapses duplicate findings into a single line.
+The `skip-check` list matches `--skip-check` on the command line. The `compact` flag collapses findings and only displays failures.
 
 ---
 
-## Output formats
+## Usage and output formats
 
 Checkov supports several output formats. The default is text. For CI integration, use JSON, SARIF, or JUnit XML.
 
@@ -187,7 +181,7 @@ jobs:
 
 ## Takeaways
 
-- Use `--skip-check` for known misconfigurations that have a valid justification. Don't skip checks blindly. Skip them only when the resource is intentionally configured that way.
-- Use `checkov:skip` comments to suppress individual findings in the code. Always explain why.
-- The `checkov-action` GitHub Action renders findings as PR checks. It's cleaner than parsing JSON output and formatting it manually.
-- Run checkov in CI on pull requests. Preventing a misconfiguration from reaching production is cheaper than fixing it after the fact.
+- Use `--skip-check` or `.checkov.yaml` for known misconfigurations. Don't skip checks blindly.
+- Use `checkov:skip` comments to suppress individual findings in the code. Explain why.
+- SARIF output integrates with GitHub Code Scanning for inline annotations on source files.
+- Run checkov in CI on pull requests. Preventing a misconfiguration from reaching production is cheaper than fixing it later.
