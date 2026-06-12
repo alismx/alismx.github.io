@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://alismx.dev/blog/2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html">
+        <link rel="canonical" href="https://alismx.dev/blog/2026/06/12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html">
       
       
-        <link rel="prev" href="../10/devsecops-run-sast-on-python-code-with-bandit.html">
+        <link rel="prev" href="../11/devsecops-manage-terraform-versions-with-tfenv.html">
       
-      
-        <link rel="next" href="../12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>DevSecOps: Manage Terraform Versions with tfenv - Alis Akers</title>
+        <title>DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov - Alis Akers</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devsecops-manage-terraform-versions-with-tfenv" class="md-skip">
+        <a href="#devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DevSecOps: Manage Terraform Versions with tfenv
+              DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov
             
           </span>
         </div>
@@ -599,7 +597,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-06-11 00:00:00+00:00" class="md-ellipsis">June 11, 2026</time>
+                        <time datetime="2026-06-12 00:00:00+00:00" class="md-ellipsis">June 12, 2026</time>
                       </div>
                     </li>
                     
@@ -621,7 +619,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -650,10 +648,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-tfenv" class="md-nav__link">
+  <a href="#install-checkov" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install tfenv
+        Install checkov
       
     </span>
   </a>
@@ -661,10 +659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-available-versions" class="md-nav__link">
+  <a href="#scan-a-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check available versions
+        Scan a project
       
     </span>
   </a>
@@ -672,10 +670,93 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#switch-versions" class="md-nav__link">
+  <a href="#understand-the-checks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Switch versions
+        Understand the checks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understand the checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iac-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IaC formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-detected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcs-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VCS configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-and-output-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage and output formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-to-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add to CI/CD
       
     </span>
   </a>
@@ -712,7 +793,70 @@
       
       
       
-        <span class="md-tag">ci</span>
+        <span class="md-tag">ansible</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">argoworkflows</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">awscdk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">awssam</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">azurepipelines</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bicep</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bitbucket</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">checkov</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cloudformation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">dockerfile</span>
       
     
       
@@ -726,35 +870,84 @@
       
       
       
-        <span class="md-tag">github</span>
+        <span class="md-tag">githubactions</span>
       
     
       
       
       
       
-        <span class="md-tag">opentofu</span>
+        <span class="md-tag">gitlab</span>
       
     
       
       
       
       
-        <span class="md-tag">pin</span>
+        <span class="md-tag">helm</span>
       
     
       
       
       
       
-        <span class="md-tag">semver</span>
+        <span class="md-tag">iac</span>
       
     
       
       
       
       
-        <span class="md-tag">shell</span>
+        <span class="md-tag">kubernetes</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">kustomize</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openapi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sarif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sast</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sca</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">security</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">serverlessframework</span>
       
     
       
@@ -764,20 +957,6 @@
         <span class="md-tag">terraform</span>
       
     
-      
-      
-      
-      
-        <span class="md-tag">tfenv</span>
-      
-    
-      
-      
-      
-      
-        <span class="md-tag">version</span>
-      
-    
   </nav>
 
 
@@ -785,53 +964,250 @@
   
 
 
-<h1 id="devsecops-manage-terraform-versions-with-tfenv">DevSecOps: Manage Terraform Versions with tfenv<a class="headerlink" href="#devsecops-manage-terraform-versions-with-tfenv" title="Permanent link">&para;</a></h1>
-<p>State file incompatibility between Terraform versions breaks your pipelines. tfenv manages multiple versions so you can pin a specific version, switch between them, and keep CI aligned with your local environment.</p>
-<p><strong>TL;DR</strong>: Install tfenv, switch to the version your project needs, and pin it in CI to prevent version drift between local and remote environments.</p>
+<h1 id="devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov">DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov<a class="headerlink" href="#devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov" title="Permanent link">&para;</a></h1>
+<p>Infrastructure code often passes syntax checks but contains security misconfigurations. Open buckets, unencrypted databases, overly permissive access policies. Checkov scans IaC files across 20+ formats for these patterns before you deploy.</p>
+<p><strong>TL;DR</strong>: Install checkov, scan your IaC directory, configure your repository, and add it to your CI pipeline to catch infrastructure misconfigurations before they reach production.</p>
 <hr />
-<h2 id="install-tfenv">Install tfenv<a class="headerlink" href="#install-tfenv" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tfutils/tfenv.git<span class="w"> </span>~/.tfenv
-</code></pre></div>
-<p>Add it to your shell profile:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ~/.bashrc, ~/.zshrc, etc.</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<h2 id="install-checkov">Install checkov<a class="headerlink" href="#install-checkov" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>checkov
 </code></pre></div>
 <p>Verify:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tfenv<span class="w"> </span>--version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>checkov<span class="w"> </span>--version
 </code></pre></div>
 <hr />
-<h2 id="check-available-versions">Check available versions<a class="headerlink" href="#check-available-versions" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># All available versions</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tfenv<span class="w"> </span>list-remote
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Filter for a specific major version (1)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^1\.&quot;</span>
+<h2 id="scan-a-project">Scan a project<a class="headerlink" href="#scan-a-project" title="Permanent link">&para;</a></h2>
+<p>Basic usage: scan an entire directory recursively:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>checkov<span class="w"> </span>-d<span class="w"> </span>/path/to/iac
 </code></pre></div>
-<p>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are compatible with existing state.</p>
+<p>Scan a single file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>checkov<span class="w"> </span>-f<span class="w"> </span>/path/to/main.tf
+</code></pre></div>
+<p>Checkov groups findings by resource type. AWS findings use <code>CKV_AWS_XX</code> IDs, Azure uses <code>CKV_AZURE_XX</code>, Kubernetes uses <code>CKV_K8S_XX</code>, and so on.</p>
 <hr />
-<h2 id="switch-versions">Switch versions<a class="headerlink" href="#switch-versions" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Install a specific version</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>tfenv<span class="w"> </span>install<span class="w"> </span><span class="m">1</span>.15.0
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># List installed versions</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>tfenv<span class="w"> </span>list
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Switch to a version </span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>tfenv<span class="w"> </span>use<span class="w"> </span><span class="m">1</span>.15.0
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Write current version to .terraform-version</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>tfenv<span class="w"> </span>pin
+<h2 id="understand-the-checks">Understand the checks<a class="headerlink" href="#understand-the-checks" title="Permanent link">&para;</a></h2>
+<p>Checkov has 750+ built-in policies across 20+ IaC types. It parses HCL-based files (.tf, .tofu, .hcl) with the same rules since both Terraform and OpenTofu use HCL.</p>
+<h3 id="iac-formats">IaC formats<a class="headerlink" href="#iac-formats" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IaC Type</th>
+<th>Format</th>
+<th>Suppression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Terraform.md">Terraform / OpenTofu</a></td>
+<td>.tf, .tofu, .hcl, .tfvars</td>
+<td><code># checkov:skip=CKV_AWS_21: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Kubernetes.md">Kubernetes</a></td>
+<td>.yaml, .json</td>
+<td><code>checkov.io/skip1: CKV_K8S_20=reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Cloudformation.md">CloudFormation</a></td>
+<td>.json, .yaml, .yml, .template</td>
+<td><code># checkov:skip=CKV_AWS_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Dockerfile.md">Dockerfile</a></td>
+<td>Named files (Dockerfile, Dockerfile.*, dockerfile)</td>
+<td><code>#checkov:skip=CKV_DOCKER_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bicep.md">Bicep</a></td>
+<td>.bicep</td>
+<td><code>#checkov:skip=CKV_AZURE_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Azure%20ARM%20templates.md">ARM Templates</a></td>
+<td>.json</td>
+<td>CLI only (<code>--skip-check</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Ansible.md">Ansible</a></td>
+<td>.yaml, .yml, .json</td>
+<td><code>#checkov:skip=CKV_ANSIBLE_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Argo%20Workflows.md">Argo Workflows</a></td>
+<td>.yaml</td>
+<td><code>checkov.io/skip1: CKV_ARGO_1=reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Serverless%20Framework.md">Serverless Framework</a></td>
+<td>.yml, .yaml</td>
+<td><code>#checkov:skip=CKV_AWS_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/AWS%20SAM.md">AWS SAM</a></td>
+<td>.yaml, .yml</td>
+<td><code>#checkov:skip=CKV_AWS_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/OpenAPI.md">OpenAPI</a></td>
+<td>.yaml, .json</td>
+<td><code>// checkov:skip=CKV_OPENAPI_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Azure%20Pipelines.md">Azure Pipelines</a></td>
+<td>.yml, .yaml</td>
+<td><code>#checkov:skip=CKV_AZUREPIPELINES_1: reason</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-detected">Auto-detected<a class="headerlink" href="#auto-detected" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IaC Type</th>
+<th>Format</th>
+<th>Suppression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Helm.md">Helm</a></td>
+<td>Auto-detected by Chart.yaml presence</td>
+<td>Via <code>#checkov:skip</code> on templates</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Kustomize.md">Kustomize</a></td>
+<td>Auto-detected by kustomization.yaml presence</td>
+<td>Via <code>#checkov:skip</code> on templates</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/CDK.md">AWS CDK</a></td>
+<td>Synthesized from .ts, .js, .py (cdk synth to JSON first)</td>
+<td>CDK construct metadata</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vcs-configuration">VCS configuration<a class="headerlink" href="#vcs-configuration" title="Permanent link">&para;</a></h3>
+<p>Checkov evaluates organization and repository settings from the respective APIs, not from code files. You need to provide a personal access token for each platform.</p>
+<table>
+<thead>
+<tr>
+<th>IaC Type</th>
+<th>Format</th>
+<th>Suppression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md">GitHub Actions</a></td>
+<td>.yml, .yaml</td>
+<td><code>#checkov:skip=CKV_GITHUB_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md">GitHub Configuration</a></td>
+<td>.json (fetched from GitHub API)</td>
+<td>CLI only (<code>--skip-check</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md">GitLab CI</a></td>
+<td>.yml, .yaml</td>
+<td><code>#checkov:skip=CKV_GITLABCI_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md">GitLab Configuration</a></td>
+<td>.json (fetched from GitLab API)</td>
+<td>CLI only (<code>--skip-check</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md">Bitbucket Pipelines</a></td>
+<td>.yml</td>
+<td><code>#checkov:skip=CKV_CIRCLECIPIPELINES_1: reason</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md">Bitbucket Configuration</a></td>
+<td>.json (fetched from Bitbucket API)</td>
+<td>CLI only (<code>--skip-check</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md">GitHub</a>, <a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md">GitLab</a>, and <a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md">Bitbucket</a> scan examples for required environment variables.</p>
+<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IaC Type</th>
+<th>Format</th>
+<th>Suppression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Sca.md">SCA</a></td>
+<td>.lock, .json, .txt, .xml, .toml (varies by language)</td>
+<td>File-level comment in lock file</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Git%20History.md">Git History</a></td>
+<td>(repository commit history, not a file format)</td>
+<td>CLI only (<code>--skip-check</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Terraform%20Plan%20Scanning.md">Terraform Plan</a></td>
+<td>.tfplan (Terraform plan output, not source)</td>
+<td>CLI only (<code>--skip-check</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Checkov's full policy index is auto-generated from the source and available at <a href="https://www.checkov.io/5.Policy%20Index/all.html">Policy Index</a>.</p>
+<p><strong>Notes on auto-detected types</strong>: Helm and Kustomize auto-detect config file presence, then template out to Kubernetes manifests for scanning. AWS CDK requires running <code>cdk synth</code> to generate a CloudFormation JSON template, which checkov then scans.</p>
+<hr />
+<h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h2>
+<p>You can configure checkov with a YAML file in your repo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .checkov.yaml</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">check</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">skip-check</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_21</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_34</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">compact</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<p>This file is tracked in git. Anyone who runs <code>tfenv use</code> (or <code>terraform</code> with tfenv installed) will use the pinned version.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Reads from .terraform-version by default</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>tfenv<span class="w"> </span>use
+<p>The <code>skip-check</code> list matches <code>--skip-check</code> on the command line. The <code>compact</code> flag collapses findings and only displays failures.</p>
+<hr />
+<h2 id="usage-and-output-formats">Usage and output formats<a class="headerlink" href="#usage-and-output-formats" title="Permanent link">&para;</a></h2>
+<p>Checkov supports several output formats. The default is text. For CI integration, use JSON, SARIF, or JUnit XML.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Default: human-readable text</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># JSON (parseable in CI)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>findings.json
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># SARIF (GitHub Code Scanning, GitLab SAST)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>sarif<span class="w"> </span>-o<span class="w"> </span>findings.sarif
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># JUnit XML (for CI systems)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>junitxml<span class="w"> </span>-o<span class="w"> </span>findings.xml
+</code></pre></div>
+<p>SARIF integrates with GitHub Code Scanning and GitLab SAST which renders findings as in-line annotations on the source files.</p>
+<hr />
+<h2 id="add-to-cicd">Add to CI/CD<a class="headerlink" href="#add-to-cicd" title="Permanent link">&para;</a></h2>
+<p>The <code>checkov-action</code> with the <code>github_failed_only</code> output format reports findings as inline checks on the pull request.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># .github/workflows/checkov.yml</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkov</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">checkov</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Checkov</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridgecrewio/checkov-action@v12</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">          </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github_failed_only</span>
 </code></pre></div>
 <hr />
 <h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>.terraform-version</code> is tracked in git, so the whole team uses the same Terraform version. This is the source of truth.</li>
-<li><code>tfenv use</code> reads from <code>.terraform-version</code> by default. <code>tfenv pin</code> writes to it. The primary workflow is both without arguments.</li>
-<li>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are safe.</li>
+<li>Use <code>--skip-check</code> or <code>.checkov.yaml</code> for known misconfigurations. Don't skip checks blindly.</li>
+<li>Use <code>checkov:skip</code> comments to suppress individual findings in the code. Explain why.</li>
+<li>SARIF output integrates with GitHub Code Scanning for inline annotations on source files.</li>
+<li>Run checkov in CI on pull requests. Preventing a misconfiguration from reaching production is cheaper than fixing it later.</li>
 </ul>
 
 
@@ -869,7 +1245,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../10/devsecops-run-sast-on-python-code-with-bandit.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevSecOps: Run SAST on Python Code with Bandit">
+          <a href="../11/devsecops-manage-terraform-versions-with-tfenv.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevSecOps: Manage Terraform Versions with tfenv">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -879,27 +1255,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                DevSecOps: Run SAST on Python Code with Bandit
+                DevSecOps: Manage Terraform Versions with tfenv
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html" class="md-footer__link md-footer__link--next" aria-label="Next: DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
