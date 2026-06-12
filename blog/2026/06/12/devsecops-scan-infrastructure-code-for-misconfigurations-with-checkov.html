@@ -270,7 +270,7 @@
   <span class="md-ellipsis">
     
   
-    alismx profile
+    profile
   
 
     
@@ -310,7 +310,7 @@
   <span class="md-ellipsis">
     
   
-    alismx posts
+    posts
   
 
     
@@ -326,7 +326,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    alismx posts
+    posts
   
 
           </label>
@@ -965,7 +965,7 @@
 
 
 <h1 id="devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov">DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov<a class="headerlink" href="#devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov" title="Permanent link">&para;</a></h1>
-<p>Infrastructure code often passes syntax checks but contains security misconfigurations. Open buckets, unencrypted databases, overly permissive access policies. Checkov scans IaC files across 20+ formats for these patterns before you deploy.</p>
+<p>Infrastructure code contains security misconfigurations. Open buckets, unencrypted databases, overly permissive access policies. Checkov scans IaC files across 20+ formats for these patterns before you deploy.</p>
 <p><strong>TL;DR</strong>: Install checkov, scan your IaC directory, configure your repository, and add it to your CI pipeline to catch infrastructure misconfigurations before they reach production.</p>
 <hr />
 <h2 id="install-checkov">Install checkov<a class="headerlink" href="#install-checkov" title="Permanent link">&para;</a></h2>
@@ -1187,7 +1187,7 @@
 <p>SARIF integrates with GitHub Code Scanning and GitLab SAST which renders findings as in-line annotations on the source files.</p>
 <hr />
 <h2 id="add-to-cicd">Add to CI/CD<a class="headerlink" href="#add-to-cicd" title="Permanent link">&para;</a></h2>
-<p>The <code>checkov-action</code> with the <code>github_failed_only</code> output format reports findings as inline checks on the pull request.</p>
+<p>The <code>checkov-action</code> with the <code>github_failed_only</code> output reports failures on the GitHub action page.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># .github/workflows/checkov.yml</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkov</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
