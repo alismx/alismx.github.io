@@ -11,8 +11,15 @@ tags:
   - sast
   - kubernetes
   - cloudformation
+  - dockerfile
+  - bicep
+  - ansible
+  - helm
+  - kustomize
+  - sarif
+  - githubactions
+  - gitlab
   - security
-  - ci
 pin: true
 ---
 
