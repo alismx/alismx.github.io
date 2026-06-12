@@ -1,5 +1,5 @@
 ---
-date: 2026-06-11
+date: 2026-06-12
 authors:
   - alismx
 categories:
@@ -8,6 +8,7 @@ tags:
   - checkov
   - iac
   - terraform
+  - sast
   - kubernetes
   - cloudformation
   - security
