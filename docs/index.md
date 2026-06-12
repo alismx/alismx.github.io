@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [fix: correct checkov blog post wording and nav labels](https://github.com/alismx/alismx.github.io/pull/17) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add Checkov CI workflow and SAST blog post](https://github.com/alismx/alismx.github.io/pull/16) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: regenerate site and update generated files](https://github.com/alismx/alismx.github.io/pull/15) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: update site navigation, colors, and plugins](https://github.com/alismx/alismx.github.io/pull/14) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [refactor: move SQLi_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/56) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix(ecs): update ECS module ref to commit with WAF fix](https://github.com/CDCgov/dibbs-aws/pull/96) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [refactor: move CrossSiteScripting_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/55) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [refactor: restructure ECS README into user-focused deployment guide](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1459) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 
 ### 📓 My gists
 
