@@ -670,6 +670,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-to-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add to CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#understand-the-checks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -727,39 +760,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-and-output-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage and output formats
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-to-cicd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add to CI/CD
-      
-    </span>
-  </a>
   
 </li>
       
@@ -984,8 +984,51 @@
 </code></pre></div>
 <p>Checkov groups findings by resource type. AWS findings use <code>CKV_AWS_XX</code> IDs, Azure uses <code>CKV_AZURE_XX</code>, Kubernetes uses <code>CKV_K8S_XX</code>, and so on.</p>
 <hr />
+<h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h2>
+<p>You can configure checkov with a YAML file in your repo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .checkov.yaml</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">check</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">skip-check</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_21</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_34</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">compact</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>The <code>skip-check</code> list matches <code>--skip-check</code> on the command line. The <code>compact</code> flag collapses findings and only displays failures.</p>
+<hr />
+<h2 id="output-formats">Output formats<a class="headerlink" href="#output-formats" title="Permanent link">&para;</a></h2>
+<p>Checkov supports several output formats. The default is text. For CI integration, use JSON, SARIF, or JUnit XML.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Default: human-readable text</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># JSON (parseable in CI)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>findings.json
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># SARIF (GitHub Code Scanning, GitLab SAST)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>sarif<span class="w"> </span>-o<span class="w"> </span>findings.sarif
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># JUnit XML (for CI systems)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>junitxml<span class="w"> </span>-o<span class="w"> </span>findings.xml
+</code></pre></div>
+<p>SARIF integrates with GitHub Code Scanning and GitLab SAST which renders findings as in-line annotations on the source files.</p>
+<hr />
+<h2 id="add-to-cicd">Add to CI/CD<a class="headerlink" href="#add-to-cicd" title="Permanent link">&para;</a></h2>
+<p>The <code>checkov-action</code> with the <code>github_failed_only</code> output reports failures on the GitHub action page.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># .github/workflows/checkov.yml</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkov</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">checkov</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Checkov</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridgecrewio/checkov-action@v12</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">          </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github_failed_only</span>
+</code></pre></div>
+<hr />
 <h2 id="understand-the-checks">Understand the checks<a class="headerlink" href="#understand-the-checks" title="Permanent link">&para;</a></h2>
-<p>Checkov has 750+ built-in policies across 20+ IaC types. It parses HCL-based files (.tf, .tofu, .hcl) with the same rules since both Terraform and OpenTofu use HCL.</p>
+<p>Checkov has 750+ built-in policies across 20+ IaC types.</p>
 <h3 id="iac-formats">IaC formats<a class="headerlink" href="#iac-formats" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1059,6 +1102,7 @@
 </tbody>
 </table>
 <h3 id="auto-detected">Auto-detected<a class="headerlink" href="#auto-detected" title="Permanent link">&para;</a></h3>
+<p>Helm and Kustomize auto-detect config file presence, then template out to Kubernetes manifests for scanning. AWS CDK requires running <code>cdk synth</code> to generate a CloudFormation JSON template, which checkov then scans.</p>
 <table>
 <thead>
 <tr>
@@ -1157,57 +1201,13 @@
 </tbody>
 </table>
 <p>Checkov's full policy index is auto-generated from the source and available at <a href="https://www.checkov.io/5.Policy%20Index/all.html">Policy Index</a>.</p>
-<p><strong>Notes on auto-detected types</strong>: Helm and Kustomize auto-detect config file presence, then template out to Kubernetes manifests for scanning. AWS CDK requires running <code>cdk synth</code> to generate a CloudFormation JSON template, which checkov then scans.</p>
-<hr />
-<h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h2>
-<p>You can configure checkov with a YAML file in your repo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .checkov.yaml</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">check</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">skip-check</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_21</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_34</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">compact</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-<p>The <code>skip-check</code> list matches <code>--skip-check</code> on the command line. The <code>compact</code> flag collapses findings and only displays failures.</p>
-<hr />
-<h2 id="usage-and-output-formats">Usage and output formats<a class="headerlink" href="#usage-and-output-formats" title="Permanent link">&para;</a></h2>
-<p>Checkov supports several output formats. The default is text. For CI integration, use JSON, SARIF, or JUnit XML.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Default: human-readable text</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># JSON (parseable in CI)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>findings.json
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># SARIF (GitHub Code Scanning, GitLab SAST)</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>sarif<span class="w"> </span>-o<span class="w"> </span>findings.sarif
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># JUnit XML (for CI systems)</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>junitxml<span class="w"> </span>-o<span class="w"> </span>findings.xml
-</code></pre></div>
-<p>SARIF integrates with GitHub Code Scanning and GitLab SAST which renders findings as in-line annotations on the source files.</p>
-<hr />
-<h2 id="add-to-cicd">Add to CI/CD<a class="headerlink" href="#add-to-cicd" title="Permanent link">&para;</a></h2>
-<p>The <code>checkov-action</code> with the <code>github_failed_only</code> output reports failures on the GitHub action page.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># .github/workflows/checkov.yml</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkov</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">checkov</span><span class="p">:</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Checkov</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridgecrewio/checkov-action@v12</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">          </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github_failed_only</span>
-</code></pre></div>
 <hr />
 <h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use <code>--skip-check</code> or <code>.checkov.yaml</code> for known misconfigurations. Don't skip checks blindly.</li>
 <li>Use <code>checkov:skip</code> comments to suppress individual findings in the code. Explain why.</li>
 <li>SARIF output integrates with GitHub Code Scanning for inline annotations on source files.</li>
-<li>Run checkov in CI on pull requests. Preventing a misconfiguration from reaching production is cheaper than fixing it later.</li>
+<li>Run checkov in CI on pull requests. Prevent misconfigurations from reaching production.</li>
 </ul>
 
 
