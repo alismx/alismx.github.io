@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: update SAST IAC Checkov blog post](https://github.com/alismx/alismx.github.io/pull/18) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [fix: correct checkov blog post wording and nav labels](https://github.com/alismx/alismx.github.io/pull/17) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add Checkov CI workflow and SAST blog post](https://github.com/alismx/alismx.github.io/pull/16) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: regenerate site and update generated files](https://github.com/alismx/alismx.github.io/pull/15) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat(security): add inspector2:Enable and update ECS module ref](https://github.com/CDCgov/dibbs-aws/pull/97) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [refactor: move SQLi_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/56) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix(ecs): update ECS module ref to commit with WAF fix](https://github.com/CDCgov/dibbs-aws/pull/96) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [refactor: move CrossSiteScripting_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/55) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
