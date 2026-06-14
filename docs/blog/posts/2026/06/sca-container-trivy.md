@@ -34,7 +34,7 @@ tags:
 pin: true
 ---
 
-# DevSecOps: Scan Container Images for Vulnerabilities with Trivy
+# DevSecOps: Scan Container Images with Trivy
 
 Containers images ship software. They also ship vulnerabilities. Outdated base images, exposed secrets, misconfigured image instructions. Trivy scans container images for CVEs, misconfigurations, secrets, and license issues in one command.
 

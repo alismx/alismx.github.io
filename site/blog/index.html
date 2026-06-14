@@ -336,7 +336,7 @@
   <span class="md-ellipsis">
     
   
-    buy me
+    buy me compute
   
 
     
@@ -396,11 +396,11 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="devsecops-scan-container-images-for-vulnerabilities-with-trivy"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html">DevSecOps: Scan Container Images for Vulnerabilities with Trivy</a></h2>
+    <h2 id="devsecops-scan-container-images-with-trivy"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html">DevSecOps: Scan Container Images with Trivy</a></h2>
 <p>Containers images ship software. They also ship vulnerabilities. Outdated base images, exposed secrets, misconfigured image instructions. Trivy scans container images for CVEs, misconfigurations, secrets, and license issues in one command.</p>
 <p><strong>TL;DR</strong>: Install Trivy, scan your container images with <code>trivy image</code>, enable additional scanners, and add it to your CI pipeline to catch vulnerabilities before deployment.</p>
 <hr />
-<h3 id="install-trivy"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#install-trivy">Install Trivy</a></h3>
+<h3 id="install-trivy"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#install-trivy">Install Trivy</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Ubuntu/Debian</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://aquasecurity.github.io/trivy-repo/deb/public.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/trivy.gpg
@@ -412,7 +412,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>trivy<span class="w"> </span>--version
 </code></pre></div>
 <hr />
-<h3 id="scan-a-container-image"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#scan-a-container-image">Scan a container image</a></h3>
+<h3 id="scan-a-container-image"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#scan-a-container-image">Scan a container image</a></h3>
 <p>Basic usage: scan a public image for vulnerabilities and secrets:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>python:3.4-alpine
 </code></pre></div>
@@ -446,7 +446,7 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--scanners<span class="w"> </span>license<span class="w"> </span>myapp:latest
 </code></pre></div>
 <hr />
-<h3 id="scan-container-image-metadata"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#scan-container-image-metadata">Scan container image metadata</a></h3>
+<h3 id="scan-container-image-metadata"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#scan-container-image-metadata">Scan container image metadata</a></h3>
 <p>Container images have configuration metadata, the container image instructions that built them. Trivy can scan this configuration for misconfigurations and secrets:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Dockerfile-style misconfigurations (USER, HEALTHCHECK, ADD vs COPY)</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--image-config-scanners<span class="w"> </span>misconfig<span class="w"> </span>myapp:latest
@@ -456,19 +456,19 @@
 </code></pre></div>
 <p>These are disabled by default. The misconfiguration scanner converts the image config into Dockerfile format and runs Dockerfile checks against it. The secret scanner looks for credentials in environment variables stored in the config JSON.</p>
 <hr />
-<h3 id="scan-an-image-tar-file"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#scan-an-image-tar-file">Scan an image tar file</a></h3>
+<h3 id="scan-an-image-tar-file"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#scan-an-image-tar-file">Scan an image tar file</a></h3>
 <p>Trivy can scan images saved as tar archives. Useful for offline or CI environments:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ruby:3.1-alpine3.15
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>docker<span class="w"> </span>save<span class="w"> </span>ruby:3.1-alpine3.15<span class="w"> </span>-o<span class="w"> </span>ruby-3.1.tar
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>trivy<span class="w"> </span>image<span class="w"> </span>--input<span class="w"> </span>ruby-3.1.tar
 </code></pre></div>
 <hr />
-<h3 id="scan-by-architecture"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#scan-by-architecture">Scan by architecture</a></h3>
+<h3 id="scan-by-architecture"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#scan-by-architecture">Scan by architecture</a></h3>
 <p>By default, Trivy scans on the host's architecture. Cross-architecture images need the <code>--platform</code> flag:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>--platform<span class="o">=</span>linux/arm<span class="w"> </span>alpine:3.16.1
 </code></pre></div>
 <hr />
-<h3 id="sbom-generation-and-vulnerability-scanning"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#sbom-generation-and-vulnerability-scanning">SBOM generation and vulnerability scanning</a></h3>
+<h3 id="sbom-generation-and-vulnerability-scanning"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#sbom-generation-and-vulnerability-scanning">SBOM generation and vulnerability scanning</a></h3>
 <p>Trivy can generate Software Bill of Materials (SBOM) for container images:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Generate SBOM in CycloneDX format</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--format<span class="w"> </span>cyclonedx<span class="w"> </span>-o<span class="w"> </span>sbom.json<span class="w"> </span>python:3.4-alpine
@@ -477,18 +477,18 @@
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>trivy<span class="w"> </span>image<span class="w"> </span>--format<span class="w"> </span>spdx-json<span class="w"> </span>-o<span class="w"> </span>sbom.json<span class="w"> </span>python:3.4-alpine
 </code></pre></div>
 <hr />
-<h3 id="compliance"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#compliance">Compliance</a></h3>
+<h3 id="compliance"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#compliance">Compliance</a></h3>
 <p>The <code>docker-cis-1.6.0</code> check evaluates container image configurations against the CIS Docker Benchmark:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>--compliance<span class="w"> </span>docker-cis-1.6.0<span class="w"> </span>myapp:latest
 </code></pre></div>
 <hr />
-<h3 id="authentication"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#authentication">Authentication</a></h3>
+<h3 id="authentication"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#authentication">Authentication</a></h3>
 <p>For private registries, authenticate with:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>trivy<span class="w"> </span>registry<span class="w"> </span>login<span class="w"> </span>--username<span class="w"> </span>myuser<span class="w"> </span>--password<span class="w"> </span>mypassword<span class="w"> </span>registry.example.com
 </code></pre></div>
 <p>Then scan as normal. Trivy reads the registry credentials before pulling the image.</p>
 <hr />
-<h3 id="filter-findings"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#filter-findings">Filter findings</a></h3>
+<h3 id="filter-findings"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#filter-findings">Filter findings</a></h3>
 <p>Trivy lets you narrow scans by severity:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Only HIGH and CRITICAL</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--severity<span class="w"> </span>HIGH,CRITICAL<span class="w"> </span>alpine:3.18
@@ -497,7 +497,7 @@
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>trivy<span class="w"> </span>image<span class="w"> </span>--severity<span class="w"> </span>HIGH<span class="w"> </span>alpine:3.18
 </code></pre></div>
 <hr />
-<h3 id="add-to-cicd"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#add-to-cicd">Add to CI/CD</a></h3>
+<h3 id="add-to-cicd"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#add-to-cicd">Add to CI/CD</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># .github/workflows/trivy.yml</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trivy</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
@@ -516,7 +516,7 @@
 </code></pre></div>
 <p><code>exit-code: 1</code> causes the job to fail on HIGH or CRITICAL findings. Use <code>format: sarif</code> and add the <code>upload-sarif</code> action for inline annotations.</p>
 <hr />
-<h3 id="understand-what-trivy-scans"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#understand-what-trivy-scans">Understand what Trivy scans</a></h3>
+<h3 id="understand-what-trivy-scans"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#understand-what-trivy-scans">Understand what Trivy scans</a></h3>
 <p>Trivy checks four categories against files inside container images:</p>
 <table>
 <thead>
@@ -550,7 +550,7 @@
 </tbody>
 </table>
 <hr />
-<h3 id="takeaways"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-for-vulnerabilities-with-trivy.html#takeaways">Takeaways</a></h3>
+<h3 id="takeaways"><a class="toclink" href="2026/06/13/devsecops-scan-container-images-with-trivy.html#takeaways">Takeaways</a></h3>
 <ul>
 <li>Trivy scans for vulnerabilities and secrets by default. Use <code>--scanners</code> to enable misconfiguration and license scanning.</li>
 <li><code>--image-config-scanners</code> scans the image's configuration metadata, not the filesystem inside it.</li>

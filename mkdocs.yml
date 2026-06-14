@@ -9,7 +9,7 @@ docs_dir: docs
 nav:
   - profile: index.md
   - blog/index.md
-  - buy me: https://ko-fi.com/alismx
+  - buy me compute: https://ko-fi.com/alismx
 
 plugins:
   - search
@@ -17,7 +17,6 @@ plugins:
   - privacy
   - tags
   - blog:
-      authors_profile: true
       blog_dir: blog
       post_readtime: true
       archive: false
