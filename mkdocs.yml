@@ -8,8 +8,8 @@ docs_dir: docs
 
 nav:
   - profile: index.md
-  - posts:
-    - blog/index.md
+  - blog/index.md
+  - buy me: https://ko-fi.com/alismx
 
 plugins:
   - search
@@ -17,8 +17,11 @@ plugins:
   - privacy
   - tags
   - blog:
+      authors_profile: true
       blog_dir: blog
       post_readtime: true
+      archive: false
+      categories: false
 
 theme:
   name: material
@@ -52,6 +55,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/alismx
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alismx
+    - icon: simple/kofi
+      link: https://ko-fi.com/alismx
   copyright: Copyright &copy; 2015 - 2026 Alis Akers
 
 markdown_extensions:
