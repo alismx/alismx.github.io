@@ -2,34 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://alismx.dev/index.html</loc>
-         <lastmod>2026-06-12</lastmod>
+         <lastmod>2026-06-14</lastmod>
     </url>
     <url>
          <loc>https://alismx.dev/blog/index.html</loc>
-         <lastmod>2026-06-12</lastmod>
+         <lastmod>2026-06-14</lastmod>
     </url>
     <url>
          <loc>https://alismx.dev/blog/2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html</loc>
-         <lastmod>2026-06-12</lastmod>
+         <lastmod>2026-06-14</lastmod>
     </url>
     <url>
-         <loc>https://alismx.dev/blog/2026/06/11/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html</loc>
-         <lastmod>2026-06-12</lastmod>
+         <loc>https://alismx.dev/blog/2026/06/12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html</loc>
+         <lastmod>2026-06-14</lastmod>
     </url>
     <url>
          <loc>https://alismx.dev/blog/2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html</loc>
-         <lastmod>2026-06-12</lastmod>
+         <lastmod>2026-06-14</lastmod>
+    </url>
+    <url>
+         <loc>https://alismx.dev/blog/2026/06/13/devsecops-scan-container-images-with-trivy.html</loc>
+         <lastmod>2026-06-14</lastmod>
     </url>
     <url>
          <loc>https://alismx.dev/blog/2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html</loc>
-         <lastmod>2026-06-12</lastmod>
-    </url>
-    <url>
-         <loc>https://alismx.dev/blog/archive/2026.html</loc>
-         <lastmod>2026-06-12</lastmod>
-    </url>
-    <url>
-         <loc>https://alismx.dev/blog/category/devsecops.html</loc>
-         <lastmod>2026-06-12</lastmod>
+         <lastmod>2026-06-14</lastmod>
     </url>
 </urlset>

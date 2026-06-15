@@ -151,7 +151,7 @@ bandit -r . -f sarif -o findings.sarif
 
 You can configure Bandit with a YAML or TOML file, or an INI file called `.bandit`.
 
-### YAML (recommended, works with all extras)
+### YAML
 
 ```yaml
 # bandit.yaml
