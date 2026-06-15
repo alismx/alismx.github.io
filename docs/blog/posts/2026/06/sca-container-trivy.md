@@ -209,11 +209,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Trivy vulnerability scanner
-<<<<<<< HEAD
         uses: aquasecurity/trivy-action@v0.36.0
-=======
-        uses: aquasecurity/trivy-action@master
->>>>>>> bbf276f (feat: add SCA container scanning with Trivy blog post and site updates)
         with:
           image-ref: myapp:latest
           format: table
