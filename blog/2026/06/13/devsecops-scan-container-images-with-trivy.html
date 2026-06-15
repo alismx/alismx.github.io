@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://alismx.dev/blog/2026/06/12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html">
+        <link rel="canonical" href="https://alismx.dev/blog/2026/06/13/devsecops-scan-container-images-with-trivy.html">
       
       
-        <link rel="prev" href="../11/devsecops-manage-terraform-versions-with-tfenv.html">
+        <link rel="prev" href="../12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html">
       
-      
-        <link rel="next" href="../13/devsecops-scan-container-images-with-trivy.html">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov - Alis Akers</title>
+        <title>DevSecOps: Scan Container Images with Trivy - Alis Akers</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov" class="md-skip">
+        <a href="#devsecops-scan-container-images-with-trivy" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov
+              DevSecOps: Scan Container Images with Trivy
             
           </span>
         </div>
@@ -399,7 +397,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-06-12 00:00:00+00:00" class="md-ellipsis">June 12, 2026</time>
+                        <time datetime="2026-06-13 00:00:00+00:00" class="md-ellipsis">June 13, 2026</time>
                       </div>
                     </li>
                     
@@ -440,10 +438,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-checkov" class="md-nav__link">
+  <a href="#install-trivy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install checkov
+        Install Trivy
       
     </span>
   </a>
@@ -451,10 +449,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scan-a-project" class="md-nav__link">
+  <a href="#scan-a-container-image" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scan a project
+        Scan a container image
       
     </span>
   </a>
@@ -462,10 +460,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-files" class="md-nav__link">
+  <a href="#scan-container-image-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration files
+        Scan container image metadata
       
     </span>
   </a>
@@ -473,10 +471,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-formats" class="md-nav__link">
+  <a href="#scan-an-image-tar-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Output formats
+        Scan an image tar file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan-by-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan by architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sbom-generation-and-vulnerability-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SBOM generation and vulnerability scanning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter findings
       
     </span>
   </a>
@@ -495,63 +548,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understand-the-checks" class="md-nav__link">
+  <a href="#understand-what-trivy-scans" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understand the checks
+        Understand what Trivy scans
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Understand the checks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#iac-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        IaC formats
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#auto-detected" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Auto-detected
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vcs-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VCS configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Other
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -585,63 +588,56 @@
       
       
       
-        <span class="md-tag">ansible</span>
+        <span class="md-tag">cache</span>
       
     
       
       
       
       
-        <span class="md-tag">argoworkflows</span>
+        <span class="md-tag">ci</span>
       
     
       
       
       
       
-        <span class="md-tag">awscdk</span>
+        <span class="md-tag">compliance</span>
       
     
       
       
       
       
-        <span class="md-tag">awssam</span>
+        <span class="md-tag">config</span>
       
     
       
       
       
       
-        <span class="md-tag">azurepipelines</span>
+        <span class="md-tag">container</span>
       
     
       
       
       
       
-        <span class="md-tag">bicep</span>
+        <span class="md-tag">containerd</span>
       
     
       
       
       
       
-        <span class="md-tag">bitbucket</span>
+        <span class="md-tag">cyclonedx</span>
       
     
       
       
       
       
-        <span class="md-tag">checkov</span>
-      
-    
-      
-      
-      
-      
-        <span class="md-tag">cloudformation</span>
+        <span class="md-tag">docker</span>
       
     
       
@@ -655,35 +651,7 @@
       
       
       
-        <span class="md-tag">git</span>
-      
-    
-      
-      
-      
-      
-        <span class="md-tag">githubactions</span>
-      
-    
-      
-      
-      
-      
-        <span class="md-tag">gitlab</span>
-      
-    
-      
-      
-      
-      
-        <span class="md-tag">helm</span>
-      
-    
-      
-      
-      
-      
-        <span class="md-tag">iac</span>
+        <span class="md-tag">github</span>
       
     
       
@@ -697,14 +665,42 @@
       
       
       
-        <span class="md-tag">kustomize</span>
+        <span class="md-tag">license</span>
       
     
       
       
       
       
-        <span class="md-tag">openapi</span>
+        <span class="md-tag">misconfig</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">oci</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">offline</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">podman</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">registry</span>
       
     
       
@@ -718,7 +714,7 @@
       
       
       
-        <span class="md-tag">sast</span>
+        <span class="md-tag">sbom</span>
       
     
       
@@ -732,6 +728,13 @@
       
       
       
+        <span class="md-tag">secret</span>
+      
+    
+      
+      
+      
+      
         <span class="md-tag">security</span>
       
     
@@ -739,14 +742,28 @@
       
       
       
-        <span class="md-tag">serverlessframework</span>
+        <span class="md-tag">spdx</span>
       
     
       
       
       
       
-        <span class="md-tag">terraform</span>
+        <span class="md-tag">tar</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">trivy</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vulnerability</span>
       
     
   </nav>
@@ -756,250 +773,167 @@
   
 
 
-<h1 id="devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov">DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov<a class="headerlink" href="#devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov" title="Permanent link">&para;</a></h1>
-<p>Infrastructure code contains security misconfigurations. Open buckets, unencrypted databases, overly permissive access policies. Checkov scans IaC files across 20+ formats for these patterns before you deploy.</p>
-<p><strong>TL;DR</strong>: Install checkov, scan your IaC directory, configure your repository, and add it to your CI pipeline to catch infrastructure misconfigurations before they reach production.</p>
+<h1 id="devsecops-scan-container-images-with-trivy">DevSecOps: Scan Container Images with Trivy<a class="headerlink" href="#devsecops-scan-container-images-with-trivy" title="Permanent link">&para;</a></h1>
+<p>Containers images ship software. They also ship vulnerabilities. Outdated base images, exposed secrets, misconfigured image instructions. Trivy scans container images for CVEs, misconfigurations, secrets, and license issues in one command.</p>
+<p><strong>TL;DR</strong>: Install Trivy, scan your container images with <code>trivy image</code>, enable additional scanners, and add it to your CI pipeline to catch vulnerabilities before deployment.</p>
 <hr />
-<h2 id="install-checkov">Install checkov<a class="headerlink" href="#install-checkov" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>checkov
+<h2 id="install-trivy">Install Trivy<a class="headerlink" href="#install-trivy" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Ubuntu/Debian</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://aquasecurity.github.io/trivy-repo/deb/public.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/trivy.gpg
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/trivy.list
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>trivy
 </code></pre></div>
 <p>Verify:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>checkov<span class="w"> </span>--version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>trivy<span class="w"> </span>--version
 </code></pre></div>
 <hr />
-<h2 id="scan-a-project">Scan a project<a class="headerlink" href="#scan-a-project" title="Permanent link">&para;</a></h2>
-<p>Basic usage: scan an entire directory recursively:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>checkov<span class="w"> </span>-d<span class="w"> </span>/path/to/iac
+<h2 id="scan-a-container-image">Scan a container image<a class="headerlink" href="#scan-a-container-image" title="Permanent link">&para;</a></h2>
+<p>Basic usage: scan a public image for vulnerabilities and secrets:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>python:3.4-alpine
 </code></pre></div>
-<p>Scan a single file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>checkov<span class="w"> </span>-f<span class="w"> </span>/path/to/main.tf
+<p>Vulnerability and secret scanning are both enabled by default. The output groups findings by OS package type, then gets into specific packages:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Report Summary
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>┌────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┐
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│                                   Target                                   │    Type    │ Vulnerabilities │ Secrets │
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>├────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│ python:3.4-alpine (alpine 3.9.2)                                           │   alpine   │       37        │    -    │
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>├────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┤
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>...
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>python:3.4-alpine (alpine 3.9.2)
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>Total: 37 (UNKNOWN: 0, LOW: 4, MEDIUM: 16, HIGH: 13, CRITICAL: 4)
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>┌──────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>│   Library    │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>├──────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>│ expat        │ CVE-2018-20843 │ HIGH     │ fixed  │ 2.2.6-r0          │ 2.2.7-r0      │ expat: large number of colons in input makes parser consume  │
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>│              │                │          │        │                   │               │ high amount...                                               │
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>│              │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2018-20843                   │
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>...
 </code></pre></div>
-<p>Checkov groups findings by resource type. AWS findings use <code>CKV_AWS_XX</code> IDs, Azure uses <code>CKV_AZURE_XX</code>, Kubernetes uses <code>CKV_K8S_XX</code>, and so on.</p>
+<p>To scan only vulnerabilities (disables the default secret scanner):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>--scanners<span class="w"> </span>vuln<span class="w"> </span>python:3.4-alpine
+</code></pre></div>
+<p>To enable only misconfiguration or license scanning:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>--scanners<span class="w"> </span>misconfig<span class="w"> </span>myapp:latest
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--scanners<span class="w"> </span>license<span class="w"> </span>myapp:latest
+</code></pre></div>
 <hr />
-<h2 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h2>
-<p>You can configure checkov with a YAML file in your repo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .checkov.yaml</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">check</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">skip-check</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_21</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CKV_AWS_34</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">compact</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<h2 id="scan-container-image-metadata">Scan container image metadata<a class="headerlink" href="#scan-container-image-metadata" title="Permanent link">&para;</a></h2>
+<p>Container images have configuration metadata, the container image instructions that built them. Trivy can scan this configuration for misconfigurations and secrets:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Dockerfile-style misconfigurations (USER, HEALTHCHECK, ADD vs COPY)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--image-config-scanners<span class="w"> </span>misconfig<span class="w"> </span>myapp:latest
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Secrets in environment variables (credential leaks in config)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>trivy<span class="w"> </span>image<span class="w"> </span>--image-config-scanners<span class="w"> </span>secret<span class="w"> </span>myapp:latest
 </code></pre></div>
-<p>The <code>skip-check</code> list matches <code>--skip-check</code> on the command line. The <code>compact</code> flag collapses findings and only displays failures.</p>
+<p>These are disabled by default. The misconfiguration scanner converts the image config into Dockerfile format and runs Dockerfile checks against it. The secret scanner looks for credentials in environment variables stored in the config JSON.</p>
 <hr />
-<h2 id="output-formats">Output formats<a class="headerlink" href="#output-formats" title="Permanent link">&para;</a></h2>
-<p>Checkov supports several output formats. The default is text. For CI integration, use JSON, SARIF, or JUnit XML.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Default: human-readable text</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># JSON (parseable in CI)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>-o<span class="w"> </span>findings.json
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># SARIF (GitHub Code Scanning, GitLab SAST)</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>sarif<span class="w"> </span>-o<span class="w"> </span>findings.sarif
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># JUnit XML (for CI systems)</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>-o<span class="w"> </span>junitxml<span class="w"> </span>-o<span class="w"> </span>findings.xml
+<h2 id="scan-an-image-tar-file">Scan an image tar file<a class="headerlink" href="#scan-an-image-tar-file" title="Permanent link">&para;</a></h2>
+<p>Trivy can scan images saved as tar archives. Useful for offline or CI environments:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ruby:3.1-alpine3.15
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>docker<span class="w"> </span>save<span class="w"> </span>ruby:3.1-alpine3.15<span class="w"> </span>-o<span class="w"> </span>ruby-3.1.tar
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>trivy<span class="w"> </span>image<span class="w"> </span>--input<span class="w"> </span>ruby-3.1.tar
 </code></pre></div>
-<p>SARIF integrates with GitHub Code Scanning and GitLab SAST which renders findings as in-line annotations on the source files.</p>
+<hr />
+<h2 id="scan-by-architecture">Scan by architecture<a class="headerlink" href="#scan-by-architecture" title="Permanent link">&para;</a></h2>
+<p>By default, Trivy scans on the host's architecture. Cross-architecture images need the <code>--platform</code> flag:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>--platform<span class="o">=</span>linux/arm<span class="w"> </span>alpine:3.16.1
+</code></pre></div>
+<hr />
+<h2 id="sbom-generation-and-vulnerability-scanning">SBOM generation and vulnerability scanning<a class="headerlink" href="#sbom-generation-and-vulnerability-scanning" title="Permanent link">&para;</a></h2>
+<p>Trivy can generate Software Bill of Materials (SBOM) for container images:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Generate SBOM in CycloneDX format</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--format<span class="w"> </span>cyclonedx<span class="w"> </span>-o<span class="w"> </span>sbom.json<span class="w"> </span>python:3.4-alpine
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Generate SBOM in SPDX format</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>trivy<span class="w"> </span>image<span class="w"> </span>--format<span class="w"> </span>spdx-json<span class="w"> </span>-o<span class="w"> </span>sbom.json<span class="w"> </span>python:3.4-alpine
+</code></pre></div>
+<hr />
+<h2 id="compliance">Compliance<a class="headerlink" href="#compliance" title="Permanent link">&para;</a></h2>
+<p>The <code>docker-cis-1.6.0</code> check evaluates container image configurations against the CIS Docker Benchmark:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>trivy<span class="w"> </span>image<span class="w"> </span>--compliance<span class="w"> </span>docker-cis-1.6.0<span class="w"> </span>myapp:latest
+</code></pre></div>
+<hr />
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>For private registries, authenticate with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>trivy<span class="w"> </span>registry<span class="w"> </span>login<span class="w"> </span>--username<span class="w"> </span>myuser<span class="w"> </span>--password<span class="w"> </span>mypassword<span class="w"> </span>registry.example.com
+</code></pre></div>
+<p>Then scan as normal. Trivy reads the registry credentials before pulling the image.</p>
+<hr />
+<h2 id="filter-findings">Filter findings<a class="headerlink" href="#filter-findings" title="Permanent link">&para;</a></h2>
+<p>Trivy lets you narrow scans by severity:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Only HIGH and CRITICAL</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>trivy<span class="w"> </span>image<span class="w"> </span>--severity<span class="w"> </span>HIGH,CRITICAL<span class="w"> </span>alpine:3.18
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Only HIGH severity</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>trivy<span class="w"> </span>image<span class="w"> </span>--severity<span class="w"> </span>HIGH<span class="w"> </span>alpine:3.18
+</code></pre></div>
 <hr />
 <h2 id="add-to-cicd">Add to CI/CD<a class="headerlink" href="#add-to-cicd" title="Permanent link">&para;</a></h2>
-<p>The <code>checkov-action</code> with the <code>github_failed_only</code> output reports failures on the GitHub action page.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># .github/workflows/checkov.yml</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkov</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">checkov</span><span class="p">:</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Checkov</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridgecrewio/checkov-action@v12</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">          </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github_failed_only</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># .github/workflows/trivy.yml</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trivy</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="nt">trivy</span><span class="p">:</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Trivy vulnerability scanner</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aquasecurity/trivy-action@v0.36.0</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">          </span><span class="nt">image-ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp:latest</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">table</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">          </span><span class="nt">exit-code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">          </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH,CRITICAL</span>
 </code></pre></div>
+<p><code>exit-code: 1</code> causes the job to fail on HIGH or CRITICAL findings. Use <code>format: sarif</code> and add the <code>upload-sarif</code> action for inline annotations.</p>
 <hr />
-<h2 id="understand-the-checks">Understand the checks<a class="headerlink" href="#understand-the-checks" title="Permanent link">&para;</a></h2>
-<p>Checkov has 750+ built-in policies across 20+ IaC types.</p>
-<h3 id="iac-formats">IaC formats<a class="headerlink" href="#iac-formats" title="Permanent link">&para;</a></h3>
+<h2 id="understand-what-trivy-scans">Understand what Trivy scans<a class="headerlink" href="#understand-what-trivy-scans" title="Permanent link">&para;</a></h2>
+<p>Trivy checks four categories against files inside container images:</p>
 <table>
 <thead>
 <tr>
-<th>IaC Type</th>
-<th>Format</th>
-<th>Suppression</th>
+<th>Category</th>
+<th>What it finds</th>
+<th>Enabled by default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Terraform.md">Terraform / OpenTofu</a></td>
-<td>.tf, .tofu, .hcl, .tfvars</td>
-<td><code># checkov:skip=CKV_AWS_21: reason</code></td>
+<td>Vulnerabilities</td>
+<td>CVEs in OS packages and language dependencies</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Kubernetes.md">Kubernetes</a></td>
-<td>.yaml, .json</td>
-<td><code>checkov.io/skip1: CKV_K8S_20=reason</code></td>
+<td>Misconfigurations</td>
+<td>IaC files inside the image (Kubernetes, Terraform)</td>
+<td>No</td>
 </tr>
 <tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Cloudformation.md">CloudFormation</a></td>
-<td>.json, .yaml, .yml, .template</td>
-<td><code># checkov:skip=CKV_AWS_1: reason</code></td>
+<td>Secrets</td>
+<td>Hardcoded credentials, tokens, API keys</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Dockerfile.md">Dockerfile</a></td>
-<td>Named files (Dockerfile, Dockerfile.*, dockerfile)</td>
-<td><code>#checkov:skip=CKV_DOCKER_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bicep.md">Bicep</a></td>
-<td>.bicep</td>
-<td><code>#checkov:skip=CKV_AZURE_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Azure%20ARM%20templates.md">ARM Templates</a></td>
-<td>.json</td>
-<td>CLI only (<code>--skip-check</code>)</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Ansible.md">Ansible</a></td>
-<td>.yaml, .yml, .json</td>
-<td><code>#checkov:skip=CKV_ANSIBLE_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Argo%20Workflows.md">Argo Workflows</a></td>
-<td>.yaml</td>
-<td><code>checkov.io/skip1: CKV_ARGO_1=reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Serverless%20Framework.md">Serverless Framework</a></td>
-<td>.yml, .yaml</td>
-<td><code>#checkov:skip=CKV_AWS_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/AWS%20SAM.md">AWS SAM</a></td>
-<td>.yaml, .yml</td>
-<td><code>#checkov:skip=CKV_AWS_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/OpenAPI.md">OpenAPI</a></td>
-<td>.yaml, .json</td>
-<td><code>// checkov:skip=CKV_OPENAPI_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Azure%20Pipelines.md">Azure Pipelines</a></td>
-<td>.yml, .yaml</td>
-<td><code>#checkov:skip=CKV_AZUREPIPELINES_1: reason</code></td>
+<td>Licenses</td>
+<td>Open source license compliance</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
-<h3 id="auto-detected">Auto-detected<a class="headerlink" href="#auto-detected" title="Permanent link">&para;</a></h3>
-<p>Helm and Kustomize auto-detect config file presence, then template out to Kubernetes manifests for scanning. AWS CDK requires running <code>cdk synth</code> to generate a CloudFormation JSON template, which checkov then scans.</p>
-<table>
-<thead>
-<tr>
-<th>IaC Type</th>
-<th>Format</th>
-<th>Suppression</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Helm.md">Helm</a></td>
-<td>Auto-detected by Chart.yaml presence</td>
-<td>Via <code>#checkov:skip</code> on templates</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Kustomize.md">Kustomize</a></td>
-<td>Auto-detected by kustomization.yaml presence</td>
-<td>Via <code>#checkov:skip</code> on templates</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/CDK.md">AWS CDK</a></td>
-<td>Synthesized from .ts, .js, .py (cdk synth to JSON first)</td>
-<td>CDK construct metadata</td>
-</tr>
-</tbody>
-</table>
-<h3 id="vcs-configuration">VCS configuration<a class="headerlink" href="#vcs-configuration" title="Permanent link">&para;</a></h3>
-<p>Checkov evaluates organization and repository settings from the respective APIs, not from code files. You need to provide a personal access token for each platform.</p>
-<table>
-<thead>
-<tr>
-<th>IaC Type</th>
-<th>Format</th>
-<th>Suppression</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md">GitHub Actions</a></td>
-<td>.yml, .yaml</td>
-<td><code>#checkov:skip=CKV_GITHUB_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md">GitHub Configuration</a></td>
-<td>.json (fetched from GitHub API)</td>
-<td>CLI only (<code>--skip-check</code>)</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md">GitLab CI</a></td>
-<td>.yml, .yaml</td>
-<td><code>#checkov:skip=CKV_GITLABCI_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md">GitLab Configuration</a></td>
-<td>.json (fetched from GitLab API)</td>
-<td>CLI only (<code>--skip-check</code>)</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md">Bitbucket Pipelines</a></td>
-<td>.yml</td>
-<td><code>#checkov:skip=CKV_CIRCLECIPIPELINES_1: reason</code></td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md">Bitbucket Configuration</a></td>
-<td>.json (fetched from Bitbucket API)</td>
-<td>CLI only (<code>--skip-check</code>)</td>
-</tr>
-</tbody>
-</table>
-<p>See the <a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Github.md">GitHub</a>, <a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Gitlab.md">GitLab</a>, and <a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Bitbucket.md">Bitbucket</a> scan examples for required environment variables.</p>
-<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>IaC Type</th>
-<th>Format</th>
-<th>Suppression</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Sca.md">SCA</a></td>
-<td>.lock, .json, .txt, .xml, .toml (varies by language)</td>
-<td>File-level comment in lock file</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Git%20History.md">Git History</a></td>
-<td>(repository commit history, not a file format)</td>
-<td>CLI only (<code>--skip-check</code>)</td>
-</tr>
-<tr>
-<td><a href="https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Terraform%20Plan%20Scanning.md">Terraform Plan</a></td>
-<td>.tfplan (Terraform plan output, not source)</td>
-<td>CLI only (<code>--skip-check</code>)</td>
-</tr>
-</tbody>
-</table>
-<p>Checkov's full policy index is auto-generated from the source and available at <a href="https://www.checkov.io/5.Policy%20Index/all.html">Policy Index</a>.</p>
 <hr />
 <h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Use <code>--skip-check</code> or <code>.checkov.yaml</code> for known misconfigurations. Don't skip checks blindly.</li>
-<li>Use <code>checkov:skip</code> comments to suppress individual findings in the code. Explain why.</li>
-<li>SARIF output integrates with GitHub Code Scanning for inline annotations on source files.</li>
-<li>Run checkov in CI on pull requests. Prevent misconfigurations from reaching production.</li>
+<li>Trivy scans for vulnerabilities and secrets by default. Use <code>--scanners</code> to enable misconfiguration and license scanning.</li>
+<li><code>--image-config-scanners</code> scans the image's configuration metadata, not the filesystem inside it.</li>
+<li><code>--input</code> lets you scan tar files and OCI layout directories instead of live registries. Useful for offline CI.</li>
+<li><code>--severity</code> and <code>--exit-code</code> control CI gating.</li>
+<li>Use <code>--platform</code> for multi-arch images. Trivy only scans the host architecture without it.</li>
 </ul>
 
 
@@ -1037,7 +971,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../11/devsecops-manage-terraform-versions-with-tfenv.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevSecOps: Manage Terraform Versions with tfenv">
+          <a href="../12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1047,27 +981,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                DevSecOps: Manage Terraform Versions with tfenv
+                DevSecOps: Scan Infrastructure Code for Misconfigurations with Checkov
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../13/devsecops-scan-container-images-with-trivy.html" class="md-footer__link md-footer__link--next" aria-label="Next: DevSecOps: Scan Container Images with Trivy">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                DevSecOps: Scan Container Images with Trivy
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

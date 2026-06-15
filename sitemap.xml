@@ -21,15 +21,11 @@
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
+         <loc>https://alismx.dev/blog/2026/06/13/devsecops-scan-container-images-with-trivy.html</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
          <loc>https://alismx.dev/blog/2026/06/11/devsecops-manage-terraform-versions-with-tfenv.html</loc>
-         <lastmod>2026-06-15</lastmod>
-    </url>
-    <url>
-         <loc>https://alismx.dev/blog/archive/2026.html</loc>
-         <lastmod>2026-06-15</lastmod>
-    </url>
-    <url>
-         <loc>https://alismx.dev/blog/category/devsecops.html</loc>
          <lastmod>2026-06-15</lastmod>
     </url>
 </urlset>
