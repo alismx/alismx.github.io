@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add Trivy IaC workflow and regenerate site](https://github.com/alismx/alismx.github.io/pull/19) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: update SAST IAC Checkov blog post](https://github.com/alismx/alismx.github.io/pull/18) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [fix: correct checkov blog post wording and nav labels](https://github.com/alismx/alismx.github.io/pull/17) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add Checkov CI workflow and SAST blog post](https://github.com/alismx/alismx.github.io/pull/16) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [docs: migrate blog and docs structure](https://github.com/alismx/alismx.github.io/pull/12) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat(security): add inspector2:Enable and update ECS module ref](https://github.com/CDCgov/dibbs-aws/pull/97) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [refactor: move SQLi_BODY to count](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/56) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [fix(ecs): update ECS module ref to commit with WAF fix](https://github.com/CDCgov/dibbs-aws/pull/96) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 
 ### 📓 My gists
 
