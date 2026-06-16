@@ -17,6 +17,7 @@ plugins:
   - privacy
   - tags
   - blog:
+      blog_toc: true
       blog_dir: blog
       post_readtime: true
       archive: false

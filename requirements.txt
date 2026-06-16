@@ -3,3 +3,4 @@ mkdocs-rss-plugin>=1.13,<2
 mkdocs-include-markdown-plugin>=7.3.0,<8
 mkdocs-material[recommended]
 pre-commit
+mkdocs-awesome-nav
