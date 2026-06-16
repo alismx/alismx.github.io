@@ -33,8 +33,6 @@ A secret committed to Git leaks to anyone with read access to the repo. Pre-comm
 
 After `git commit`, the code exists in the repository. After `git push`, it exists in CI. After a merge, it's on its way to production. Each step out costs more to fix than the last.
 
-Fixing a secret found in CI costs at least one round trip and a need to rotate your secret. Detect the issue, revert the commit, apply the fix, recommit, push again. Fixing it at commit time costs seconds. The same math applies to insecure code, misconfigured infrastructure, anything that automated checks can catch.
-
 ---
 
 ## How pre-commit hooks work
@@ -55,7 +53,15 @@ fi
 echo "All checks passed."
 ```
 
-This is a shell script that runs whatever you want before a commit, but it's not managed by Git itself. That adds flexibility to a developer's setup, but at the cost of a more fragile setup. This can be used by developers to add their own preferred checks to the team's pre-commit framework as long as it doesn't conflict.
+Make it executable:
+
+```bash
+chmod +x .git/hooks/pre-commit
+```
+
+This is a shell script that runs whatever you want before a commit, but it's not committed to the repo. This should be used by developers to add their preferred checks on top of the team's agreed upon pre-commit framework.
+
+This approach is straightforward but requires developers to install all tools manually, and requires every dev to keep their hooks up to date as the project evolves.
 
 ---
 
@@ -112,41 +118,6 @@ pre-commit run
 ```
 
 The commit is blocked if any hook exits non-zero. The developer sees the output and can fix the issue.
-
----
-
-## Manual git hooks
-
-If you don't want the pre-commit framework, you can chain tools together in a shell script. This is what the individual tool documentation shows for each tool in isolation.
-
-```bash
-#!/bin/sh
-# .git/hooks/pre-commit
-
-echo "Running gitleaks..."
-gitleaks detect --source . --verbose --redact /dev/null
-if [ $? -ne 0 ]; then
-  echo "gitleaks found secrets. Commit blocked."
-  exit 1
-fi
-
-echo "Running checkov..."
-checkov -d .
-if [ $? -ne 0 ]; then
-  echo "checkov found misconfigurations. Commit blocked."
-  exit 1
-fi
-
-echo "All checks passed."
-```
-
-Make it executable:
-
-```bash
-chmod +x .git/hooks/pre-commit
-```
-
-The manual approach is straightforward but requires developers to install all tools manually, and requires every dev to keep their hooks up to date as the project evolves.
 
 ---
 
