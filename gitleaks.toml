@@ -1,8 +1,0 @@
-[extend]
-using = "github.com/gitleaks/gitleaks"
-
-[allowlist]
-description = "global allow lists"
-regexes = [
-    # patterns to allow
-]
