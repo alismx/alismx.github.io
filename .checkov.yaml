@@ -1,7 +1,0 @@
-check:
-  skip-check:
-    - CKV_GHA_4
-    - CKV_AWS_34
-
-soft-fail: true
-compact: true

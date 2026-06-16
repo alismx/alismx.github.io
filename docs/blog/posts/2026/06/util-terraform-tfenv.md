@@ -70,7 +70,7 @@ tfenv install 1.15.0
 # List installed versions
 tfenv list
 
-# Switch to a version 
+# Switch to a version
 tfenv use 1.15.0
 
 # Write current version to .terraform-version

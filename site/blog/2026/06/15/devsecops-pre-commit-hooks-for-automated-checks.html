@@ -10,11 +10,11 @@
 
 
 
-        <link rel="canonical" href="https://alismx.dev/blog/2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html">
+        <link rel="canonical" href="https://alismx.dev/blog/2026/06/15/devsecops-pre-commit-hooks-for-automated-checks.html">
 
 
+        <link rel="prev" href="../13/devsecops-scan-container-images-with-trivy.html">
 
-        <link rel="next" href="../10/devsecops-run-sast-on-python-code-with-bandit.html">
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-        <title>DevSecOps: Scan for Secrets in Your Git Repository - Alis Akers</title>
+        <title>DevSecOps: Pre-commit Hooks for Automated Checks - Alis Akers</title>
 
 
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
 
 
-        <a href="#devsecops-scan-for-secrets-in-your-git-repository" class="md-skip">
+        <a href="#devsecops-pre-commit-hooks-for-automated-checks" class="md-skip">
           Skip to content
         </a>
 
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
 
-              DevSecOps: Scan for Secrets in Your Git Repository
+              DevSecOps: Pre-commit Hooks for Automated Checks
 
           </span>
         </div>
@@ -397,7 +397,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-06-09 00:00:00+00:00" class="md-ellipsis">June 9, 2026</time>
+                        <time datetime="2026-06-15 00:00:00+00:00" class="md-ellipsis">June 15, 2026</time>
                       </div>
                     </li>
 
@@ -409,7 +409,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
 
-                              1 min read
+                              4 min read
 
                           </span>
                         </div>
@@ -438,10 +438,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 
         <li class="md-nav__item">
-  <a href="#install-gitleaks" class="md-nav__link">
+  <a href="#why-pre-commit-hooks" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Install gitleaks
+        Why pre-commit hooks
 
     </span>
   </a>
@@ -449,10 +449,10 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#configure-gitleaks" class="md-nav__link">
+  <a href="#how-pre-commit-hooks-work" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Configure gitleaks
+        How pre-commit hooks work
 
     </span>
   </a>
@@ -460,10 +460,60 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#scan-your-repository" class="md-nav__link">
+  <a href="#pre-commit-framework-recommended" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Scan Your Repository
+        pre-commit framework (recommended)
+
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="pre-commit framework (recommended)">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Install
+
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Configuration
+
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        How it works
+
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#manual-git-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Manual git hooks
 
     </span>
   </a>
@@ -471,10 +521,10 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#add-to-local-git-hooks" class="md-nav__link">
+  <a href="#execution" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Add to local git hooks
+        Execution
 
     </span>
   </a>
@@ -482,10 +532,21 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#add-gitleaks-to-cicd" class="md-nav__link">
+  <a href="#ci-is-still-a-requirement" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Add gitleaks to CI/CD
+        CI is still a requirement
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#choose-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Choose the tools
 
     </span>
   </a>
@@ -522,7 +583,14 @@
 
 
 
-        <span class="md-tag">allowlist</span>
+        <span class="md-tag">bandit</span>
+
+
+
+
+
+
+        <span class="md-tag">checkov</span>
 
 
 
@@ -536,21 +604,7 @@
 
 
 
-        <span class="md-tag">detect</span>
-
-
-
-
-
-
         <span class="md-tag">git</span>
-
-
-
-
-
-
-        <span class="md-tag">github</span>
 
 
 
@@ -564,21 +618,21 @@
 
 
 
-        <span class="md-tag">precommit</span>
+        <span class="md-tag">iac</span>
 
 
 
 
 
 
-        <span class="md-tag">redact</span>
+        <span class="md-tag">pre-commit</span>
 
 
 
 
 
 
-        <span class="md-tag">rule</span>
+        <span class="md-tag">python</span>
 
 
 
@@ -602,6 +656,20 @@
         <span class="md-tag">security</span>
 
 
+
+
+
+
+        <span class="md-tag">shift-left</span>
+
+
+
+
+
+
+        <span class="md-tag">terraform</span>
+
+
   </nav>
 
 
@@ -609,72 +677,136 @@
 
 
 
-<h1 id="devsecops-scan-for-secrets-in-your-git-repository">DevSecOps: Scan for Secrets in Your Git Repository<a class="headerlink" href="#devsecops-scan-for-secrets-in-your-git-repository" title="Permanent link">&para;</a></h1>
-<p>Accidentally committed API keys and tokens cause breaches. Gitleaks scans Git history for these patterns.</p>
-<p><strong>TL;DR</strong>: Install gitleaks, configure your repository, run a scan, and add it to your CI pipeline to catch secrets before they reach production.</p>
+<h1 id="devsecops-pre-commit-hooks-for-automated-checks">DevSecOps: Pre-commit Hooks for Automated Checks<a class="headerlink" href="#devsecops-pre-commit-hooks-for-automated-checks" title="Permanent link">&para;</a></h1>
+<p>A secret committed to Git leaks to anyone with read access to the repo. Pre-commit hooks are a chance to catch those mistakes before they're written to history.</p>
+<p><strong>TL;DR</strong>: Pre-commit hooks run automated checks before every <code>git commit</code>. They catch security issues before it's committed, the cheapest time to fix anything.</p>
 <hr />
-<h2 id="install-gitleaks">Install gitleaks<a class="headerlink" href="#install-gitleaks" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
+<h2 id="why-pre-commit-hooks">Why pre-commit hooks<a class="headerlink" href="#why-pre-commit-hooks" title="Permanent link">&para;</a></h2>
+<p>After <code>git commit</code>, the code exists in the repository. After <code>git push</code>, it exists in CI. After a merge, it's on its way to production. Each step out costs more to fix than the last.</p>
+<p>Fixing a secret found in CI costs at least one round trip and a need to rotate your secret. Detect the issue, revert the commit, apply the fix, recommit, push again. Fixing it at commit time costs seconds. The same math applies to insecure code, misconfigured infrastructure, anything that automated checks can catch.</p>
+<hr />
+<h2 id="how-pre-commit-hooks-work">How pre-commit hooks work<a class="headerlink" href="#how-pre-commit-hooks-work" title="Permanent link">&para;</a></h2>
+<p>A pre-commit hook is a script stored in <code>.git/hooks/pre-commit</code>. Git runs it before each commit. If the script exits with a non-zero code, the commit is blocked and the developer sees the output.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/sh</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># .git/hooks/pre-commit</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running security checks...&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact<span class="w"> </span>/dev/null
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found a secret. Commit blocked.&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">fi</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All checks passed.&quot;</span>
 </code></pre></div>
-<p>Verify the install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gitleaks<span class="w"> </span>--version
+<p>This is a shell script that runs whatever you want before a commit, but it's not managed by Git itself. That adds flexibility to a developer's setup, but at the cost of a more fragile setup. This can be used by developers to add their own preferred checks to the team's pre-commit framework as long as it doesn't conflict.</p>
+<hr />
+<h2 id="pre-commit-framework-recommended">pre-commit framework (recommended)<a class="headerlink" href="#pre-commit-framework-recommended" title="Permanent link">&para;</a></h2>
+<p>The pre-commit framework (<a href="https://pre-commit.com/">pre-commit.com</a>) manages hooks declaratively and handles installation automatically (or notifies you if something isn't).</p>
+<h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pre-commit
 </code></pre></div>
-<h2 id="configure-gitleaks">Configure gitleaks<a class="headerlink" href="#configure-gitleaks" title="Permanent link">&para;</a></h2>
-<p>Create a <code>gitleaks.toml</code> file in your repository root:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[extend]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;github.com/gitleaks/gitleaks&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">[allowlist]</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;global allow lists&quot;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">regexes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1"># patterns to allow</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">]</span>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># .pre-commit-config.yaml</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">repos</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/gitleaks/gitleaks</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v8.29.0</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">--verbose</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">--redact</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkov</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkov</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkov -d .</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nt">pass_filenames</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-<p>Add a custom rule:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[[rules]]</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-custom-secret&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Custom secret pattern&quot;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;(your-pattern-here)&#39;&#39;&#39;</span>
+<p>Some repos like Gitleaks and Bandit have official remote hooks and can be install automatically. Checkov doesn't have an official pre-commit remote repo, so you define it as a local hook that runs the <code>checkov</code> binary directly. That also means pre-commit won't install checkov for you, so developers need to install checkov before <code>pre-commit install</code> works.</p>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<p>After installing with <code>pre-commit install</code>, the hooks run automatically on every commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Run install</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>pre-commit<span class="w"> </span>install
 </code></pre></div>
-<h2 id="scan-your-repository">Scan Your Repository<a class="headerlink" href="#scan-your-repository" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Full history scan</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Run all hooks on the entire repo</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Verbose output (shows actual secrets)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Run a specific hook</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>gitleaks
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Verbose output (redacts actual secrets)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Run hooks on staged files only</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>pre-commit<span class="w"> </span>run
 </code></pre></div>
-<h2 id="add-to-local-git-hooks">Add to local git hooks<a class="headerlink" href="#add-to-local-git-hooks" title="Permanent link">&para;</a></h2>
+<p>The commit is blocked if any hook exits non-zero. The developer sees the output and can fix the issue.</p>
+<hr />
+<h2 id="manual-git-hooks">Manual git hooks<a class="headerlink" href="#manual-git-hooks" title="Permanent link">&para;</a></h2>
+<p>If you don't want the pre-commit framework, you can chain tools together in a shell script. This is what the individual tool documentation shows for each tool in isolation.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/sh</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># .git/hooks/pre-commit</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gitleaks
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running gitleaks...&quot;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact<span class="w"> </span>/dev/null
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;gitleaks found secrets. Commit blocked.&quot;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">fi</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running checkov...&quot;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>checkov<span class="w"> </span>-d<span class="w"> </span>.
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;checkov found misconfigurations. Commit blocked.&quot;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="k">fi</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All checks passed.&quot;</span>
 </code></pre></div>
 <p>Make it executable:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
 </code></pre></div>
-<h2 id="add-gitleaks-to-cicd">Add gitleaks to CI/CD<a class="headerlink" href="#add-gitleaks-to-cicd" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">scan</span><span class="p">:</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v6</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks/gitleaks-action@v3</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<p>The manual approach is straightforward but requires developers to install all tools manually, and requires every dev to keep their hooks up to date as the project evolves.</p>
+<hr />
+<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
+<p>Gitleaks on staged files (not full history) runs fast. Bandit on staged Python files runs fast. Checkov on all IaC files in the repo takes longer because it scans the entire directory.</p>
+<p>If you want to avoid blocking on slow findings during quick commits, use <code>pre-commit</code>'s <code>stages</code> feature:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">repos</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/gitleaks/gitleaks</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v8.29.0</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitleaks</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="nt">stages</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">commit</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkov</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkov</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkov -d .</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="nt">pass_filenames</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="nt">stages</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
 </code></pre></div>
+<p>This runs checkov only on <code>git push</code> (pre-push hook), not on every commit. Developers can commit IaC changes and push them later for the full scan. You lose the pre-commit guarantee for checkov but gain speed during active development.</p>
+<hr />
+<h2 id="ci-is-still-a-requirement">CI is still a requirement<a class="headerlink" href="#ci-is-still-a-requirement" title="Permanent link">&para;</a></h2>
+<p>CI catches things the developer missed. If someone bypasses the hook or forgets to install it, CI blocks the merge. It's not as clean because the commit has already landed, but it's better than nothing.</p>
+<hr />
+<h2 id="choose-the-tools">Choose the tools<a class="headerlink" href="#choose-the-tools" title="Permanent link">&para;</a></h2>
+<p>You don't need to run every check. Pick the ones that match what you ship with an eye for guarding secrets and keeping your systems secure.</p>
+<p>Consider using any of these posts for inspiration:</p>
+<ul>
+<li><a href="../10/devsecops-run-sast-on-python-code-with-bandit.html">Bandit</a>: Python SAST</li>
+<li><a href="../12/devsecops-scan-infrastructure-code-for-misconfigurations-with-checkov.html">Checkov</a>: IaC SAST</li>
+<li><a href="../09/devsecops-scan-for-secrets-in-your-git-repository.html">Gitleaks</a>: Git Secret Scanning</li>
+<li><a href="../13/devsecops-scan-container-images-with-trivy.html">Trivy</a>: Container SAST</li>
+</ul>
+<hr />
 <h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Scan the full Git history. People commit secrets and then delete them from current files, but the values remain in commit history.</li>
-<li>Use <code>--verbose</code> when investigating findings. It reveals the secret value, not just the file and line.</li>
-<li>Add gitleaks to your CI on pull requests. Preventing the secret from reaching production is cheaper than responding after it does.</li>
+<li>The pre-commit framework manages hooks and installation declaratively. Manual git hooks are a shell script that requires manual setup and manual tool installation.</li>
+<li><code>language: system</code> hooks get no virtual environment: pre-commit won't install checkov for you because it has no official remote repo. Developers must install it themselves.</li>
+<li>CI is a vital second line, not just a fallback. If someone bypasses the hook or forgets to install it, CI catches it later. The commit has already landed, but it's better than nothing.</li>
+<li>Use <code>stages: [push]</code> for slow tools to avoid blocking on quick commits during active development.</li>
+<li>Each tool catches a different class of mistake.</li>
 </ul>
 
 
@@ -712,21 +844,21 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
 
 
-
-          <a href="../10/devsecops-run-sast-on-python-code-with-bandit.html" class="md-footer__link md-footer__link--next" aria-label="Next: DevSecOps: Run SAST on Python Code with Bandit">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                DevSecOps: Run SAST on Python Code with Bandit
-              </div>
-            </div>
+          <a href="../13/devsecops-scan-container-images-with-trivy.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: DevSecOps: Scan Container Images with Trivy">
             <div class="md-footer__button md-icon">
 
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                DevSecOps: Scan Container Images with Trivy
+              </div>
             </div>
           </a>
+
 
       </nav>
 

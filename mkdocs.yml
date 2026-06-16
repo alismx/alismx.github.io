@@ -8,7 +8,9 @@ docs_dir: docs
 
 nav:
   - profile: index.md
-  - blog/index.md
+  - blog:
+    - blog/posts/2026
+
   - buy me compute: https://ko-fi.com/alismx
 
 plugins:

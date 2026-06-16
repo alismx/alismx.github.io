@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.29.0
+    hooks:
+      - id: gitleaks
+        args: [--verbose, --redact]
+  - repo: local
+    hooks:
+      - id: checkov
+        name: checkov
+        entry: checkov -d .
+        language: system
+        pass_filenames: false
