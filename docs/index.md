@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: rename NBS env vars to JWT env vars](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/57) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add SCA container scanning with Trivy blog post and site updates](https://github.com/alismx/alismx.github.io/pull/23) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add SCA container scanning with Trivy blog post and site updates](https://github.com/alismx/alismx.github.io/pull/22) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add Trivy IaC workflow and regenerate site](https://github.com/alismx/alismx.github.io/pull/19) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [chore: regenerate site and update generated files](https://github.com/alismx/alismx.github.io/pull/15) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: update site navigation, colors, and plugins](https://github.com/alismx/alismx.github.io/pull/14) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [docs: migrate gitleaks post and add Bandit SAST post](https://github.com/alismx/alismx.github.io/pull/13) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [docs: migrate blog and docs structure](https://github.com/alismx/alismx.github.io/pull/12) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
