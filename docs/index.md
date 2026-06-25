@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [docs: add how-to guide for running containers individually; add HEALTHCHECK to Dockerfiles](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1570) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Add rds permission for database version update](https://github.com/CDCgov/dibbs-aws/pull/100) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [chore: rename NBS env vars to JWT env vars](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/57) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add SCA container scanning with Trivy blog post and site updates](https://github.com/alismx/alismx.github.io/pull/23) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [fix: correct checkov blog post wording and nav labels](https://github.com/alismx/alismx.github.io/pull/17) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add Checkov CI workflow and SAST blog post](https://github.com/alismx/alismx.github.io/pull/16) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: regenerate site and update generated files](https://github.com/alismx/alismx.github.io/pull/15) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [chore: update site navigation, colors, and plugins](https://github.com/alismx/alismx.github.io/pull/14) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
