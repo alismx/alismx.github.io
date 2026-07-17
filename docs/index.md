@@ -41,11 +41,11 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 📓 My gists
 
+- [OpenCode safe global permissions (~/.config/opencode/opencode.json). JSON permission.bash format. Pre-approved commands covering: file/text inspection, system info, git &amp; GitHub CLI read ops, check-only linters, lockfile-respecting installs, test runners, and Jira read queries. Note: webfetch/websearch only support global allow/ask/deny (no URL-pattern filtering). See also: Claude Code version, Codex CLI version.](https://gist.github.com/599e75c16c8df347dd726c7b30c1e9a2)
 - [How to: Use qemu-img command to convert between vmdk, raw, qcow2, vdi, vhd, vhdx formats/disk images (qemu-img create, snapshot, resize etc.)](https://gist.github.com/9894bbbd9640074416f258bbaf3874ec)
 - [Emulating ARM with QEMU on Debian/Ubuntu](https://gist.github.com/3107fdd62a87607d7cc7b1368d84fc52)
 - [Debian 12 preseed file](https://gist.github.com/717776684587d3467b8c3980d2cba4e3)
 - [](https://gist.github.com/eb554c67c7013b27c0e16461c3321df9)
-- [](https://gist.github.com/a8c473968f0d87c0532944017f844363)
 
 ### 👯 Recent followers
 
