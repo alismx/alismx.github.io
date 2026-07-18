@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Remove Simple Report content and link from demo site](https://github.com/skylight-hq/dibbs-landing/pull/27) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [docs: add how-to guide for running containers individually; add HEALTHCHECK to Dockerfiles](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1570) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [docs: update Terraform version requirement to 1.9.0](https://github.com/CDCgov/dibbs-aws/pull/100) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [chore: rename NBS env vars to JWT env vars](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/57) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [chore: update SAST IAC Checkov blog post](https://github.com/alismx/alismx.github.io/pull/18) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [fix: correct checkov blog post wording and nav labels](https://github.com/alismx/alismx.github.io/pull/17) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [feat: add Checkov CI workflow and SAST blog post](https://github.com/alismx/alismx.github.io/pull/16) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [chore: regenerate site and update generated files](https://github.com/alismx/alismx.github.io/pull/15) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
