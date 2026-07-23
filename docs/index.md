@@ -15,9 +15,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🚀 My work
 
+- [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [alismx/exo-docker](https://github.com/alismx/exo-docker)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [feat: add gcp option to workflow trigger configuration](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1646) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Remove Simple Report content and link from demo site](https://github.com/skylight-hq/dibbs-landing/pull/27) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [docs: add how-to guide for running containers individually; add HEALTHCHECK to Dockerfiles](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1570) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [docs: update Terraform version requirement to 1.9.0](https://github.com/CDCgov/dibbs-aws/pull/100) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [feat: add Trivy IaC workflow and regenerate site](https://github.com/alismx/alismx.github.io/pull/19) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [chore: update SAST IAC Checkov blog post](https://github.com/alismx/alismx.github.io/pull/18) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 - [fix: correct checkov blog post wording and nav labels](https://github.com/alismx/alismx.github.io/pull/17) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [feat: add Checkov CI workflow and SAST blog post](https://github.com/alismx/alismx.github.io/pull/16) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
