@@ -16,8 +16,8 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
+- [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Change monitoring interval to 0](https://github.com/CDCgov/dibbs-aws/pull/103) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Revert &#34;Revert &#34;Adding fhir-converter-proxy&#34;&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/61) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Revert &#34;Adding fhir-converter-proxy&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/60) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [fix: restore external WAF ACL association support](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/59) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [docs: update Terraform version requirement to 1.9.0](https://github.com/CDCgov/dibbs-aws/pull/100) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [chore: rename NBS env vars to JWT env vars](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/57) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [feat: add SCA container scanning with Trivy blog post and site updates](https://github.com/alismx/alismx.github.io/pull/23) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
-- [feat: add SCA container scanning with Trivy blog post and site updates](https://github.com/alismx/alismx.github.io/pull/22) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
