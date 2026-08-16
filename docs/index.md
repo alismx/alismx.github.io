@@ -16,9 +16,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 ### 🚀 My work
 
 - [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
+- [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
-- [CDCgov/dibbs-azure](https://github.com/CDCgov/dibbs-azure)
 - [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [alismx/exo-docker](https://github.com/alismx/exo-docker)
