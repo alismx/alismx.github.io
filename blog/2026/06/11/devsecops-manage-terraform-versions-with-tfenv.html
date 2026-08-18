@@ -584,7 +584,7 @@
 </code></pre></div>
 <p>Add it to your shell profile:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ~/.bashrc, ~/.zshrc, etc.</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
 </code></pre></div>
 <p>Verify:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tfenv<span class="w"> </span>--version
@@ -595,7 +595,7 @@
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tfenv<span class="w"> </span>list-remote
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Filter for a specific major version (1)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^1\.&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^1\."</span>
 </code></pre></div>
 <p>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are compatible with existing state.</p>
 <hr />

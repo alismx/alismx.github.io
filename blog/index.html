@@ -511,14 +511,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/sh</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># .git/hooks/pre-commit</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running security checks...&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Running security checks..."</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>gitleaks<span class="w"> </span>detect<span class="w"> </span>--source<span class="w"> </span>.<span class="w"> </span>--verbose<span class="w"> </span>--redact<span class="w"> </span>/dev/null
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found a secret. Commit blocked.&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Found a secret. Commit blocked."</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">fi</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All checks passed.&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"All checks passed."</span>
 </code></pre></div>
 <p>Make it executable:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
@@ -654,7 +654,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Ubuntu/Debian</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://aquasecurity.github.io/trivy-repo/deb/public.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/trivy.gpg
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/trivy.list
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb </span><span class="k">$(</span>lsb_release<span class="w"> </span>-sc<span class="k">)</span><span class="s2"> main"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/trivy.list
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>trivy
 </code></pre></div>
@@ -1140,7 +1140,7 @@
 </code></pre></div>
 <p>Add it to your shell profile:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ~/.bashrc, ~/.zshrc, etc.</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.tfenv/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
 </code></pre></div>
 <p>Verify:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tfenv<span class="w"> </span>--version
@@ -1151,7 +1151,7 @@
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tfenv<span class="w"> </span>list-remote
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Filter for a specific major version (1)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^1\.&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tfenv<span class="w"> </span>list-remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">"^1\."</span>
 </code></pre></div>
 <p>Terraform uses semantic versioning: breaking changes only happen between major versions. Minor and patch updates are compatible with existing state.</p>
 <hr />
@@ -1354,8 +1354,8 @@
 <h4 id="toml"><a class="toclink" href="2026/06/10/devsecops-run-sast-on-python-code-with-bandit.html#toml">TOML</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># pyproject.toml</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">[tool.bandit]</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">exclude_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;migrations&quot;</span><span class="p">]</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">skips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;B101&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B602&quot;</span><span class="p">]</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">exclude_dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"tests"</span><span class="p">,</span><span class="w"> </span><span class="s2">"migrations"</span><span class="p">]</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">skips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"B101"</span><span class="p">,</span><span class="w"> </span><span class="s2">"B602"</span><span class="p">]</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>bandit<span class="w"> </span>-c<span class="w"> </span>pyproject.toml<span class="w"> </span>-r<span class="w"> </span>.
 </code></pre></div>
@@ -1371,10 +1371,10 @@
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">the_hash</span> <span class="o">=</span> <span class="n">md5</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1"># nosec</span>
 </code></pre></div>
 <p>The whole line gets suppressed. If you only want to suppress specific checks on that line, name them:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;/bin/ls *&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># nosec B602, B607</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">'/bin/ls *'</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># nosec B602, B607</span>
 </code></pre></div>
 <p>You can use full test names instead of IDs:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">assert</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[]</span>  <span class="c1"># nosec assert_used</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">assert</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2">"</span><span class="p">)</span> <span class="o">==</span> <span class="p">[]</span>  <span class="c1"># nosec assert_used</span>
 </code></pre></div>
 <p>Always add a comment explaining <em>why</em> you're suppressing the finding. Without context, future reviewers won't know if the suppression is intentional or lazy.</p>
 <hr />
@@ -1412,7 +1412,7 @@
 <a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
 <a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v5</span>
 <a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.12&#39;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">'3.12'</span>
 <a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Bandit</span>
 <a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install bandit[sarif]</span>
 <a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Bandit</span>
@@ -1487,19 +1487,19 @@
 <h3 id="configure-gitleaks"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#configure-gitleaks">Configure gitleaks</a></h3>
 <p>Create a <code>gitleaks.toml</code> file in your repository root:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[extend]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;github.com/gitleaks/gitleaks&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">using</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"github.com/gitleaks/gitleaks"</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">[allowlist]</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;global allow lists&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"global allow lists"</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">regexes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1"># patterns to allow</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">]</span>
 </code></pre></div>
 <p>Add a custom rule:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[[rules]]</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-custom-secret&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Custom secret pattern&quot;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;(your-pattern-here)&#39;&#39;&#39;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my-custom-secret"</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Custom secret pattern"</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'''(your-pattern-here)'''</span>
 </code></pre></div>
 <h3 id="scan-your-repository"><a class="toclink" href="2026/06/09/devsecops-scan-for-secrets-in-your-git-repository.html#scan-your-repository">Scan Your Repository</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Full history scan</span>
