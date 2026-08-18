@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [Update docker-install.sh](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1719) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Change monitoring interval to 0](https://github.com/CDCgov/dibbs-aws/pull/103) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Revert &#34;Revert &#34;Adding fhir-converter-proxy&#34;&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/61) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Revert &#34;Adding fhir-converter-proxy&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/60) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [docs: add how-to guide for running containers individually; add HEALTHCHECK to Dockerfiles](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1570) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [docs: update Terraform version requirement to 1.9.0](https://github.com/CDCgov/dibbs-aws/pull/100) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [chore: rename NBS env vars to JWT env vars](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/57) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
-- [feat: add SCA container scanning with Trivy blog post and site updates](https://github.com/alismx/alismx.github.io/pull/23) on [alismx/alismx.github.io](https://github.com/alismx/alismx.github.io)
 
 ### 📓 My gists
 
