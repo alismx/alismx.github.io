@@ -28,7 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
-- [Update docker-install.sh](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1719) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
+- [fix: add --no-pager to docker install diagnostics](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1719) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Change monitoring interval to 0](https://github.com/CDCgov/dibbs-aws/pull/103) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Revert &#34;Revert &#34;Adding fhir-converter-proxy&#34;&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/61) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 - [Revert &#34;Adding fhir-converter-proxy&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/60) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
