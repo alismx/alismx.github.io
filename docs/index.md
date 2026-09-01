@@ -28,6 +28,7 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 🌱 My pull requests
 
+- [chore: Group dependabot updates into a single PR](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1741) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [fix: add --no-pager to docker install diagnostics](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1719) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [Change monitoring interval to 0](https://github.com/CDCgov/dibbs-aws/pull/103) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
 - [Revert &#34;Revert &#34;Adding fhir-converter-proxy&#34;&#34;](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/61) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
@@ -37,7 +38,6 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 - [Remove Simple Report content and link from demo site](https://github.com/skylight-hq/dibbs-landing/pull/27) on [skylight-hq/dibbs-landing](https://github.com/skylight-hq/dibbs-landing)
 - [docs: add how-to guide for running containers individually; add HEALTHCHECK to Dockerfiles](https://github.com/CDCgov/dibbs-ecr-viewer/pull/1570) on [CDCgov/dibbs-ecr-viewer](https://github.com/CDCgov/dibbs-ecr-viewer)
 - [docs: update Terraform version requirement to 1.9.0](https://github.com/CDCgov/dibbs-aws/pull/100) on [CDCgov/dibbs-aws](https://github.com/CDCgov/dibbs-aws)
-- [chore: rename NBS env vars to JWT env vars](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer/pull/57) on [CDCgov/terraform-aws-dibbs-ecr-viewer](https://github.com/CDCgov/terraform-aws-dibbs-ecr-viewer)
 
 ### 📓 My gists
 
