@@ -49,9 +49,9 @@ I'm Alis, a DevOps engineer passionate about open-source, cloud-native technolog
 
 ### 👯 Recent followers
 
+- [victorlanx](https://github.com/victorlanx)
 - [urbantech](https://github.com/urbantech)
 - [trinhminhtriet](https://github.com/trinhminhtriet)
-- [ezgidemirci](https://github.com/ezgidemirci)
 
 ### 📈 My certifications
 
